@@ -45,14 +45,14 @@
                 
                 <div class="col-md-9 col-md-offset-2">
                     <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav text-center">
-                            <li><a href="#" class="hvr-fade">home</a></li>
-                            <li><a href="#" class="hvr-fade">products</a></li>
-                            <li><a href="#" class="hvr-fade">solutions</a></li>
-                            <li><a href="#" class="hvr-fade">product support</a></li>
-                            <li><a href="#" class="hvr-fade">reference projects</a></li>
-                            <li><a href="#" class="hvr-fade">about</a></li>
-                            <li><a href="#" class="hvr-fade">contact</a></li>
+                        <ul class="nav navbar-nav">
+                            <li><a href="../index.html" class="hvr-fade">home</a></li>
+                            <li><a href="../products.html" class="hvr-fade">products</a></li>
+                            <li><a href="../solutions.html" class="hvr-fade">solutions</a></li>
+                            <li><a href="../product-support.html" class="hvr-fade">product support</a></li>
+                            <li><a href="../reference-projects.html" class="hvr-fade">reference projects</a></li>
+                            <li><a href="../about.html" class="hvr-fade">about</a></li>
+                            <li><a href="../contact.html" class="hvr-fade">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -271,26 +271,19 @@ function closeNav() {
 </script>
 
 <script>
-    // Get the current page URL
-    var currentPage = window.location.href;
-
-    // Function to add 'active' class to the corresponding <li> element
-    function setActivePage() {
-        // Get all <a> elements in the navigation menu
-        var navLinks = document.querySelectorAll('.navbar-nav a');
-
-        // Loop through each <a> element
-        navLinks.forEach(function(link) {
-            // If the href of the link matches the current page URL
-            if (link.href === currentPage) {
-                // Add 'active' class to its parent <li> element
-                link.parentElement.classList.add('active');
-            }
-        });
+	document.addEventListener('DOMContentLoaded', function () {
+    var currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+    if (currentPage === '' || currentPage === 'index') {
+        currentPage = 'index';
     }
 
-    // Call the function when the page is loaded
-    window.onload = setActivePage;
+    document.querySelectorAll('.nav.navbar-nav li a').forEach(function (link) {
+        var linkPage = link.getAttribute('href').split('/').pop().replace('.html', '');
+        if (linkPage === currentPage) {
+            link.parentElement.classList.add('active');
+        }
+    });
+});
 </script>
 
 
