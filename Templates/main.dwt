@@ -177,49 +177,86 @@
 <!-- TemplateEndEditable -->
 
 <footer id="footer">
-	<section class="lwrftr">
-     	<div class="container">
+	
+    <section class="upprftr">
+    	<div class="container">
         	<div class="row">
-            	<div class="col-md-12 no-pad">
-                	
-                    <div class="lwrftrsctn">
-                    	<div class="fttrbx">
+            	<div class="col-md-12">
+                
+                	<div class="footerwrpr">
+                    
+                    	<div class="footerwrprbx">
                         	<img src="images/footer-logo.png" class="img-responsive" alt=""/>
-                            <h4>© Copyright 2025, Golden Mine Factory. All rights reserved.</h4>
-                            <p><a href="../privacy-policy.html" class="hvr-fade">Privacy Policy</a></p>
+                            <p class="cntrytxt">Gabon   •   Dubai   •   India</p>
+                            <p>GloPower FZ LLC is a leading power solutions company, delivering comprehensiv generator systems ranging from 9 kVA to 4000 kVA for diesel gensets and 17 kVA to 3125 kVA for gas gensets. The company executes large infrastructure power projects from concept design, detailed engineering to installation and commissioning.</p>
+                            <h3>CORPORATE OFFICE</h3>
+                            <p>FDRK1086, Compass Building,<br />Al Shohada Road, AL Hamra Industrial<br />Zone-FZ, Ras Al Khaimah,<br />United Arab Emirates</p>
+                            <p class="phntxt">Phone: +971 582413303</p>
+                            <p>Email: contact@glopower.ae</p>
                         </div>
-                        <div class="fttrbx">
-                            <h4>Our Products</h4>
-                            <ul>
-                            	<li><a href="../product-silica-sand.html" class="hvr-fade">Silica Sand</a></li>
-                                <li><a href="../product-calcium-carbonate.html" class="hvr-fade">Calcium Carbonate</a></li>
-                            </ul>
-                        </div>
-                        <div class="fttrbx">
-                            <h4>Our Services</h4>
-                            <ul>
-                            	<li><a href="../service-silica-sand-mining.html" class="hvr-fade">Silica Sand Mining</a></li>
-                                <li><a href="../service-limestone-mining.html" class="hvr-fade">Limestone Mining</a></li>
-                            </ul>
-                        </div>
-                        <div class="fttrbx">
-                            <h4>Follow us</h4>
-                            <ul>
-                            	<li><a href="https://www.linkedin.com/company/golden-mine-factory/" target="_blank" class="hvr-fade"><i class="fab fa-linkedin-in"></i></a></li>
-                                <!--<li><a href="#" class="hvr-fade">Instagram</a></li>-->
-                            </ul>
-                        </div>
-                        <div class="fttrbx">
-                            <h4>Designed By</h4>
-                            <a href="https://ermaconsulting.in/" target="_blank"><img src="images/erma.png" class="img-responsive" alt=""/></a>
+                        
+                        <div class="footerwrprbx">
+                        	
+                            <div class="ftrlstbx">
+                            	<div class="lstbx">
+                                	<h3>PRODUCTS</h3>
+                                    <ul>
+                                    	<li><a href="#">Diesel Generator Sets</a></li>
+                                        <li><a href="#">Gas Generator Sets</a></li>
+                                        <li><a href="#">Electrical Panels</a></li>
+                                        <li><a href="#">Electrical Accessories</a></li>
+                                    </ul>
+                                </div>
+                                <div class="lstbx">
+                                	<h3>GET TO KNOW US</h3>
+                                    <ul>
+                                    	<li><a href="#">Who we are</a></li>
+                                        <li><a href="#">Our Brands</a></li>
+                                        <li><a href="#">Our Global Presence</a></li>
+                                        <li><a href="#">Message from the Chairman</a></li>
+                                    </ul>
+                                </div>
+                                <div class="lstbx"> 
+                                	<h3>SOLUTION</h3>
+                                    <ul>
+                                    	<li><a href="#">Electrical EPC Solution</a></li>
+                                        <li><a href="#">Acoustic Solutions</a></li>
+                                        <li><a href="#">Fuel Delivery Solutions</a></li>
+                                        <li><a href="#">Centrifuge and Fuel Polishing systems</a></li>
+                                    </ul>
+                                </div>
+                                <div class="lstbx">
+                                	<h3>PRODUCT SUPPORT</h3>
+                                    <ul>
+                                    	<li><a href="#">Electrical EPC Solution</a></li>
+                                        <li><a href="#">Acoustic Solutions</a></li>
+                                        <li><a href="#">Fuel Delivery Solutions</a></li>
+                                        <li><a href="#">Centrifuge and Fuel Polishing systems</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
                         </div>
                     </div>
-                    
+                
                 	<div class="clearfix"></div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section class="lwrftr">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-12">
+                	<p>Copyright © 2026 GLOPOWER FZ LLC.</p>
+                    <p>Proudly designed by <strong>Erma Consulting</strong></p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 </footer>
 
 <!-- TemplateBeginEditable name="EditRegion5" -->
