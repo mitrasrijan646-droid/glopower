@@ -1334,16 +1334,17 @@ RIGHT ENGINEER IMAGE
     font-size:14px;
 }
 /* RIGHT */
-.project-preview-wrapper{
-	background:#ffc000;
-}
+.project-preview-wrapper{background:#ffc000;}
 .project-preview{ overflow:hidden; background:#fff;}
 .preview-image{ position:relative;}
 .preview-image img{
     width:100%;
-    height:420px;
+    height:100%;
     object-fit:cover;
     display:block;
+	-webkit-border-top-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+border-top-right-radius: 20px;
 }
 .preview-overlay{
     position:absolute;
@@ -1353,17 +1354,18 @@ RIGHT ENGINEER IMAGE
 }
 .preview-overlay h2{
     margin:0;
+	color:#FFF;
     font-size:52px;
     font-weight:700;
 }
-.preview-overlay p{ margin-top:5px; font-size:22px;}
+.preview-overlay p{ margin-top:5px; font-size:22px; color:#FFF;}
 /* GENSET */
 .genset-info{
     background:#ffc000;
     display:flex;
     align-items:center;
     gap: 10px;
-    padding: 15px 15px;
+    padding: 15px 30px;
     justify-content: flex-start;
 }
 .genset-icon{font-size:42px;}
@@ -1371,16 +1373,19 @@ RIGHT ENGINEER IMAGE
 /* HIGHLIGHTS */
 .project-highlights{
     background: #ffc000;
-    padding: 32px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding:40px 40px;
+    border-top: 1px solid rgba(0, 0, 0, .99);
     display: grid;
     align-items: stretch;
-    gap: 27px;
+    gap:15px;
     align-content: space-between;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-bottom-right-radius: 20px;
 }
-.project-highlights h3{margin-top:0; text-align:left; }
-.project-highlights ul{padding-left:20px; padding-inline-start:0;}
-.project-highlights li{margin-bottom:12px;line-height:1.7;}
+.project-highlights h3{margin-top:0; text-align:left; font-weight:bold;}
+.project-highlights ul{padding-left:20px; padding-inline-start:20px;}
+.project-highlights li{margin-bottom:10px; line-height:30px; font-size:25px;}
 .project-preview{ display:none;}
 .project-preview.active{ display:block;}
 /* MEDIA QUERY CSS STARTS HERE */
