@@ -757,13 +757,8 @@ a:focus, a:hover {
 	text-align:left;
 }
 .sltnsctn h1{text-align:left; font-size:80px; color:#0039a3;}
-.sector-slider{
-    position:relative;
-    padding-bottom:55px;
-}
-.swiper{
-    overflow:visible;
-}
+.sector-slider{position:relative;padding-bottom:55px;}
+.swiper{ overflow:visible;}
 .swiper-slide{
     width:100%;
     height:460px;
@@ -822,14 +817,8 @@ a:focus, a:hover {
     font-size:14px;
     font-weight:700;
 }
-.swiper-button-prev{
-    left:50%;
-    transform:translateX(-85px);
-}
-.swiper-button-next{
-    right:50%;
-    transform:translateX(85px);
-}
+.swiper-button-prev{ left:50%; transform:translateX(-85px);}
+.swiper-button-next{ right:50%; transform:translateX(85px);}
 .swiper-pagination{
     width:200px !important;
     left:50% !important;
@@ -840,10 +829,7 @@ a:focus, a:hover {
     border-radius:30px;
     overflow:hidden;
 }
-.swiper-pagination-progressbar-fill{
-    background:#e5a51d !important;
-    border-radius:30px;
-}
+.swiper-pagination-progressbar-fill{ background:#e5a51d !important;border-radius:30px;}
 .mapsctn{background:#0041bb; padding:;}
 .mapcntnr{
 	display: grid;
@@ -1068,15 +1054,6 @@ a:focus, a:hover {
     overflow:hidden;
 	padding-bottom:0;
 }
-/* .spprtsctnbx:before{
-	position:absolute;
-	content:'';
-	background:url(../images/support/gear.png) no-repeat;
-	width:386px;
-	height:292px;
-	top:0;
-	left:0;
-} */
 .gear-animation{
 	position:absolute;
 	top:0;
@@ -1439,17 +1416,12 @@ RIGHT ENGINEER IMAGE
     background:#d89b13;
 }
 /* SLIDER */
-.clientSwiper{
-    overflow:hidden;
-    padding:60px 0 !important;
-}
+.clientSwiper{ overflow:hidden;  padding:60px 0 !important;}
 .swiper-slide{
     display:flex;
     align-items:center;
     justify-content:center;
 }
-.swiper-slide img{ width:100%; transition:0.4s ease; cursor:pointer;}
-.swiper-slide:hover img{ transform:scale(1.08);}
 /* DOTS */
 .swiper-pagination{
 	bottom:0 !important; 
@@ -1471,6 +1443,128 @@ RIGHT ENGINEER IMAGE
     border-radius:30px;
 	background:#f2ae2c !important;
     opacity:1;
+}
+.rangwrpr .cpbltsbx{background:#0041bb; position:relative; z-index:1;}
+.rangwrpr .cpbltsbx p{color:#FFF;}
+.rangwrpr .cpbltsbx .textbx{
+	display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+    bottom:50px;
+	z-index: 1;
+	padding:35px;
+}
+.rangwrpr .cpbltsbx .textbx h2{
+	color:#FFF;
+	text-align:left;
+	font-size:22px;
+	font-weight:700;
+	letter-spacing:0;
+}
+.rangwrpr .cpbltsbx svg{
+	fill: #FFF;
+    height: 26px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+	transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+	rotate:312deg;
+}
+.rangwrpr .cpbltsbx:hover svg{ transform:translateX(6px);}
+.trstdsctn{margin:0 auto; justify-content: center; gap:95px; overflow: visible !important;  height: auto !important;}
+.trstdsctn h1{font-size:65px; text-align:center; color:#0041bb;}
+.trstdsctn img{margin:0 auto; width:auto;}
+.prtnrimgbx{justify-content: flex-start; left:0;}
+/* ── SECTOR SLIDER ── */
+.sector-slider {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/* ── SWIPER ── */
+.mySectorSliderone {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.mySectorSliderone .swiper-wrapper {
+    height: auto !important;
+    align-items: flex-start !important;
+}
+
+/* ── EACH SLIDE ── */
+.mySectorSliderone .swiper-slide {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* ── GOLD DIVIDER ── */
+.trustd-divider {
+    width: 55px;
+    height: 3px;
+    background: #dc9b15;
+    margin: 0 auto 22px;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* ── SLIDE H3 ── */
+.mySectorSliderone .swiper-slide h3 {
+    display: block !important;
+    visibility: visible !important;
+    color: #0039a3 !important;
+    font-size:34px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+	margin-bottom:35px;
+}
+/* ── SLIDE PARAGRAPH ── */
+.mySectorSliderone .swiper-slide p {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 0 28px 0 !important;
+    text-align: center !important;
+    opacity: 1 !important;
+	width:auto;
+}
+
+/* ── PAGINATION DOTS ── */
+.mySectorSliderone-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 25px !important;
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+}
+
+.mySectorSliderone-pagination .swiper-pagination-bullet {
+    width: 13px !important;
+    height: 13px !important;
+    background: #cccccc !important;
+    opacity: 1 !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease, transform 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.mySectorSliderone-pagination .swiper-pagination-bullet-active {
+    background: #dc9b15 !important;
+    transform: scale(1.2) !important;
+}
+
+.mySectorSliderone-pagination .swiper-pagination-bullet:hover {
+    background: #0039a3 !important;
 }
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}

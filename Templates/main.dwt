@@ -45,7 +45,7 @@
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="../index.html" class="hvr-fade">home</a></li>
-                            <li><a href="#" class="hvr-fade">products</a></li>
+                            <li><a href="../products.html" class="hvr-fade">products</a></li>
                             <li><a href="#" class="hvr-fade">solutions</a></li>
                             <li><a href="../product-support.html" class="hvr-fade">product support</a></li>
                             <li><a href="../reference-projects.html" class="hvr-fade">reference projects</a></li>
