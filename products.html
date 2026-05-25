@@ -167,7 +167,7 @@
 </div>
 
 <!-- InstanceBeginEditable name="banner" -->
-<section class="bnnrsctn">
+<section class="bnnrsctn innrbnnr">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 no-pad">
@@ -839,6 +839,24 @@ var swiperOne = new Swiper(".mySectorSliderone", {
         type: "bullets",
     },
 });
+</script>
+
+<script>
+var imgBx = document.querySelector('.prtnrimgbx');
+
+function checkImgScroll() {
+    if (!imgBx) return;
+    var rect = imgBx.getBoundingClientRect();
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top <= windowHeight * 0.85) {
+        imgBx.classList.add('in-view');
+        window.removeEventListener('scroll', checkImgScroll);
+    }
+}
+
+window.addEventListener('scroll', checkImgScroll);
+window.addEventListener('load', checkImgScroll);
 </script>
 
 <!-- InstanceEndEditable -->

@@ -500,6 +500,7 @@ a:focus, a:hover {
     align-items: center;  /* vertically centers content at all sizes */
     min-height:100vh;
 }
+.innrbnnr .evntbxbnnr{min-height:80vh;}
 .bnnrsctn .evntbxbnnr .imgbx{ width: 100%; height: 100%;}
 .bnnrsctn .evntbxbnnr .bannrbx {
 	position: relative;
@@ -749,13 +750,19 @@ a:focus, a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+	transition: 0.4s ease;
 }
+.rdbx:hover{box-shadow:none; transform: translateY(-1px);}
+.rdbx:hover h2{transform: translateY(-10px);}
 .rdbx h2{
 	text-transform:uppercase;
 	color:#FFF;
 	font-weight:bold;
 	text-align:left;
+	transition: 0.4s ease;
 }
+.rdbx a.dscvrbttnnew{transition: 0.4s ease;}
+.rdbx:hover a.dscvrbttnnew{transform: translateY(-10px);}
 .sltnsctn h1{text-align:left; font-size:80px; color:#0039a3;}
 .sector-slider{position:relative;padding-bottom:55px;}
 .swiper{ overflow:visible;}
@@ -794,7 +801,9 @@ a:focus, a:hover {
     left: 30px;
     bottom: 50px;
     z-index:2;
+	transition: 0.4s ease;
 }
+.card-image:hover .card-content{transform: translateY(-10px);}
 .card-content h3{
     color:#fff;
     font-size:30px;
@@ -1456,7 +1465,9 @@ RIGHT ENGINEER IMAGE
     bottom:50px;
 	z-index: 1;
 	padding:35px;
+	transition: 0.4s ease;
 }
+.rangwrpr .cpbltsbx:hover .textbx{transform:translateY(-10px)}
 .rangwrpr .cpbltsbx .textbx h2{
 	color:#FFF;
 	text-align:left;
@@ -1477,24 +1488,29 @@ RIGHT ENGINEER IMAGE
 .trstdsctn{margin:0 auto; justify-content: center; gap:95px; overflow: visible !important;  height: auto !important;}
 .trstdsctn h1{font-size:65px; text-align:center; color:#0041bb;}
 .trstdsctn img{margin:0 auto; width:auto;}
-.prtnrimgbx{justify-content: flex-start; left:0;}
+.prtnrimgbx{
+	justify-content:flex-start; 
+	left:0;
+	opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.prtnrimgbx.in-view {
+    opacity: 1;
+    transform: translateY(0px);
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0.8s; /* starts floating after slide-in completes */
+}
+@keyframes floatUpDown {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
 /* ── SECTOR SLIDER ── */
-.sector-slider {
-    overflow: visible !important;
-    height: auto !important;
-}
-
+.sector-slider {  overflow: visible !important;  height: auto !important;}
 /* ── SWIPER ── */
-.mySectorSliderone {
-    overflow: visible !important;
-    height: auto !important;
-}
-
-.mySectorSliderone .swiper-wrapper {
-    height: auto !important;
-    align-items: flex-start !important;
-}
-
+.mySectorSliderone { overflow: visible !important; height: auto !important;}
+.mySectorSliderone .swiper-wrapper { height: auto !important; align-items: flex-start !important;}
 /* ── EACH SLIDE ── */
 .mySectorSliderone .swiper-slide {
     height: auto !important;
@@ -1503,7 +1519,6 @@ RIGHT ENGINEER IMAGE
     visibility: visible !important;
     opacity: 1 !important;
 }
-
 /* ── GOLD DIVIDER ── */
 .trustd-divider {
     width: 55px;
@@ -1513,7 +1528,6 @@ RIGHT ENGINEER IMAGE
     display: block !important;
     visibility: visible !important;
 }
-
 /* ── SLIDE H3 ── */
 .mySectorSliderone .swiper-slide h3 {
     display: block !important;
@@ -1534,7 +1548,6 @@ RIGHT ENGINEER IMAGE
     opacity: 1 !important;
 	width:auto;
 }
-
 /* ── PAGINATION DOTS ── */
 .mySectorSliderone-pagination {
     display: flex !important;
@@ -1546,7 +1559,6 @@ RIGHT ENGINEER IMAGE
     left: auto !important;
     width: 100% !important;
 }
-
 .mySectorSliderone-pagination .swiper-pagination-bullet {
     width: 13px !important;
     height: 13px !important;
@@ -1557,15 +1569,8 @@ RIGHT ENGINEER IMAGE
     transition: background 0.3s ease, transform 0.3s ease !important;
     display: inline-block !important;
 }
-
-.mySectorSliderone-pagination .swiper-pagination-bullet-active {
-    background: #dc9b15 !important;
-    transform: scale(1.2) !important;
-}
-
-.mySectorSliderone-pagination .swiper-pagination-bullet:hover {
-    background: #0039a3 !important;
-}
+.mySectorSliderone-pagination .swiper-pagination-bullet-active { background: #dc9b15 !important; transform: scale(1.2) !important;}
+.mySectorSliderone-pagination .swiper-pagination-bullet:hover { background: #0039a3 !important;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){
