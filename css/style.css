@@ -681,8 +681,8 @@ a:focus, a:hover {
 		z-index: 1;
     }
     .powerbx img.img-responsive {
-      width:auto;
-      height: auto;
+      width:100px;
+      height:100px;
       object-fit: contain;
       flex-shrink: 0;
     }
