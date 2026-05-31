@@ -226,49 +226,6 @@ a:focus, a:hover {
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li a:hover{color:#FFF;}
 #myNavbar ul.navbar-nav li.dropdown ul.dropdown-menu li a.hvr-sweep-to-right:before{background:#890000; color:#FFF;}
 #myNavbar ul.navbar-nav li.dropdown ul.dropdown-menu li a.hvr-sweep-to-left:before{background:#fde216;}
-.bannersctn {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background: url(../images/banner.jpg) no-repeat center center / cover;
-}
-.hero-section {
-    height: 100vh;
-    padding-top: 0;
-    position: relative;
-    text-align: center;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    color: #FFF;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-.hero-content {
-    position: absolute;
-    z-index: 2;
-    max-width: 100%;
-    top:80px;
-    height: auto;
-	padding:0 7%;
-}
-.hero-content img{width:auto; max-width:30%; margin-bottom:30px;}
-.hero-content h1 {color: #003565; font-size:58px; text-align: left; margin:0;}
-.hero-content h2 {color: #003565; font-size:50px; text-align: left; margin:0;}
-.hero-links{
-	width:100%;
-	padding:20px 0;
-    position: absolute;
-    bottom:20px;
-	left:0;
-    text-align: left;
-	background:url(../images/footer-bg.jpg) no-repeat left top;
-	background-size:cover;
-}
-.hero-links-bx{padding:0 7%;}
-.hero-links-bx p{color:#FFF; font-weight:700; margin-bottom:0;}
-.hero-links-bx p a{color:#FFF; outline:none;}
 .sidenav{margin-bottom:30px; background:#f6f5f1; padding:12px 0; border-radius: 6px;}
 .sidenav h1.cntxt{margin: 15px 20px;}
 .sidenav ul{padding-inline-start:0;}
@@ -502,7 +459,7 @@ a:focus, a:hover {
     min-height:100vh;
 }
 .innrbnnr .evntbxbnnr{min-height:80vh;}
-.bnnrsctn .evntbxbnnr .imgbx{ width: 100%; height: 100%;}
+.innrbnnr .evntbxbnnr .imgbx img{height:auto !important;}
 .bnnrsctn .evntbxbnnr .bannrbx {
 	position: relative;
     top: auto;            /* remove the fixed top:200px */
@@ -520,7 +477,7 @@ a:focus, a:hover {
 .bnnrsctn .evntbxbnnr .imgbx img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:fill;
 }
 .bnnrsctn .evntbxbnnr .container { position: relative; z-index: 9;}
 .bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt a.dscvrbttnnew{margin:20px 0 65px;}
@@ -575,7 +532,7 @@ a:focus, a:hover {
 /* Thumbnails sit on top of the banner, pinned to the bottom */
 .thumb-overlay {
     position: absolute;
-    bottom:20px;
+    bottom:4vw;
     left: 0;
     right: 0;
     z-index: 20;	
@@ -600,7 +557,7 @@ a:focus, a:hover {
     left: 0;
     right: 0;
     color: #fff;
-    font-size: 20px;
+   font-size: 1.2vw;
     text-align: left;
     padding: 20px 25px;
     line-height: 24px;
