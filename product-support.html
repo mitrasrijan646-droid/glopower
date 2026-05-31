@@ -461,16 +461,16 @@
                         	<h1>Power. <br />Performance. <br />Progress.</h1>
                             <div class="ftrtxtbx">
                             	<p><strong>Copyright © 2026 GLOPOWER FZ LLC.</strong></p>
-                                <p><a href="#">PRIVACY POLICY</a>  <a href="#">Who Made This Site</a></p>
+                                <p><a href="#">PRIVACY POLICY</a>  <a href="https://ermaconsulting.in/" target="_blank">Who Made This Site</a></p>
                             </div>
                         </div>
                         <div class="footerwrprbx">
                         	<h3>CORPORATE OFFICE</h3>
                             <h4>GloPower FZ LLC</h4>
                             <p>FDRK1086, Compass Building,<br />Al Shohada Road, AL Hamra Industrial<br />Zone-FZ, Ras Al Khaimah,<br />United Arab Emirates</p>
-                            <p class="phntxt">Phone: +971 582413303</p>
-                            <p>Email: contact@glopower.ae</p>
-                             <p class="cntrytxt">Gabon   •   Dubai   •   India</p>
+                            <p class="phntxt">Phone:<a href="tel:+971582413303"> +971 582413303</a></p>
+                            <p>Email: <a href="mailto:contact@glopower.ae">contact@glopower.ae</a></p>
+                            <p class="cntrytxt">Gabon   •   Dubai   •   India</p>
                         </div>
                     </div>
                     
@@ -643,6 +643,17 @@ gsap.to(".logo-parallax", {
     scrub: 1.1
   }
 });
+</script>
+
+<script type="text/javascript">
+	window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}, { passive: true });
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
