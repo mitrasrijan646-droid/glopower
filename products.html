@@ -45,10 +45,57 @@
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html" class="hvr-fade">home</a></li>
-                            <li><a href="products.html" class="hvr-fade">products</a></li>
-                            <li><a href="#" class="hvr-fade">solutions</a></li>
+                            <li>
+                                <div class="nav-dropdown">
+                                    <a href="products.html" class="dropdown-toggle">
+                                        products
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/>
+                                        </svg>
+                                    </a>
+                                    <div class="custom-dropdown">
+                                        
+                                        <div class="dropdown-grid">
+                                            <a href="#" class="dropdown-item">
+                                                <img src="images/product/range/image-one.jpg" class="img-responsive" alt=""/>
+                                                <div>
+                                                    <h1>International Market: Diesel</h1>
+                                                    <h2>Diesel <br/>Generating Sets</h2>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <img src="images/product/range/image-two.jpg" class="img-responsive" alt=""/>
+                                                <div>
+                                                    <h1>International Market: Gas</h1>
+                                                    <h2>Gas <br/>Generating Sets</h2>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="dropdown-grid">
+                                            <a href="#" class="dropdown-item">
+                                                <img src="images/product/range/image-three.jpg" class="img-responsive" alt=""/>
+                                                <div>
+                                                    <h1>Electrical Equipment</h1>
+                                                    <h2>MV / LV / C&R / <br />SCADA Panels</h2>
+                                                </div>
+                                            </a>
+                                            
+                                            <a href="#" class="dropdown-item">
+                                                <img src="images/product/range/image-four.jpg" class="img-responsive" alt=""/>
+                                                <div>
+                                                    <h1> Electrical EPC Solution</h1>
+                                                    <h2>Transformers <br/>& Cables</h2>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
                             <li><a href="product-support.html" class="hvr-fade">product support</a></li>
                             <li><a href="reference-projects.html" class="hvr-fade">reference projects</a></li>
+                            <li><a href="#" class="hvr-fade">solutions</a></li>
                             <li><a href="#" class="hvr-fade">about</a></li>
                             <li><a href="#" class="hvr-fade">contact</a></li>
                         </ul>
@@ -783,10 +830,13 @@ function closeNav() {
         currentPage = 'index';
     }
 
-    document.querySelectorAll('.nav.navbar-nav li a').forEach(function (link) {
-        var linkPage = link.getAttribute('href').split('/').pop().replace('.html', '');
+    // only target the top level nav links, not dropdown items
+    document.querySelectorAll('.nav.navbar-nav > li > a, .nav.navbar-nav > li > .nav-dropdown > a').forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (!href || href === '#') return; // skip empty links
+        var linkPage = href.split('/').pop().replace('.html', '');
         if (linkPage === currentPage) {
-            link.parentElement.classList.add('active');
+            link.closest('li').classList.add('active');
         }
     });
 });
