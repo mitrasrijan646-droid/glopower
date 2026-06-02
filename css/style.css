@@ -189,15 +189,15 @@ a:focus, a:hover {
 .menusctninnr .menubox h4 a:hover{color:#890000 !important;}
 .navbar-header img{	width:100%; margin: 20px auto 0;}
 .scrolled{
-	background-color: rgba(255, 255, 255, .35);
+	background-color: rgba(255, 255, 255, .75);
     transition: 0.5s;
     width: 100%;
     padding:0;
 	border-bottom:1px solid #bcbcbc;
-	backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);   /* Safari */
+	backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);   /* Safari */
 }
-.scrolled #myNavbar ul.navbar-nav li a { color:#ffc100 !important;}
+.scrolled #myNavbar ul.navbar-nav li a { color:#0039a3 !important;}
 .scrolled #myNavbar ul.navbar-nav li a:hover{color:#FFF !important; background:#FFF;}
 .scrolled #myNavbar ul li.dropdown ul.dropdown-menu li a{color:#1a315c;}
 .navbar #myNavbar ul.navbar-nav{
@@ -235,7 +235,7 @@ a:focus, a:hover {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 40px;
+    height:auto;
     background: transparent;
 }
 #myNavbar .custom-dropdown {
@@ -311,7 +311,7 @@ a:focus, a:hover {
     height: 10px;
     fill: #fff;
     position: relative;
-    top: 2px;
+    top:0;
     transition: transform 0.3s ease;
 }
 #myNavbar .nav-dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
@@ -593,7 +593,7 @@ a:focus, a:hover {
 	padding:8px 0;
 	margin-bottom:0;
 }
-.bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt ol.breadcrumb li{color:#FFF; text-transform:uppercase; font-size:12px;}
+.bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt ol.breadcrumb li{color:#FFF; text-transform:uppercase; font-size:12px; letter-spacing:1px;}
 .bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt ol.breadcrumb li a{color:#FFF;}
 .owl-main .evntbxbnnr { position: relative;}
 .owl-main .bannrbx {
@@ -645,10 +645,10 @@ a:focus, a:hover {
     left: 0;
     right: 0;
     color: #fff;
-   font-size: 1.6vw;
+   font-size:18px;
     text-align: left;
     padding: 20px 25px;
-    line-height: 24px;
+    line-height:25px;
 }
 .services{
 	padding: 100px 6vw;
@@ -1635,6 +1635,21 @@ RIGHT ENGINEER IMAGE
 }
 .mySectorSliderone-pagination .swiper-pagination-bullet-active { background: #dc9b15 !important; transform: scale(1.2) !important;}
 .mySectorSliderone-pagination .swiper-pagination-bullet:hover { background: #0039a3 !important;}
+.gasgrrnbx{
+	background:#0f4003;
+	padding:33px;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.gasgrrnbx h3{
+	color: #5dba47;
+    font-size: 30px;
+    font-family: "akzidenz-grotesk-next-extend";
+    text-align: left;
+}
+.gasgrrnbx p{font-family: "akzidenz-grotesk-next-extend"; color:#FFF; font-size:20px;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){
