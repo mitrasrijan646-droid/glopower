@@ -216,7 +216,7 @@ a:focus, a:hover {
 }
 .navbar #myNavbar ul.navbar-nav li.active a{background:#ffc100; color:#FFF;}
 .scrolled #myNavbar ul.navbar-nav li.active a{background:#0039a3; color:#FFF !important;}
-.navbar #myNavbar ul.navbar-nav li:hover a{background-color:#ffc100; color:#FFF !important;}
+.navbar #myNavbar ul.navbar-nav li:hover a{background-color:#ffc100; color:#FFF;}
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li{color:#1a315c;}
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li a{color:#282828;}
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li a:hover{color:#FFF;}
@@ -293,6 +293,7 @@ a:focus, a:hover {
 	font-size:14px;
 	font-family: "akzidenz-grotesk-next-extend",sans-serif;
 }
+#myNavbar .dropdown-grid .grid-nav ul li a:hover{color:#ffc100 !important;}
 #myNavbar .dropdown-grid:hover .grid-nav ul li a{
 	background-color:transparent !important; 
 	color:#000 !important; 
@@ -309,7 +310,6 @@ a:focus, a:hover {
     transition: transform 0.3s ease;
 }
 #myNavbar .nav-dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
-.navbar #myNavbar ul.navbar-nav li:hover a
 .sidenav{margin-bottom:30px; background:#f6f5f1; padding:12px 0; border-radius: 6px;}
 .sidenav h1.cntxt{margin: 15px 20px;}
 .sidenav ul{padding-inline-start:0;}
