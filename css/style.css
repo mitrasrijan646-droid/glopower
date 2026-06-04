@@ -233,7 +233,7 @@ a:focus, a:hover {
     background: transparent;
 }
 #myNavbar .custom-dropdown {
-    display:block;
+    display:none;
     position: absolute;
     top: calc(100% + 1px);
     left:35px;
