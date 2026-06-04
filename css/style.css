@@ -168,22 +168,16 @@ a:focus, a:hover {
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#b7944c;}
 }
 /* NEW CSS STARTS HERE */
+.container {
+  max-width: 1270px !important;
+  width: 96% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .sectnbx{padding:80px 0;}
 .bordradius{border-radius:20px;}
-.slider-opacity {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 17;
-    opacity: 0;
-    visibility: hidden;
-    transition: background 0.3s ease, color 0.3s ease;
-    -webkit-transition: background 0.3s ease, color 0.3s ease;
-    -moz-transition: background 0.3s ease, color 0.3s ease;
-}
 .menusctn{padding:30px 0;}
 .menusctninnr .menubox h4 a{color:#000 !important;}
 .menusctninnr .menubox h4 a:hover{color:#890000 !important;}
@@ -198,7 +192,7 @@ a:focus, a:hover {
     -webkit-backdrop-filter: blur(20px);   /* Safari */
 }
 .scrolled #myNavbar ul.navbar-nav li a { color:#0039a3 !important;}
-.scrolled #myNavbar ul.navbar-nav li a:hover{color:#FFF !important; background:#FFF;}
+/* .scrolled #myNavbar ul.navbar-nav li a:hover{color:#FFF !important; background:#FFF;} */
 .scrolled #myNavbar ul li.dropdown ul.dropdown-menu li a{color:#1a315c;}
 .navbar #myNavbar ul.navbar-nav{
 	margin:0 auto;
@@ -239,82 +233,83 @@ a:focus, a:hover {
     background: transparent;
 }
 #myNavbar .custom-dropdown {
-    display:none;
+    display:block;
     position: absolute;
     top: calc(100% + 1px);
-    left:60px;
+    left:35px;
     transform: translateX(-50%);
-    background: #dedcdd;
-    border-radius:0;
-    padding: 35px 35px;
-    min-width: 1100px;
+    background: #FFF;
+    min-width: 1270px;
     z-index: 999;
     box-shadow: 0 10px 10px rgba(0,0,0,0.35);
     animation: dropFade 0.25s ease;
-	-webkit-border-bottom-right-radius: 20px;
-	-webkit-border-bottom-left-radius: 20px;
-	-moz-border-radius-bottomright: 20px;
-	-moz-border-radius-bottomleft: 20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
 }
 @keyframes dropFade {
     from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
     to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-#myNavbar .nav-dropdown:hover .custom-dropdown { display: block; }
-#myNavbar .dropdown-label { text-align: left; letter-spacing: 1px; }
+#myNavbar .nav-dropdown:hover .custom-dropdown {display: block; }
 #myNavbar .dropdown-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:15px;
-    margin-bottom:15px;
+    grid-template-columns:repeat(5,1fr);
+    gap:30px;
+	cursor:pointer;
+	padding: 35px 28px;
 }
-#myNavbar .dropdown-grid:last-child { margin-bottom: 0; }
-#myNavbar .custom-dropdown .dropdown-item {
-    display: flex !important;
+#myNavbar .dropdown-grid .grid-nav{
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap:18px;
-    background:rgba(255,255,255,.88) !important;
-    border-radius:0;
-    padding:20px 24px !important;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.5s ease;
+    gap:25px;
 }
-#myNavbar .dropdown-item:hover { background:rgba(245, 245, 245, 0.7) !important; transform: translateY(-5px); }
-#myNavbar .dropdown-item img {
-    width:100px;
-    height:100px;
-    border-radius: 12px;
-    object-fit: cover;
-    flex-shrink: 0;
+#myNavbar .dropdown-grid .grid-nav h1{font-family: "akzidenz-grotesk-next-extend",sans-serif;  font-weight:400; margin:0;}
+#myNavbar .dropdown-grid .grid-nav h4{
+	margin:0; 
+	font-family:"akzidenz-grotesk-next-pro";
+	color:#0039a3; 
+	font-weight:bold;
+	font-size:18px;
 }
-#myNavbar .dropdown-item h1 {
-    font-size:30px;
-    font-weight: 500;
-    color: #f2ae2c;
-    margin: 0;
-	text-align:left;
-	line-height:27px;
-	margin-bottom:10px;
+#myNavbar .dropdown-grid .grid-nav p{font-family: "akzidenz-grotesk-next-extend",sans-serif; font-weight:400;}
+#myNavbar .dropdown-grid .grid-nav ul{padding-inline-start:0; width: 100%;}
+#myNavbar .dropdown-grid .grid-nav ul li{
+	list-style-type:none; 
+	margin:0;
+	border-bottom:1px solid #fdd694;
+	padding-bottom: 7px;
+    padding-top: 7px;
 }
-#myNavbar .dropdown-item h2{
-	color:#0039a3;
-	line-height:24px;
-	text-align:left;
-	font-size:20px;
-	font-weight:700;
-	font-family: "akzidenz-grotesk-next-pro",sans-serif;
+#myNavbar .dropdown-grid .grid-nav ul li:last-child{border-bottom:none;}
+#myNavbar .dropdown-grid.grid-nav ul li{background-color:transparent !important; color:#000 !important;}
+#myNavbar .dropdown-grid.grid-nav ul li:hover{background-color:transparent !important; color:#000 !important;}
+#myNavbar .dropdown-grid .grid-nav ul li a{
+	color: #000 !important;
+    background-color: transparent !important;
+    line-height: 22px;
+	padding:0;
+	font-weight:300;
+	font-size:14px;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+}
+#myNavbar .dropdown-grid:hover .grid-nav ul li a{
+	background-color:transparent !important; 
+	color:#000 !important; 
+	font-size:14px;
+	font-weight:300;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif;
 }
 #myNavbar .dropdown-toggle svg {
-    margin-left: 1px;
+    margin-left:5px;
     height: 10px;
-    fill: #fff;
+    fill: #FFF;
     position: relative;
     top:0;
     transition: transform 0.3s ease;
 }
 #myNavbar .nav-dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
+.navbar #myNavbar ul.navbar-nav li:hover a
 .sidenav{margin-bottom:30px; background:#f6f5f1; padding:12px 0; border-radius: 6px;}
 .sidenav h1.cntxt{margin: 15px 20px;}
 .sidenav ul{padding-inline-start:0;}
@@ -1653,6 +1648,7 @@ RIGHT ENGINEER IMAGE
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){
+	
 }
 @media screen and (max-width:1199px){}
 @media screen and (max-width:1080px){
