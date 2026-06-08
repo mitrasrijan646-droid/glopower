@@ -177,7 +177,7 @@ a:focus, a:hover {
   padding-right: 15px;
 }
 .sectnbx{padding:80px 0;}
-.bordradius{border-radius:20px;}
+.bordradius{border-radius:15px;}
 .menusctn{padding:30px 0;}
 .menusctninnr .menubox h4 a{color:#000 !important;}
 .menusctninnr .menubox h4 a:hover{color:#890000 !important;}
@@ -202,8 +202,9 @@ a:focus, a:hover {
 	padding:0 0;
 }
 .navbar #myNavbar ul.navbar-nav li{margin:0 5px;}
+.navbar #myNavbar ul.navbar-nav li:last-child{margin:0 0 0 10px;}
 .navbar #myNavbar ul.navbar-nav li a{
-    padding:0 10px;
+    padding:0 15px;
     font-weight: 500;
 	color:#FFF;
 	font-size:17px;
@@ -235,10 +236,11 @@ a:focus, a:hover {
     display:none;
     position: absolute;
     top: calc(100% + 1px);
-    left:35px;
+    left:66px;
     transform: translateX(-50%);
     background: #FFF;
-    min-width: 1270px;
+    min-width: 1300px;
+	width:100%;
     z-index: 999;
     box-shadow: 0 10px 10px rgba(0,0,0,0.35);
     animation: dropFade 0.25s ease;
@@ -251,7 +253,7 @@ a:focus, a:hover {
 #myNavbar .dropdown-grid {
     display: grid;
     grid-template-columns:repeat(5,1fr);
-    gap:30px;
+    gap:45px;
 	cursor:pointer;
 	padding: 35px 28px;
 }
@@ -284,7 +286,7 @@ a:focus, a:hover {
 	padding-bottom: 7px;
     padding-top: 7px;
 }
-#myNavbar .dropdown-grid .grid-nav ul li:last-child{border-bottom:none;}
+#myNavbar .dropdown-grid .grid-nav ul li:last-child{border-bottom:none; margin:0;}
 #myNavbar .dropdown-grid.grid-nav ul li{background-color:transparent !important; color:#000 !important;}
 #myNavbar .dropdown-grid.grid-nav ul li:hover{background-color:transparent !important; color:#000 !important;}
 #myNavbar .dropdown-grid .grid-nav ul li a{
@@ -780,14 +782,14 @@ a:focus, a:hover {
 }
 .cpbltsbx{
 	background:#dfdfdf; 
-	border-radius:20px; 
+	border-radius:15px; 
 	padding-bottom:15px; 
 	cursor:pointer; 
 	transition: background 0.5s;
 	transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .cpbltsbx img{
-	border-radius:20px;
+	border-radius:15px;
 	margin:0 auto 15px;
 	display:table;
 	width:100%;
@@ -946,7 +948,7 @@ a:focus, a:hover {
 .project-card{
     position:relative;
     overflow:hidden;
-    border-radius:20px;
+    border-radius:15px;
     min-height:400px;
     flex:1;
     cursor:pointer;
@@ -1023,7 +1025,7 @@ a:focus, a:hover {
 .view-projects{
 	cursor:pointer;
     background:#ef1d24;
-    border-radius:20px;
+    border-radius:15px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -1197,7 +1199,7 @@ CARD DESIGN
 ========================*/
 .support-card{
     background:#003fc7;
-    border-radius:8px;
+    border-radius:15px;
     text-align:center;
     padding:30px 20px;
     transition:0.4s ease;
@@ -1424,12 +1426,12 @@ RIGHT ENGINEER IMAGE
 /* RIGHT */
 .project-preview-wrapper{
 	background:#ffc000;
-	-webkit-border-top-right-radius: 20px;
-	-webkit-border-bottom-right-radius: 20px;
-	-moz-border-radius-topright: 20px;
-	-moz-border-radius-bottomright: 20px;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
+	-webkit-border-top-right-radius:15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 /* .project-preview{overflow:hidden;} */
 .preview-image{ position:relative;}
@@ -1438,9 +1440,9 @@ RIGHT ENGINEER IMAGE
     height:100%;
     object-fit:cover;
     display:block;
-	-webkit-border-top-right-radius: 20px;
-	-moz-border-radius-topright: 20px;
-	border-top-right-radius: 20px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-right-radius: 15px;
 }
 .preview-overlay{
     position:absolute;
@@ -1788,7 +1790,7 @@ RIGHT ENGINEER IMAGE
 	-moz-border-radius-topright: 20px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
-	padding:0 0 90px;
+	padding:0 0 120px;
 }
 .ftrwrpprhdbx{}
 .ftrwrpprhdbx h1{ font-weight:200; font-size:72px; text-align:center; color:#8a9d43;}
@@ -1808,19 +1810,50 @@ RIGHT ENGINEER IMAGE
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap:25px;
-	padding:25px;
-	border-radius:20px;
-	box-shadow: 0 1px 9px rgba(0, 0, 0, 0.35);
+    gap:50px;
+	padding:45px;
+	border-radius:15px;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+	transition: 0.8s ease;
+	cursor:pointer;
 }
-.ftrwrpprbx p{text-align:center; font-weight:200; font-size:18px; line-height:22px;}
+.ftrwrpprbx:first-child{box-shadow:none; padding:0;}
+.ftrwrpprbx:first-child h1{
+	text-align:left;
+	margin:0;
+	font-size:70px;
+	font-family: "akzidenz-grotesk-next",sans-serif;
+	font-weight:200;
+}
+.ftrwrpprbx img{margin:0 auto; transition: 0.8s ease;}
+.ftrwrpprbx p:before{
+	content:'';
+    position: absolute;
+    background: #fba819;
+    width: 50px;
+    height: 6px;
+    top: -25px;
+    left: 42%;
+    border-radius:6px;
+}
+.ftrwrpprbx p{
+	text-align:center; 
+	font-weight:200; 
+	font-size:18px; 
+	line-height:22px; 
+	position:relative;
+	transition: 0.8s ease;
+}
+.ftrwrpprbx:hover{transform: translateY(-5px);}
+.ftrwrpprbx:hover img{transform: translateY(-2px);}
+.ftrwrpprbx:hover p{transform: translateY(-3px);}
 /* Section */
 .engine-tabs-section { padding: 0 0 100px 0;}
 /* Tab Buttons Wrapper */
 .engine-tab-wrapper {
     display: flex;
     gap: 0;
-    margin-bottom:160px;
+    margin-bottom:60px;
 }
 .engine-tab-wrapper .lefttab{
 	-webkit-border-top-left-radius:20px;
@@ -1843,9 +1876,13 @@ RIGHT ENGINEER IMAGE
     cursor: pointer;
     transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
     padding:50px;
+	gap:30px;
 }
 .engine-tab-btn:hover { transform: translateY(-3px);}
-.engine-tab-btn.active { background: #FFF;}
+.engine-tab-btn.active {background: #FFF;}
+.engine-tab-wrapper .righttab.active .tab-logo{
+	filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(85%) contrast(105%) !important;
+}
 /* Logo inside tab */
 .engine-tab-btn .tab-logo { transition: filter 0.4s ease;}
 .engine-tab-btn.active .tab-logo { /* makes logo white on dark bg */}
@@ -1856,7 +1893,8 @@ RIGHT ENGINEER IMAGE
     font-size: 18px;
     transition: color 0.4s ease, transform 0.4s ease;
 }
-.engine-tab-btn.active .tab-arrow { color: #FFF; transform: rotate(180deg);}
+.engine-tab-btn .tab-arrow svg{ fill:#FFF; height:30px;}
+.engine-tab-btn.active .tab-arrow svg { fill:#0f4003; height:30px; transform: rotate(180deg);}
 /* Tab Content */
 .engine-tab-content {
 	padding:0 67px;
@@ -1910,9 +1948,9 @@ RIGHT ENGINEER IMAGE
     padding: 15px 15px;
     border-bottom: 1px solid #e8e8e8;
     color: #000;
-	letter-spacing:.9px;
     transition: background 0.3s ease;
-    font-weight: 400;
+	font-family:"akzidenz-grotesk-next-pro";
+    font-weight:200;
 }
 .engine-table tbody tr.alt td { background: #f8f8ce;}
 .engine-table tbody tr:hover td { background: #f8f8ce;}
