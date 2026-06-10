@@ -2047,6 +2047,18 @@ RIGHT ENGINEER IMAGE
     transition: color 0.4s ease;
 }
 .cap-card:hover h4 {color:#FFF; font-family: "akzidenz-grotesk-next-extend",sans-serif;}
+.contactwrppr{background:#FFF;}
+.contactwrppr h1{color:#0041bb;}
+.contactwrppr p.required-field{color:#0041bb; font-weight:bold;}
+.contactwrppr .form-group label{color:#0041bb;}
+.contactwrppr .form-group .chips span{border: 1px solid rgba(0, 65, 187, 0.7); color:#000;}
+.contactwrppr .form-group .chips:hover span{background:#FFF;}
+.contactwrppr .contact-title{color:#0041bb;}
+.contactwrppr .form-grid .input-box label{color:#0041bb;}
+.contactwrppr .form-grid .input-box input, .input-box textarea{ background:#e1e1e1;}
+.contactwrppr .textarea-box label{color:#0041bb;}
+.contactwrppr p.privacy-text{color:#000;}
+.contactwrppr p.privacy-text a{color:#000;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
