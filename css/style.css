@@ -168,6 +168,8 @@ a:focus, a:hover {
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#b7944c;}
 }
 /* NEW CSS STARTS HERE */
+.greenbx{background: #0f4003;}
+.bluebx{background:#0041bb;}
 .container {
   max-width: 1270px !important;
   width: 96% !important;
@@ -1643,7 +1645,6 @@ RIGHT ENGINEER IMAGE
 }
 .mySectorSliderone-pagination .swiper-pagination-bullet-active { background: #dc9b15 !important; transform: scale(1.2) !important;}
 .mySectorSliderone-pagination .swiper-pagination-bullet:hover { background: #0039a3 !important;}
-.greenbx{background: #0f4003;}
 .gasgrrnbx{
     padding: 33px;
     display: flex;
@@ -1962,6 +1963,90 @@ RIGHT ENGINEER IMAGE
 	font-weight:700;
 	margin-bottom:0;
 }
+.bluebx h3{color:#FFF;}
+.prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; }
+.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(2, 1fr); gap:30px;}
+.prdctsprtsctnbx h1.blutxt{color:#0041bb;}
+.exprtsctn{background:#bddcff;}
+/* Left Content */
+.capabilities-content {
+	padding:60px 70px 60px 0;
+	display: flex;
+	gap:59px;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.capabilities-content h1{
+	font-weight:200; 
+	color: #0041bb; 
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
+	text-align:left;
+}
+.capabilities-content p {
+	max-width:450px;
+    font-size:17px;
+	line-height:25px;
+    color: #000;
+    margin-bottom: 15px;
+}
+/* Top Grid - 2 columns */
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+/* Bottom Grid - 4 columns */
+.capabilities-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+/* Card */
+.cap-card {
+    background: #0041bb;
+    border-radius: 12px;
+    padding:40px;
+    text-align: center;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+.cap-card:hover {
+    transform:translateY(-6px);
+    background:#0039a3;
+    box-shadow: 0 12px 30px rgba(26, 58, 143, 0.35);
+}
+/* Icon Circle */
+.cap-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+}
+.cap-card:hover .cap-icon {transform: scale(1.08) rotate(5deg);}
+/* Gold Divider */
+.cap-divider {
+    width:50px;
+    height:6px;
+    background: #e8a820;
+    margin:25px auto;
+    border-radius:6px;
+    transition: width 0.4s ease;
+}
+.cap-card:hover .cap-divider{width:70px;}
+/* Card Text */
+.cap-card h4 {
+	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+    color: #FFF;
+    font-size: 18px;
+    font-weight:200;
+    line-height:22px;
+    margin: 0;
+    transition: color 0.4s ease;
+}
+.cap-card:hover h4 {color:#FFF; font-family: "akzidenz-grotesk-next-extend",sans-serif;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
