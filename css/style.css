@@ -551,7 +551,7 @@ a:focus, a:hover {
     min-height:100vh;
 }
 .innrbnnr .evntbxbnnr{
-	min-height:90vh;
+	min-height:80vh;
 	flex-direction: column;
     justify-content: center;
 	align-items: flex-start;
@@ -1802,7 +1802,7 @@ RIGHT ENGINEER IMAGE
     grid-template-columns: repeat(3, 1fr);
     gap:35px;
     align-items: stretch;
-    padding:0 70px 0;
+    padding:0;
     align-content: space-between;
     justify-items: stretch;
 }
@@ -1816,7 +1816,6 @@ RIGHT ENGINEER IMAGE
 	border-radius:15px;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 	transition: 0.8s ease;
-	cursor:pointer;
 }
 .ftrwrpprbx:first-child{box-shadow:none; padding:0;}
 .ftrwrpprbx:first-child h1{
@@ -1849,13 +1848,9 @@ RIGHT ENGINEER IMAGE
 .ftrwrpprbx:hover img{transform: translateY(-2px);}
 .ftrwrpprbx:hover p{transform: translateY(-3px);}
 /* Section */
-.engine-tabs-section { padding: 0 0 100px 0;}
+.engine-tabs-section { padding:0;}
 /* Tab Buttons Wrapper */
-.engine-tab-wrapper {
-    display: flex;
-    gap: 0;
-    margin-bottom:60px;
-}
+.engine-tab-wrapper {  display: flex; gap: 0;}
 .engine-tab-wrapper .lefttab{
 	-webkit-border-top-left-radius:20px;
 	-moz-border-radius-topleft:20px;
@@ -1876,12 +1871,12 @@ RIGHT ENGINEER IMAGE
     background: #0f4003;
     cursor: pointer;
     transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
-    padding:50px;
+    padding:50px 25px;
 	gap:30px;
 }
 .engine-tab-btn:hover { transform: translateY(-3px);}
 .engine-tab-btn.active {background: #FFF;}
-.engine-tab-wrapper .righttab.active .tab-logo{
+.engine-tab-wrapper.active .tab-logo{
 	filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(85%) contrast(105%) !important;
 }
 /* Logo inside tab */
@@ -1915,6 +1910,7 @@ RIGHT ENGINEER IMAGE
         transform: translateY(0);
     }
 }
+.blutxt{color:#0048cf !important; text-align:left;}
 /* Heading */
 .engine-tab-content h2 {
     font-size: 50px;
@@ -1962,6 +1958,15 @@ RIGHT ENGINEER IMAGE
     color: #000;
 	font-weight:700;
 	margin-bottom:0;
+}
+.engine-table.diesel-table tr:first-child th{background:#a5ddf8;}
+.engine-table.diesel-table thead tr.subhead th {background:#a5ddf8;}
+.engine-table.diesel-table tbody tr.alt td { background: #ddf0fc;}
+.engine-table.diesel-table tbody tr:hover td { background: #ddf0fc;}
+.engine-tab-btn.diesel-tab-btn{background:#0048cf;}
+.engine-tab-btn.diesel-tab-btn.active {background: #FFF;}
+.engine-tab-btn.diesel-tab-btn.active .tab-logo{
+	filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(1500%) hue-rotate(210deg) brightness(95%) contrast(105%) !important;
 }
 .bluebx h3{color:#FFF;}
 .prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; }
@@ -2059,6 +2064,24 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .textarea-box label{color:#0041bb;}
 .contactwrppr p.privacy-text{color:#000;}
 .contactwrppr p.privacy-text a{color:#000;}
+.blackbxsctn{background:#000; padding:120px 0;}
+.parallax-section {
+    position: relative;
+    background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
+    background-position:left center;
+    background-repeat: no-repeat;
+	background-size:contain;
+    min-height:auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+/* Dark overlay on top of image */
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
