@@ -1235,21 +1235,23 @@ CARD DESIGN
 /*========================
 RIGHT ENGINEER IMAGE
 ========================*/
-.prdctimgbx{
-    position:absolute;
-    right:0;
-    bottom:0;
-    height:100%;
-    display:flex;
-    align-items:flex-end;
-    justify-content:flex-end;
+.prdctimgbx {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-.prdctimgbx img{
-    height:100%;
-    width:auto;
-    max-width:none;
-    object-fit:contain;
-    display:block;
+.prdctimgbx img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+  will-change: transform;
+  transition: transform 0.1s linear;  /* ADD this — smooths the movement */
 }
 .cnnctstnbx{background:#0041bb;}
 .cnnctstnbx h1{font-size:65px; text-align:left; color:#FFF; font-family:"akzidenz-grotesk-next-pro"; font-weight:400;}
@@ -1689,7 +1691,6 @@ RIGHT ENGINEER IMAGE
 	margin:120px 0;
 }
 .pwrsltnwrprbx{
-	cursor:pointer;
 	position:relative;
 	background:#f3f0f0; 
 	padding:30px 70px 30px 50px; 
@@ -1721,11 +1722,7 @@ RIGHT ENGINEER IMAGE
 	margin-top:100px;
 }
 /* Container */
-.infrastcnbx .card-image {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
+.infrastcnbx .card-image {  position: relative; overflow: hidden;}
 /* Image - zoom on hover */
 .infrastcnbx .card-image img {
     width: 100%;
@@ -1812,12 +1809,12 @@ RIGHT ENGINEER IMAGE
     align-items: center;
     justify-content: flex-start;
     gap:50px;
-	padding:45px;
+	padding:60px;
 	border-radius:15px;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 	transition: 0.8s ease;
 }
-.ftrwrpprbx:first-child{box-shadow:none; padding:0;}
+.ftrwrpprbx:first-child{box-shadow:none; padding:20px;}
 .ftrwrpprbx:first-child h1{
 	text-align:left;
 	margin:0;
@@ -1881,7 +1878,8 @@ RIGHT ENGINEER IMAGE
 }
 /* Logo inside tab */
 .engine-tab-btn .tab-logo { transition: filter 0.4s ease;}
-.engine-tab-btn.active .tab-logo { /* makes logo white on dark bg */}
+.engine-tab-btn.lefttab.active .tab-logo { filter: none!important; /* makes logo white on dark bg */}
+.engine-tab-btn.righttab.active .tab-logo { filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(85%) contrast(105%) !important; /* makes logo white on dark bg */}
 /* Arrow icon */
 .engine-tab-btn .tab-arrow {
     margin-top: 12px;
@@ -1968,8 +1966,9 @@ RIGHT ENGINEER IMAGE
 .engine-tab-btn.diesel-tab-btn.active .tab-logo{
 	filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(1500%) hue-rotate(210deg) brightness(95%) contrast(105%) !important;
 }
+.engine-tab-btn.diesel-tab-btn.active .tab-arrow svg { fill:#0048cf; height:30px; transform: rotate(180deg);}
 .bluebx h3{color:#FFF;}
-.prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; }
+.prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; max-width:550px;}
 .prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(2, 1fr); gap:30px;}
 .prdctsprtsctnbx h1.blutxt{color:#0041bb;}
 .exprtsctn{background:#bddcff;}
@@ -2068,9 +2067,9 @@ RIGHT ENGINEER IMAGE
 .parallax-section {
     position: relative;
     background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
-    background-position:left center;
+    background-position-x: left 80px;
     background-repeat: no-repeat;
-	background-size:contain;
+    background-size: auto 40%;
     min-height:auto;
     display: flex;
     align-items: center;

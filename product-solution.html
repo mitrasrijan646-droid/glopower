@@ -296,7 +296,9 @@
 <!-- InstanceEndEditable -->
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<section class="whtbx sectnbx spprtsctnbx">
+<section class="whtbx sectnbx spprtsctnbx" id="parallaxSection">
+	<div class="parallax-bg" id="parallaxBg"></div>
+	<div class="parallax-overlay"></div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -667,6 +669,21 @@ gsap.to(".logo-parallax", {
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
+
+<script type="text/javascript">
+	const img = document.querySelector('.prdctimgbx img');
+const box = document.querySelector('.prdctimgbx');
+
+function parallaxImage() {
+  const rect = box.getBoundingClientRect();
+  const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+  const shift = (progress - 0.5) * 200;  /* increased to 150 so movement is obvious */
+  img.style.transform = `translateY(${shift}px)`;
+}
+
+window.addEventListener('scroll', parallaxImage, { passive: true });
+parallaxImage()
+</script>
 
 <!-- InstanceEndEditable -->
 </body>

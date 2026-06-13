@@ -725,7 +725,7 @@ gsap.to(".logo-parallax", {
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
-<script>
+<script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(){
 
 	const section = document.querySelector(".spprtsctnbx");
@@ -749,6 +749,20 @@ document.addEventListener("DOMContentLoaded", function(){
 	observer.observe(section);
 
 });
+</script>
+<script type="text/javascript">
+	const img = document.querySelector('.prdctimgbx img');
+const box = document.querySelector('.prdctimgbx');
+
+function parallaxImage() {
+  const rect = box.getBoundingClientRect();
+  const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+  const shift = (progress - 0.4) * 200;  /* increased to 150 so movement is obvious */
+  img.style.transform = `translateY(${shift}px)`;
+}
+
+window.addEventListener('scroll', parallaxImage, { passive: true });
+parallaxImage()
 </script>
 <!-- InstanceEndEditable -->
 </body>
