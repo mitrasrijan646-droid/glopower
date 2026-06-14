@@ -628,7 +628,7 @@ a:focus, a:hover {
 /* Thumbnails sit on top of the banner, pinned to the bottom */
 .thumb-overlay {
     position: absolute;
-    bottom:4vw;
+    bottom:3vw;
     left: 0;
     right: 0;
     z-index: 20;	
