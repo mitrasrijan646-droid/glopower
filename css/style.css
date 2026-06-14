@@ -653,10 +653,11 @@ a:focus, a:hover {
     left: 0;
     right: 0;
     color: #fff;
-   font-size:18px;
+	font-size:18px;
     text-align: left;
     padding: 20px 25px;
     line-height:25px;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 }
 .services{
 	padding: 100px 6vw;
