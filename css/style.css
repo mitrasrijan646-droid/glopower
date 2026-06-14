@@ -575,7 +575,7 @@ a:focus, a:hover {
 .bnnrsctn .evntbxbnnr .imgbx img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit:fill;
 }
 .bnnrsctn .evntbxbnnr .container { position: relative; z-index: 9;}
 .bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt a.dscvrbttnnew{margin:20px 0 65px;}
@@ -1205,7 +1205,6 @@ CARD DESIGN
     text-align:center;
     padding:30px 20px;
     transition:0.4s ease;
-    cursor:pointer;
     position:relative;
     display:flex;
     flex-direction:column;
@@ -2080,6 +2079,199 @@ RIGHT ENGINEER IMAGE
     position: relative;
     z-index: 2;
     text-align: center;
+}
+.prflesctn{background:#001538;}
+.prflewrppr{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+    align-items: stretch;
+    justify-items: stretch;
+}
+.prflewrpprbx p{color:#FFF;}
+.prflewrpprbx{
+	display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+	gap:35px;
+}
+.prflewrpprbx:last-child{padding:0 50px 0 0;}
+.brndsctn h1{
+	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+	text-align:left;
+	color:#0048cf;
+	font-weight:400;
+	font-size:90px;
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:35px;
+	margin:50px 0;
+    }
+/* ── Card ── */
+.brand-card {
+      background: #0048cf;
+      border-radius:15px;
+      padding:0;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      min-height:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                  box-shadow 0.4s ease;
+}
+.brand-card:hover { transform: translateY(-7px);  box-shadow: 0 22px 44px rgba(27, 71, 184, 0.38);}
+    /* ── Top: name + divider ── */
+.card-top {  position: relative; z-index:4; padding:30px;}
+.card-name {
+    font-size:40px;
+    font-weight:400;
+    color: #FFF;
+    letter-spacing:0;
+    line-height:42px;
+}
+.card-divider {
+    width:40px;
+    height:4px;
+    background:#e8a020;
+    border-radius:6px;
+    margin:25px 0 0;
+}
+/* ── Middle: logo/text area ── */
+.card-middle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.35s ease;
+}
+.brand-card:hover .card-middle { opacity: 0; pointer-events: none;}
+.card-text-body {
+    color:#FFF;
+    font-size:18px;
+    line-height:24px;
+}
+ /* ── Hover description — slides in from top ── */
+.card-hover-desc {
+      position: absolute;
+      bottom:-120px;
+	  height:100%;
+      left: 0;
+      right: 0;
+      /* sits just below name+divider: top padding 2rem + ~3.5rem for name+divider */
+      padding:54px 40px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.38s ease 0.05s,
+                  transform 0.38s cubic-bezier(0.25, 0.8, 0.25, 1) 0.05s;
+      pointer-events: none;
+      z-index: 3;
+	  background:#0042bd;
+}
+.card-hover-desc p{
+	color: #FFF;
+    font-size: 20px;
+    line-height:30px;
+}
+.brand-card:hover .card-hover-desc {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+/* ── Bottom: discover button — always visible ── */
+.card-bottom {
+	position: relative; 
+	z-index: 4;
+	background:#0042bd;
+	padding:30px;
+}
+.discover-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size:18px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: none;
+      transition: gap 0.25s ease;
+    }
+.brand-card:hover .card-bottom a{color:#FFF;}
+.brand-card:hover .discover-btn {gap:20px;}
+.arrow-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.25s, background 0.25s;
+      flex-shrink: 0;
+    }
+.brand-card:hover .discover-btn .arrow-circle {border-color: #FFF; background:#ffc100; rotate: 312deg;}
+.enerjsctn{
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:35px;
+	margin-top:50px;
+}
+.enerjsctnbx .card-divider{
+	width:40px;
+    height:4px;
+    background:#e8a020;
+    border-radius:6px;
+    margin:0 0 25px;
+}
+.enerjsctnbx h3{
+	text-align:left;
+	color:#0048cf;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+	line-height:35px;
+}
+.enerjsctnbx p{font-size:25px; line-height:35px; }
+.abtprsncsctn h1{font-size:90px; text-align:left; color:#FFF; font-family: "akzidenz-grotesk-next-extend",sans-serif; font-weight:400;}
+.abtprsntwrpr{ margin-top:60px; grid-template-columns:1.4fr 1fr;}
+.abtprsntwrpr .abtprsnbx{
+	background:#e5262a;
+	border-radius:15px;
+	padding:60px 50px;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	gap:30px;
+}
+.abtprsntwrpr .abtprsnbx h2{ font-size:30px; text-align:left; font-weight:700; color:#FFF;}
+.abtprsntwrpr .abtprsnbx p{
+	font-size:20px; 
+	color:#FFF; 
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
+	font-weight:400; 
+	line-height:25px;
+}
+.mngmntsctn h1{
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
+	text-align:left;
+	font-size:90px;
+	color:#0048cf;
+	font-weight:400;
+}
+.mngmntsctnwrpr{
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:70px;
+	margin-top:80px;
 }
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
