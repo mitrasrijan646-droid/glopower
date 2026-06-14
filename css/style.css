@@ -1,13 +1,13 @@
 html {scroll-behavior: smooth;}
 li, td, table, tr, th, thead, input, label, select, textarea , button {
-	font-family: "akzidenz-grotesk-next",sans-serif;
 	font-weight:400;
 	font-size:16px;
 	color:#010000;
 	outline:none;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 }
 h1 {
-	font-family: "akzidenz-grotesk-next-pro",sans-serif; 
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	font-weight:700;
 	font-size:50px;
 	text-align:center;
@@ -15,14 +15,14 @@ h1 {
 	margin-bottom:20px;
 }
 h2 {
-	font-family: "akzidenz-grotesk-next-pro",sans-serif;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	font-size:40px;
 	margin: 0;
 	text-align:center;
 	color: #010000;
 }
 h3{
-	font-family: "akzidenz-grotesk-next-pro",sans-serif; 
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	font-size:25px;
     font-weight:400;
     margin: 0;
@@ -30,21 +30,21 @@ h3{
 	color: #010000;
 }
 h4{	
-	font-family: "akzidenz-grotesk-next-pro",sans-serif; 
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	font-size:16px;
 	font-weight:400;
 	color: #010000;
 }
 p{
-	font-family: "akzidenz-grotesk-next",sans-serif;
+	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	line-height:24px;
 	color:#000000;
     margin: 0;
 	font-size:16px;
 	margin-bottom:10px;
-	letter-spacing: 0.02em;
+	letter-spacing:0;
 }
-a{line-height:17px; outline:none; color:#010000; text-decoration: none; font-family: "akzidenz-grotesk-next",sans-serif; letter-spacing:1px;}
+a{line-height:17px; outline:none; color:#010000; text-decoration: none;  letter-spacing:0; font-family: "akzidenz-grotesk-next-extend",sans-serif; }
 a:focus, a:hover {
     color: #231f20;
 	outline:none;
@@ -238,7 +238,7 @@ a:focus, a:hover {
     display:none;
     position: absolute;
     top: calc(100% + 1px);
-    left:66px;
+    left:185px;
     transform: translateX(-50%);
     background: #FFF;
     min-width: 1300px;
@@ -267,19 +267,19 @@ a:focus, a:hover {
     align-items: flex-start;
     gap:25px;
 }
-#myNavbar .dropdown-grid .grid-nav h1{font-family: "akzidenz-grotesk-next-extend",sans-serif;  font-weight:400; margin:0;}
+#myNavbar .dropdown-grid .grid-nav h1{  font-weight:400; margin:0;}
 #myNavbar .dropdown-grid .grid-nav h4{margin:0; }
 #myNavbar .dropdown-grid .grid-nav h4 a{
 	background:transparent !important;
 	outline:none;
-	font-family:"akzidenz-grotesk-next-pro" !important;
 	color:#0039a3 !important; 
 	font-weight:bold !important;
 	font-size:18px !important;
 	line-height:22px !important;
 	padding: 0 !important;
 }
-#myNavbar .dropdown-grid .grid-nav p{font-family: "akzidenz-grotesk-next-extend",sans-serif; font-weight:400;}
+.scrolled #myNavbar ul.navbar-nav li.active a.dropdown-grid .grid-nav h4 a{color:#0039a3 !important; }
+#myNavbar .dropdown-grid .grid-nav p{ font-weight:400;}
 #myNavbar .dropdown-grid .grid-nav ul{padding-inline-start:0; width: 100%;}
 #myNavbar .dropdown-grid .grid-nav ul li{
 	list-style-type:none; 
@@ -298,7 +298,6 @@ a:focus, a:hover {
 	padding:0;
 	font-weight:300;
 	font-size:14px;
-	font-family: "akzidenz-grotesk-next-extend",sans-serif;
 }
 #myNavbar .dropdown-grid .grid-nav ul li a:hover{color:#ffc100 !important;}
 #myNavbar .dropdown-grid:hover .grid-nav ul li a{
@@ -306,7 +305,6 @@ a:focus, a:hover {
 	color:#000 !important; 
 	font-size:14px;
 	font-weight:300;
-	font-family: "akzidenz-grotesk-next-extend",sans-serif;
 }
 .scrolled #myNavbar .dropdown-toggle svg{fill:#0039a3;}
 #myNavbar .dropdown-toggle svg {
@@ -798,7 +796,7 @@ a:focus, a:hover {
 }
 .cpbltsbx:hover img{filter: brightness(1) saturate(1);}
 .cpbltsbx:hover{background:#f2ae2c; transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);}
-.cpbltsbx p{text-align:center; font-weight:bold;}
+.cpbltsbx p{text-align:center;}
 .rdbx{
 	padding-left:50px;
 	background: #e42628;
@@ -920,12 +918,11 @@ a:focus, a:hover {
 	border:2px solid #0039a3;
 	border-radius:50px;
 	display: flex;
-	font-size:25px;
+	font-size:22px;
     flex-wrap: wrap;
 	align-items: center;
 	color:#00153c;
 	margin-bottom:30px;
-	font-family: "akzidenz-grotesk-next-pro", sans-serif;
 	font-weight:700;
 	padding:0 20px 10px;
 	transition: all 0.3s ease;
@@ -935,7 +932,7 @@ a:focus, a:hover {
 .sprtbx ul li img{width:auto; height:auto; margin-right:15px; position:relative; z-index:1; margin-top:-25px; transition: filter 0.3s ease}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
-.lwrsctn h1{color:#f2ae2c; font-size:90px;}
+.lwrsctn h1{color:#f2ae2c; font-size:80px;}
 .projects-section{ width:100%;  padding:0 0 80px 3vw;}
 .projects-container{
     max-width:1300px;
@@ -1018,7 +1015,6 @@ a:focus, a:hover {
     gap:10px;
     color:#fff;
     text-decoration:none;
-    font-weight:600;
     margin-top:8px;
     transition:0.3s ease;
 }
@@ -1047,7 +1043,7 @@ a:focus, a:hover {
 }
 .view-projects:hover h2{ transform:translateY(-10px);}
 .view-btn{
-	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
+	 
     display:inline-flex;
     align-items:center;
     gap:15px;
@@ -1093,8 +1089,6 @@ a:focus, a:hover {
 	color:#FFF; 
 	font-size:16px; 
 	margin-bottom:30px;
-	font-weight: 700;
-    font-family: "akzidenz-grotesk-next-pro";
 }
 .footerwrpr p{color:#FFF; margin-bottom:30px;}
 .footerwrpr p a{color:#FFF;}
@@ -1121,8 +1115,8 @@ a:focus, a:hover {
 .ftrtxtbx{
 	margin-top:36px;
 	display: grid;
-    grid-template-columns:2fr 2fr;
-    gap:40px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
     align-items: flex-end;
 }
 .ftrtxtbx p a{color:#FFF; text-transform:uppercase; margin:0 15px; text-decoration:underline;}
@@ -1208,7 +1202,7 @@ CARD DESIGN
     position:relative;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content: flex-start;
     align-items:center;
 }
 .support-card:hover{transform:translateY(-10px);}
@@ -1222,7 +1216,7 @@ CARD DESIGN
     height:2px;
     left:50%;
     transform:translateX(-50%);
-    bottom:120px;
+    Top:140px;
 }
 .support-card h4{
     color:#fff;
@@ -1253,17 +1247,15 @@ RIGHT ENGINEER IMAGE
   transition: transform 0.1s linear;  /* ADD this — smooths the movement */
 }
 .cnnctstnbx{background:#0041bb;}
-.cnnctstnbx h1{font-size:65px; text-align:left; color:#FFF; font-family:"akzidenz-grotesk-next-pro"; font-weight:400;}
+.cnnctstnbx h1{font-size:65px; text-align:left; color:#FFF; font-weight:400;}
 .discussion-wrapper{ margin:auto;}
 .required-field{
     color:#FFF;
     font-size:30px;
-	font-family: "akzidenz-grotesk-next-conden",sans-serif;
     margin-bottom:35px;
 }
 .form-group{ margin-bottom:40px;}
 .form-group label{
-	font-family: "akzidenz-grotesk-next-pro",sans-serif;
     display:block;
     color:#fff;
     font-size:16px;
@@ -1278,7 +1270,6 @@ RIGHT ENGINEER IMAGE
 .chips label{ margin:0;}
 .chips input{ display:none;}
 .chips span{
-	font-family: "akzidenz-grotesk-next",sans-serif;
     border:1px solid rgba(255,255,255,0.7);
     color:#fff;
     padding:16px 24px;
@@ -1298,6 +1289,7 @@ RIGHT ENGINEER IMAGE
     font-size:20px;
     margin-bottom:30px;
     margin-top:50px;
+	
 }
 .form-grid{
     display:grid;
@@ -1377,7 +1369,7 @@ RIGHT ENGINEER IMAGE
     transition: 0.3s ease;
     flex: 1 10%;
 	font-size:20px;
-	font-family: "akzidenz-grotesk-next-pro", sans-serif;
+	
     font-weight: 700;
 }
 .tab-btn.active,
@@ -1673,11 +1665,10 @@ RIGHT ENGINEER IMAGE
 	background: #FFFF;
 	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 41%, rgba(15, 64, 3, 1) 23%);
 }
-.prdctcntnr h2{text-align:left; font-family: "akzidenz-grotesk-next-pro", sans-serif; font-weight:bold; line-height:45px;}
+.prdctcntnr h2{text-align:left;  font-weight:bold; line-height:45px;}
 .prdctcntnr h2.prdctxt{color:#FFF; text-align:center;}
 .prdctcntnr h1{
-	text-align:left; 
-	font-family: "akzidenz-grotesk-next-pro", sans-serif; 
+	text-align:left;  
 	font-weight:400; 
 	color:#5dba47;
 	font-size:65px;
@@ -1762,7 +1753,6 @@ RIGHT ENGINEER IMAGE
 /* Heading */
 .infrastcnbx .card-image .card-content h3 {
     color: #FFF;
-	font-family: "akzidenz-grotesk-next",sans-serif;
     margin: 0;
     font-size:30px;
     font-weight:400;
@@ -1818,7 +1808,6 @@ RIGHT ENGINEER IMAGE
 	text-align:left;
 	margin:0;
 	font-size:70px;
-	font-family: "akzidenz-grotesk-next",sans-serif;
 	font-weight:200;
 }
 .ftrwrpprbx img{margin:0 auto; transition: 0.8s ease;}
@@ -1928,11 +1917,9 @@ RIGHT ENGINEER IMAGE
     padding: 12px 15px;
     text-align: left;
     border: 1px solid #FFF;
-	font-family: "akzidenz-grotesk-next-pro",sans-serif;
 }
 .engine-table thead tr.subhead th {
     background: #d4e279;
-	font-family: "akzidenz-grotesk-next-pro",sans-serif;
     color: #000;
     font-weight:700;
     padding: 10px 15px;
@@ -1943,19 +1930,13 @@ RIGHT ENGINEER IMAGE
     border-bottom: 1px solid #e8e8e8;
     color: #000;
     transition: background 0.3s ease;
-	font-family:"akzidenz-grotesk-next-pro";
     font-weight:200;
 }
 .engine-table tbody tr.alt td { background: #f8f8ce;}
 .engine-table tbody tr:hover td { background: #f8f8ce;}
 /* Notes */
 .table-notes {margin-top:50px;}
-.table-notes p {
-    font-size:18px;
-    color: #000;
-	font-weight:700;
-	margin-bottom:0;
-}
+.table-notes p { color: #000; margin-bottom:0;}
 .engine-table.diesel-table tr:first-child th{background:#a5ddf8;}
 .engine-table.diesel-table thead tr.subhead th {background:#a5ddf8;}
 .engine-table.diesel-table tbody tr.alt td { background: #ddf0fc;}
@@ -1983,7 +1964,6 @@ RIGHT ENGINEER IMAGE
 .capabilities-content h1{
 	font-weight:200; 
 	color: #0041bb; 
-	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	text-align:left;
 }
 .capabilities-content p {
@@ -2041,7 +2021,6 @@ RIGHT ENGINEER IMAGE
 .cap-card:hover .cap-divider{width:70px;}
 /* Card Text */
 .cap-card h4 {
-	font-family: "akzidenz-grotesk-next-extend",sans-serif;
     color: #FFF;
     font-size: 18px;
     font-weight:200;
@@ -2049,7 +2028,7 @@ RIGHT ENGINEER IMAGE
     margin: 0;
     transition: color 0.4s ease;
 }
-.cap-card:hover h4 {color:#FFF; font-family: "akzidenz-grotesk-next-extend",sans-serif;}
+.cap-card:hover h4 {color:#FFF; }
 .contactwrppr{background:#FFF;}
 .contactwrppr h1{color:#0041bb;}
 .contactwrppr p.required-field{color:#0041bb; font-weight:bold;}
@@ -2098,7 +2077,7 @@ RIGHT ENGINEER IMAGE
 }
 .prflewrpprbx:last-child{padding:0 50px 0 0;}
 .brndsctn h1{
-	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+	
 	text-align:left;
 	color:#0048cf;
 	font-weight:400;
@@ -2128,12 +2107,15 @@ RIGHT ENGINEER IMAGE
 .brand-card:hover { transform: translateY(-7px);  box-shadow: 0 22px 44px rgba(27, 71, 184, 0.38);}
     /* ── Top: name + divider ── */
 .card-top {  position: relative; z-index:4; padding:30px;}
-.card-name {
-    font-size:40px;
+.card-name {}
+.card-name h2{
+	text-align:left;
+	font-size:40px;
     font-weight:400;
     color: #FFF;
     letter-spacing:0;
     line-height:42px;
+	
 }
 .card-divider {
     width:40px;
@@ -2178,8 +2160,8 @@ RIGHT ENGINEER IMAGE
 }
 .card-hover-desc p{
 	color: #FFF;
-    font-size: 20px;
-    line-height:30px;
+    font-size:18px;
+    line-height:25px;
 }
 .brand-card:hover .card-hover-desc {
     opacity: 1;
@@ -2207,6 +2189,7 @@ RIGHT ENGINEER IMAGE
       text-decoration: none;
       transition: gap 0.25s ease;
     }
+.brand-card:hover .card-bottom{display:none;}
 .brand-card:hover .card-bottom a{color:#FFF;}
 .brand-card:hover .discover-btn {gap:20px;}
 .arrow-circle {
@@ -2237,11 +2220,11 @@ RIGHT ENGINEER IMAGE
 .enerjsctnbx h3{
 	text-align:left;
 	color:#0048cf;
-	font-family: "akzidenz-grotesk-next-extend",sans-serif;
+	
 	line-height:35px;
 }
 .enerjsctnbx p{font-size:25px; line-height:35px; }
-.abtprsncsctn h1{font-size:90px; text-align:left; color:#FFF; font-family: "akzidenz-grotesk-next-extend",sans-serif; font-weight:400;}
+.abtprsncsctn h1{font-size:90px; text-align:left; color:#FFF;  font-weight:400;}
 .abtprsntwrpr{ margin-top:60px; grid-template-columns:1.4fr 1fr;}
 .abtprsntwrpr .abtprsnbx{
 	background:#e5262a;
@@ -2256,12 +2239,10 @@ RIGHT ENGINEER IMAGE
 .abtprsntwrpr .abtprsnbx p{
 	font-size:20px; 
 	color:#FFF; 
-	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	font-weight:400; 
 	line-height:25px;
 }
 .mngmntsctn h1{
-	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 	text-align:left;
 	font-size:90px;
 	color:#0048cf;
@@ -2273,6 +2254,15 @@ RIGHT ENGINEER IMAGE
     gap:70px;
 	margin-top:80px;
 }
+.mngmntsctnbx{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+    flex-direction: column;
+}
+.mngmntsctnwrpr svg{height:90px; fill:#ffc100;}
+.mngmntsctnwrpr p span{color:#0048cf; font-size:15px; font-weight:700;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
