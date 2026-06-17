@@ -192,7 +192,7 @@ a:focus, a:hover {
 	backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);   /* Safari */
 }
-.scrolled #myNavbar ul.navbar-nav li a { color:#0039a3 !important;}
+.navbar.scrolled #myNavbar ul.navbar-nav li a { color:#0039a3 ;}
 /* .scrolled #myNavbar ul.navbar-nav li a:hover{color:#FFF !important; background:#FFF;} */
 .scrolled #myNavbar ul li.dropdown ul.dropdown-menu li a{color:#1a315c;}
 .navbar #myNavbar ul.navbar-nav{
@@ -217,7 +217,7 @@ a:focus, a:hover {
 	background-color:transparent;
 }
 .navbar #myNavbar ul.navbar-nav li.active a{background:#ffc100; color:#FFF;}
-.scrolled #myNavbar ul.navbar-nav li.active a{background:#0039a3; color:#FFF !important;}
+.scrolled #myNavbar ul.navbar-nav li.active a{background:#0039a3; color:#FFF;}
 .navbar #myNavbar ul.navbar-nav li:hover a{background-color:#ffc100; color:#FFF;}
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li{color:#1a315c;}
 #myNavbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li a{color:#282828;}
@@ -278,7 +278,7 @@ a:focus, a:hover {
 	line-height:22px !important;
 	padding: 0 !important;
 }
-.scrolled #myNavbar ul.navbar-nav li.active a.dropdown-grid .grid-nav h4 a{color:#0039a3 !important; }
+.scrolled #myNavbar ul.navbar-nav li.active a.dropdown-grid .grid-nav h4 a{color:#0039a3;}
 #myNavbar .dropdown-grid .grid-nav p{ font-weight:400;}
 #myNavbar .dropdown-grid .grid-nav ul{padding-inline-start:0; width: 100%;}
 #myNavbar .dropdown-grid .grid-nav ul li{
@@ -307,6 +307,7 @@ a:focus, a:hover {
 	font-weight:300;
 }
 .scrolled #myNavbar .dropdown-toggle svg{fill:#0039a3;}
+.scrolled #myNavbar ul li.active a.dropdown-toggle svg{fill:#FFF;}
 #myNavbar .dropdown-toggle svg {
     margin-left:5px;
     height: 10px;
@@ -1389,7 +1390,7 @@ RIGHT ENGINEER IMAGE
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:30px;
+    padding:35px;
     border-bottom:1px solid #ddd;
     cursor:pointer;
     transition:0.3s ease;
@@ -2296,22 +2297,6 @@ RIGHT ENGINEER IMAGE
 }
 .epc-progress-wrap {display:flex; flex:0 35%; height:20px; background:#e2e2e2; border-radius:15px; overflow:hidden;}
 .epc-progress-fill {height: 100%; background: #e8a020; border-radius: 3px; transition: width .4s ease;}
-/* .cable-parallax-wrap {
-    position: absolute;
-    top: -80px;
-    right:-80px;
-    width: 320px;
-    height: calc(100% + 160px);
-    z-index: 0;
-    pointer-events: none;
-}
-.cable-parallax-img {
-    width:auto;
-    height:auto;
-    object-fit: fill;
-    object-position: top right;
-    will-change: transform;
-} */
 .cable-parallax-wrap {
     position: absolute;
     top: 0;
@@ -2330,6 +2315,8 @@ RIGHT ENGINEER IMAGE
     will-change: transform, opacity;
     transition: transform 0.1s linear;
 }
+#myNavbar .custom-dropdown-one{ display:none; left:-300px;}
+#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: repeat(3, 1fr);}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
