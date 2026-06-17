@@ -676,14 +676,17 @@ gsap.to(".logo-parallax", {
 <script type="text/javascript">
 $(function(){
   var $slider = $('#epcSlick');
-
   $slider.slick({
-    slidesToShow:3,
-    slidesToScroll:1,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     arrows: false,
     dots: false,
-    infinite: false,
-    speed:1000,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768,  settings: { slidesToShow: 2 } },
@@ -691,21 +694,42 @@ $(function(){
     ]
   });
 
-  function updateProgress(){
+  function updateProgress(currentSlide){
     var total   = $slider.slick('getSlick').slideCount;
     var visible = $slider.slick('getSlick').options.slidesToShow;
-    var current = $slider.slick('getSlick').currentSlide;
     var maxIdx  = total - visible;
-    var pct = maxIdx > 0 ? (current / maxIdx) * 95 : 100;
-    $('#epcProgress').css('width', Math.min(Math.round(pct), 100) + '%');
-    $('#epcPrev').css('opacity', current === 0 ? 0.45 : 1);
-    $('#epcNext').css('opacity', current >= maxIdx ? 0.45 : 1);
+    var pct     = maxIdx > 0 ? (currentSlide / maxIdx) * 95 : 100;
+
+    /* progress bar transition matches slider speed exactly */
+    $('#epcProgress').css({
+      'width'      : Math.min(Math.round(pct), 100) + '%',
+      'transition' : 'width ' + $slider.slick('getSlick').options.speed + 'ms ease'
+    });
+
+    $('#epcPrev').css('opacity', currentSlide === 0 ? 0.45 : 1);
+    $('#epcNext').css('opacity', currentSlide >= maxIdx ? 0.45 : 1);
   }
 
-  updateProgress();
-  $slider.on('afterChange', function(){ updateProgress(); });
-  $('#epcPrev').on('click', function(){ $slider.slick('slickPrev'); });
-  $('#epcNext').on('click', function(){ $slider.slick('slickNext'); });
+  /* initial state */
+  updateProgress(0);
+
+  /* ── beforeChange fires at slide START — in sync with animation ── */
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    updateProgress(nextSlide);   /* use nextSlide, not currentSlide */
+  });
+
+  /* manual prev/next */
+  $('#epcPrev').on('click', function(){
+    $slider.slick('slickPrev');
+    $slider.slick('slickPause');
+    setTimeout(function(){ $slider.slick('slickPlay'); }, 5000);
+  });
+  $('#epcNext').on('click', function(){
+    $slider.slick('slickNext');
+    $slider.slick('slickPause');
+    setTimeout(function(){ $slider.slick('slickPlay'); }, 5000);
+  });
+
 });
 </script>
 
