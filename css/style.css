@@ -2265,7 +2265,7 @@ RIGHT ENGINEER IMAGE
 .epcsctn{ position: relative; overflow: hidden;}
 .epcsctn h1{text-align:left; color:#0048cf; font-size:65px;}
 .epc-slick{margin-top:60px;}
-.epc-slick .epc-card {margin:0 5px; background:#0041bb; border-radius:15px;}
+.epc-slick .epc-card {margin:0 5px; background:#0041bb; border-radius:15px; padding-bottom:0;}
 .epc-slick .epc-card.cpbltsbx:hover{box-shadow:none;}
 .epc-slick .epc-card.cpbltsbx img { 
 	width: 100%; 
