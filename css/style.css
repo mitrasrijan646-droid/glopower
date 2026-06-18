@@ -2316,6 +2316,13 @@ RIGHT ENGINEER IMAGE
 }
 #myNavbar .custom-dropdown-one{ display:none; left:-300px;}
 #myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: 1.2fr 1fr 1fr;}
+.clntsctn{background:#dfdfdf;}
+.clntsctn h1{color:#0039a3; font-weight:700;}
+.clntsctn .clientSwiper{padding:40px 0 0!important;}
+.clntsctn .clientSwiper .swiper-slide{overflow:visible;}
+.clntsctn .clientSwiper .swiper-slide img{width:100%; transition:0.5s ease;}
+.clntsctn .clientSwiper .swiper-slide:hover img{ transform:scale(1.08);}
+.clntsctn .swiper-pagination-bullets .swiper-pagination-bullet{background:#0039a3;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
