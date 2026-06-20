@@ -1953,7 +1953,8 @@ RIGHT ENGINEER IMAGE
 }
 .engine-tab-btn.diesel-tab-btn.active .tab-arrow svg { fill:#0048cf; height:30px; transform: rotate(180deg);}
 .bluebx h3{color:#FFF;}
-.prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; max-width:600px;}
+.prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 120px; max-width:100%;}
+.prdctsltn-grid p{width:auto;}
 .prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(2, 1fr); gap:30px;}
 .prdctsprtsctnbx h1.blutxt{color:#0041bb;}
 .exprtsctn{background:#bddcff;}
