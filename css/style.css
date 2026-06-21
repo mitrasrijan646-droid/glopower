@@ -661,12 +661,12 @@ a:focus, a:hover {
 	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 }
 .services{
-	padding: 100px 6vw;
+	padding: 100px 5vw;
     background: #a7ccee;
     position: relative;
     margin-top: -11px;
 }
-.services h1{text-align:left; color:#0039a3; font-size:100px; margin-bottom: 60px;}
+.services h1{text-align:left; color:#0039a3; font-size:60px; margin-bottom: 60px;}
    /* ─────────────────────────────────────────
        POWERGRID — zigzag wrapper
        Row 1: indent-left  → shifts cards RIGHT
