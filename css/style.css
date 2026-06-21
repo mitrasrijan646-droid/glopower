@@ -786,7 +786,7 @@ a:focus, a:hover {
 }
 .cpbltsbx:hover img{filter: brightness(1) saturate(1);}
 .cpbltsbx:hover{background:#f2ae2c; transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);}
-.cpbltsbx p{text-align:center;}
+.cpbltsbx p{text-align:center; line-height:20px;}
 .rdbx{
 	padding-left:50px;
 	background: #e42628;
