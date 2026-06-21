@@ -478,23 +478,46 @@
 	</div>
 </section>
 
-<section class="mapsctn sectnbx abtprsncsctn">
+<section class="mapsctn sectnbx">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>Our Presence</h1>
+				<h1>our presence</h1>
+				<div class="presence-layout">
 				
-				<div class="mapcntnr abtprsntwrpr">
-					<div class="mapbx">
-						<img src="images/map/map.png" class="img-responsive" alt=""/>
+					<div class="map-wrap mapbx">
+						<svg id="map-svg" viewBox="0 70 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of GloPower group presence across Africa and Asia">
+							<g id="land-layer"></g>
+							<g id="territory-layer"></g>
+						</svg>
+						
+						<div class="legend" id="legend">
+							<span class="legend-item" data-group="samba">
+								<span class="legend-dot samba"></span> Samba Tech &amp; Co
+							</span>
+							<span class="legend-item" data-group="glopower-gulf">
+								<span class="legend-dot gulf"></span> GloPower FZ LLC
+							</span>
+							<span class="legend-item" data-group="glopower-eastafrica">
+								<span class="legend-dot eastafrica"></span> GloPower FZ LLC
+							</span>
+							<span class="legend-item" data-group="uila">
+								<span class="legend-dot uila"></span> Uila Power Pvt. Ltd.
+							</span>
+						</div>
 					</div>
-					<div class="mapbx abtprsnbx">
-						<h2>SAMBA TECH & CO</h2>
-						<p>3 Quartier Station, Glass,<br/> Libreville, Gabon</p>
-						<p>Tel.: +241 6558 2666 <br/> Email: contact@sambatechco.com</p>
+					
+					<div class="info-panel-wrap mapbx">
+						<div class="info-card" id="info-card" data-theme="empty">
+							<div class="empty-state" id="empty-state">
+							  <strong>Select a territory</strong> Click any region on the map to view contact details for that entity.
+							</div>
+						</div>
+					  <!-- <div class="hint">Hover to preview, click to lock a region in place.</div> -->
 					</div>
+					
 				</div>
-			
+				
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -744,7 +767,187 @@ gsap.to(".logo-parallax", {
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
+<script src="js/countries-data.js"></script>
+<script>
+(function(){
+  const COMPANY_INFO = {
+    samba: {
+      theme: "samba",
+      name: "Samba Tech &amp; Co",
+      sub: "Gabon",
+      lines: [
+        "3 Quartier Station, Glass,<br>Libreville, Gabon"
+      ],
+      meta: [
+        "<b>Tel.:</b> +241 6558 2666",
+        "<b>Email:</b> <a href=\"mailto:contact@sambatechco.com\">contact@sambatechco.com</a>"
+      ]
+    },
+    "glopower-gulf": {
+      theme: "gulf",
+      name: "GloPower FZ LLC",
+      sub: "United Arab Emirates — Group Headquarters",
+      lines: [
+        "FDRK1086, Compass Building, Al Shohada Road,<br>AL Hamra Industrial Zone-FZ, Ras Al Khaimah,<br>United Arab Emirates"
+      ],
+      meta: [
+        "<b>Tel.:</b> +971 58 241 3303",
+        "<b>Email:</b> <a href=\"mailto:contact@glopower.ae\">contact@glopower.ae</a>",
+      ]
+    },
+    "glopower-eastafrica": {
+      theme: "eastafrica",
+      name: "GloPower FZ LLC",
+      sub: "East Africa Operations",
+      lines: [
+        "FDRK1086, Compass Building, Al Shohada Road,<br>AL Hamra Industrial Zone-FZ, Ras Al Khaimah,<br>United Arab Emirates"
+      ],
+      meta: [
+        "<b>Tel.:</b> +971 58 241 3303",
+        "<b>Email:</b> <a href=\"mailto:contact@glopower.ae\">contact@glopower.ae</a>",
+      ]
+    },
+    uila: {
+      theme: "uila",
+      name: "Uila Power Pvt. Ltd.",
+      sub: "India",
+      lines: [
+        "Unit no. 503, Enkay Town Plaza, Palam Vihar, Gurugram – 122017 (Haryana), India"
+      ],
+      meta: [
+        "<b>Ph:</b> +91 124 4400950&nbsp;/&nbsp;+91 99106 27437",
+        "<b>Email:</b> <a href=\"mailto:hello@uilapower.com\">hello@uilapower.com</a>"
+      ]
+    }
+  };
 
+  const GROUP_CLASS = {
+    samba: "t-samba",
+    "glopower-gulf": "t-glopower-gulf",
+    "glopower-eastafrica": "t-glopower-eastafrica",
+    uila: "t-uila"
+  };
+
+  const landLayer = document.getElementById("land-layer");
+  const territoryLayer = document.getElementById("territory-layer");
+  const data = window.COUNTRY_DATA || [];
+
+  const landPaths = [];
+  const territoryPaths = [];
+
+  data.forEach(function(c){
+    if (c.group) {
+      territoryPaths.push(c);
+    } else {
+      landPaths.push(c);
+    }
+  });
+
+  const landFrag = document.createDocumentFragment();
+  landPaths.forEach(function(c){
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", c.d);
+    p.setAttribute("class", "land");
+    p.setAttribute("data-name", c.name);
+    landFrag.appendChild(p);
+  });
+  landLayer.appendChild(landFrag);
+
+  const terrFrag = document.createDocumentFragment();
+  territoryPaths.forEach(function(c){
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", c.d);
+    p.setAttribute("class", "territory " + GROUP_CLASS[c.group]);
+    p.setAttribute("data-group", c.group);
+    p.setAttribute("data-name", c.name);
+    p.setAttribute("tabindex", "0");
+    p.setAttribute("role", "button");
+    p.setAttribute("aria-label", c.name + " — " + (COMPANY_INFO[c.group] ? COMPANY_INFO[c.group].name.replace(/&amp;/g,'&') : ""));
+    terrFrag.appendChild(p);
+  });
+  territoryLayer.appendChild(terrFrag);
+
+  const infoCard = document.getElementById("info-card");
+  const legend = document.getElementById("legend");
+  let activeGroup = null;
+
+  function renderCard(groupKey){
+    const info = COMPANY_INFO[groupKey];
+    if (!info) return;
+
+    infoCard.setAttribute("data-theme", info.theme);
+    infoCard.innerHTML =
+      '<div class="company-name">' + info.name + '</div>' +
+      '<div class="company-sub">' + info.sub + '</div>' +
+      '<div class="addr">' + info.lines.join("<br><br>") + '</div>' +
+      '<div class="meta-row">' + info.meta.join("<br>") + '</div>';
+  }
+
+  function clearCard(){
+    infoCard.setAttribute("data-theme", "empty");
+    infoCard.innerHTML = '<div class="empty-state"><strong>Select a territory</strong>Click any coloured region on the map to view contact details for that entity.</div>';
+  }
+
+  function setActiveGroup(groupKey){
+    activeGroup = groupKey;
+    document.querySelectorAll(".territory").forEach(function(el){
+      el.classList.toggle("is-active", el.getAttribute("data-group") === groupKey);
+    });
+    document.querySelectorAll(".legend-item").forEach(function(el){
+      el.classList.toggle("is-active", el.getAttribute("data-group") === groupKey);
+    });
+    if (groupKey) {
+      renderCard(groupKey);
+    } else {
+      clearCard();
+    }
+  }
+
+  territoryLayer.addEventListener("click", function(e){
+    const target = e.target.closest(".territory");
+    if (!target) return;
+    const groupKey = target.getAttribute("data-group");
+    if (activeGroup === groupKey) {
+      setActiveGroup(null);
+    } else {
+      setActiveGroup(groupKey);
+    }
+  });
+
+  territoryLayer.addEventListener("keydown", function(e){
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const target = e.target.closest(".territory");
+    if (!target) return;
+    e.preventDefault();
+    const groupKey = target.getAttribute("data-group");
+    setActiveGroup(activeGroup === groupKey ? null : groupKey);
+  });
+
+  legend.addEventListener("click", function(e){
+    const item = e.target.closest(".legend-item");
+    if (!item) return;
+    const groupKey = item.getAttribute("data-group");
+    setActiveGroup(activeGroup === groupKey ? null : groupKey);
+  });
+
+  // hover preview (desktop) without locking selection
+  territoryLayer.addEventListener("mousemove", function(e){
+    const target = e.target.closest(".territory");
+    if (!target) return;
+    if (activeGroup) return; // don't override a locked selection
+    const groupKey = target.getAttribute("data-group");
+    if (infoCard.getAttribute("data-preview") === groupKey) return;
+    infoCard.setAttribute("data-preview", groupKey);
+    renderCard(groupKey);
+  });
+
+  territoryLayer.addEventListener("mouseleave", function(){
+    if (activeGroup) return;
+    infoCard.removeAttribute("data-preview");
+    clearCard();
+  });
+})();
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
