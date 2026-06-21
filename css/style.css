@@ -763,11 +763,7 @@ a:focus, a:hover {
 		flex-direction: column;
 		gap: 8px;
 	}
-.whtbx h1{
-	text-align:left;
-	color:#f2ae2c;
-	font-size:80px;
-}
+.whtbx h1{ text-align:left; color:#f2ae2c;}
 .cpbltswrpr{
 	margin-top:85px;
 	display:grid;
@@ -812,7 +808,7 @@ a:focus, a:hover {
 .rdbx a.dscvrbttnnew{transition: 0.4s ease;}
 .rdbx:hover a.dscvrbttnnew{transform: translateY(-10px);}
 .sltnsctn{background: linear-gradient(180deg, #FFF 60%, #0041bb 50%); padding-bottom:0;}
-.sltnsctn h1{text-align:left; font-size:80px; color:#0039a3;}
+.sltnsctn h1{text-align:left; color:#0039a3;}
 .sector-slider{position:relative;padding-bottom:55px;}
 .swiper{ overflow:visible;}
 .swiper-slide{
@@ -925,8 +921,8 @@ a:focus, a:hover {
 .sprtbx ul li img{width:auto; height:auto; margin-right:15px; position:relative; z-index:1; margin-top:-25px; transition: filter 0.3s ease}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
-.lwrsctn h1{color:#f2ae2c; font-size:80px;}
-.projects-section{ width:100%;  padding:0 0 80px 3vw;}
+.lwrsctn h1{color:#f2ae2c;}
+.projects-section{ width:100%; padding:0 0 80px 3vw;}
 .projects-container{
     max-width:1300px;
     margin:auto;
