@@ -680,19 +680,11 @@ a:focus, a:hover {
       margin-bottom:28px;
     }
     /* Row 1 shifts RIGHT (Card1 smaller, Card2 bigger) */
-    .powergrid.row-1 {
-      padding-left: 70px;
-      padding-right: 0;
-	  cursor:pointer;
-    }
+    .powergrid.row-1 { padding-left: 70px; padding-right: 0;}
     .powergrid.row-1 .powerbx:nth-child(1) { flex: 11; }
     .powergrid.row-1 .powerbx:nth-child(2) { flex: 11; }
     /* Row 2 shifts LEFT (Card3 bigger, Card4 smaller) */
-    .powergrid.row-2 {
-      padding-right: 60px;
-      padding-left: 0;
-	  cursor:pointer;
-    }
+    .powergrid.row-2 {  padding-right: 60px;  padding-left: 0;}
     .powergrid.row-2 .powerbx:nth-child(1) { flex: 11; }
     .powergrid.row-2 .powerbx:nth-child(2) { flex: 11; }
     /* ─────────────────────────────────────────
@@ -700,7 +692,7 @@ a:focus, a:hover {
     ───────────────────────────────────────── */
     .powerbx {
       flex: 1;
-	  padding: 50px 65px 40px;
+	  padding: 50px 50px;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -744,8 +736,8 @@ a:focus, a:hover {
     }
     .powerbx h1 {
       font-weight: 700;
-      font-size:30px;
-      line-height:35px;
+      font-size:20px;
+      line-height:25px;
       margin: 0 0 15px;
     }
     .powerbx.blue h1 { color: #FFF; }
@@ -753,8 +745,8 @@ a:focus, a:hover {
        CARD BODY TEXT
     ───────────────────────────────────────── */
     .powerbx p {
-      font-size:18px;
-      line-height:22px;
+      font-size:16px;
+      line-height:20px;
       margin: 0;
       position: relative;
       z-index: 1;
