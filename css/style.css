@@ -943,20 +943,21 @@ a:focus, a:hover {
 .t-glopower-eastafrica{ fill:var(--eastafrica-teal); }
 .t-uila{ fill:var(--uila-teal); }
 .legend{
+	justify-content: flex-start;
     display:flex;
     flex-wrap:wrap;
-    gap:1.4rem;
-    margin-top:1.8rem;
+    gap:20px;
+    margin-top:0;
     font-size:16px;
 	font-family: "akzidenz-grotesk-next-extend",sans-serif;
-    color:rgba(255,255,255,0.78);
+    color:#FFF;
   }
 .legend-item{
     display:flex;
     align-items:center;
-    gap:0.5rem;
+    gap:10px;
     cursor:pointer;
-    padding:0.2rem 0.1rem;
+    padding:0;
     border-bottom:1px solid transparent;
     transition:border-color 0.15s ease, color 0.15s ease;
   }
