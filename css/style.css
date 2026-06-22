@@ -907,7 +907,7 @@ a:focus, a:hover {
  .presence-layout{
 	display:grid;
 	grid-template-columns: 2.4fr 1.1fr;
-	gap:25px;
+	gap:50px;
     position:relative;
   }
 .map-wrap{position:relative;}
