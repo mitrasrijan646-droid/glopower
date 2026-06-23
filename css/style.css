@@ -2480,6 +2480,16 @@ RIGHT ENGINEER IMAGE
 .clntsctn .clientSwiper .swiper-slide img{width:100%; transition:0.5s ease;}
 .clntsctn .clientSwiper .swiper-slide:hover img{ transform:scale(1.08);}
 .clntsctn .swiper-pagination-bullets .swiper-pagination-bullet{background:#0039a3;}
+.fuelcntnr{
+	display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 70px;
+    align-items: flex-start;
+	margin:80px 0;
+}
+.fuelcntnr h2{color:#0048cf; text-align:left; font-weight:700; font-size:35px;}
+.fuelcntnr h2 span{font-weight:400;}
+.fuelcntnr p{font-size:18px; line-height:30px;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
