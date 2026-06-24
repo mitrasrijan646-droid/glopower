@@ -2498,9 +2498,9 @@ RIGHT ENGINEER IMAGE
 }
 .card{
     position:relative;
-    aspect-ratio: 4 / 4;
+    aspect-ratio: 3 / 4;
     overflow:hidden;
-    background-size:fill;
+    background-size:cover;
     background-position:center;
     isolation:isolate;
 	border-radius:15px;
@@ -2581,7 +2581,7 @@ RIGHT ENGINEER IMAGE
 }
 .parallax-layer{
 	position: absolute;
-    top: -180px;
+    top: -300px;
     right: 0;
     width: 100%;
     height: 130%;
