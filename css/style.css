@@ -1816,12 +1816,12 @@ RIGHT ENGINEER IMAGE
 }
 .gasgrrnbx h3{
 	color: #5dba47;
-    font-size: 30px;
+	font-weight:700;
     font-family: "akzidenz-grotesk-next-extend";
     text-align: left;
 	line-height:35px;
 }
-.gasgrrnbx p{font-family: "akzidenz-grotesk-next-extend"; color:#FFF; font-size:20px; margin-bottom:0;}
+.gasgrrnbx p{font-family: "akzidenz-grotesk-next-extend"; color:#FFF; margin-bottom:0;}
 .sectnbxprdct{padding:130px 0 130px;}
 .grnprdctbx{
 	background: #FFFF;
@@ -1833,7 +1833,6 @@ RIGHT ENGINEER IMAGE
 	text-align:left;  
 	font-weight:400; 
 	color:#5dba47;
-	font-size:65px;
 }
 .prdctcntnr h1.textcnter{text-align:center;}
 .pwrsltnwrpr{
@@ -2594,6 +2593,33 @@ RIGHT ENGINEER IMAGE
 	will-change: transform;
 	transform: translateY(0); /* JS updates this on scroll */
 }
+.elctrcprdctbx{
+	background: #FFFF;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 34%, rgba(0, 65, 187, 1) 34%);
+}
+.elctrcprdctbx h1{color:rgba(0, 65, 187, 1);}
+.elctrcprdctbx h1.textcnter{color:#FFF;}
+.elctrcsltnwrpr{grid-template-columns: repeat(3, 1fr); gap:20px;}
+.elctrcsltnwrpr .pwrsltnwrprbx{padding:30px; gap:25px;}
+.elctrcsltnwrpr .pwrsltnwrprbx h3{text-align:left; font-size:25px;}
+.elctrcsltnwrpr .pwrsltnwrprbx img{ margin-top: -75px;}
+.envrnmntsctn .infrastcnbx:nth-child(1){ border-top-left-radius: 15px; overflow: hidden; }
+.envrnmntsctn .infrastcnbx:nth-child(3){ border-top-right-radius: 15px; overflow: hidden; }
+.envrnmntsctn .infrastcnbx:nth-child(4){ border-bottom-left-radius: 15px; overflow: hidden; }
+.envrnmntsctn .infrastcnbx:nth-child(6){ border-bottom-right-radius: 15px; overflow: hidden; }
+.elctrcsltnwrpr .pwrsltnwrprbx ul li{font-size:20px; line-height:25px;}
+.eqpmntsctn h2{color:#0041bb;}
+.eqpmntsctn h1{color:#f2ae2c; font-weight:400;}
+.elctrctab-wrapper{
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+    justify-items: stretch;
+    justify-content: center;
+	margin-bottom:60px;
+}
+.elctrctab-wrapper .diesel-tab-btn.active h3{color:#0f4003;}
+.elctrctab-wrapper .diesel-tab-btn h3{color:#FFF; font-size:30px; text-align:center; font-weight:200;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
