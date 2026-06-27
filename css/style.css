@@ -274,7 +274,7 @@ a:focus, a:hover {
 #myNavbar .nav-dropdown:hover .custom-dropdown {display: block; }
 #myNavbar .dropdown-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap:45px;
 	cursor:pointer;
 	padding: 35px 28px;
@@ -784,11 +784,13 @@ a:focus, a:hover {
 		gap: 8px;
 	}
 .whtbx h1{color:#f2ae2c;}
+.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.22fr);}
 .cpbltswrpr{
 	margin-top:85px;
-	display:grid;
-	grid-template-columns: repeat(4, 1fr);
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap:5px;
+    justify-content: center;
 }
 .cpbltsbx{
 	background:#dfdfdf; 
@@ -1396,10 +1398,10 @@ RIGHT ENGINEER IMAGE
   justify-content: flex-end;
 }
 .prdctimgbx img {
-  height: 100%;
+  height:100%;
   width: auto;
   max-width: none;
-  object-fit: contain;
+  object-fit:cover;
   display: block;
   will-change: transform;
   transition: transform 0.1s linear;  /* ADD this — smooths the movement */
@@ -1724,6 +1726,7 @@ RIGHT ENGINEER IMAGE
     transform: translateY(80px);
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
+.prtnrimgbx img{height:65%;}
 .prtnrimgbx.in-view {
     opacity: 1;
     transform: translateY(0px);
@@ -2111,7 +2114,7 @@ RIGHT ENGINEER IMAGE
 .bluebx h3{color:#FFF;}
 .prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 60px; max-width:100%;}
 .prdctsltn-grid p{width:auto;}
-.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(2, 1fr); gap:30px; margin-top:0;}
+.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:0;}
 .prdctsprtsctnbx h1.blutxt{color:#0041bb;}
 .exprtsctn{background:#bddcff;}
 /* Left Content */
@@ -2472,9 +2475,9 @@ RIGHT ENGINEER IMAGE
     transition: transform 0.1s linear;
 }
 #myNavbar .custom-dropdown-one{ display:none; left:-300px;}
-#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: 1.2fr 1fr 1fr;}
+#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: 1.5fr 1.5fr 1fr 1fr;}
 .clntsctn{background:#dfdfdf;}
-.clntsctn h1{color:#0039a3; font-weight:700;}
+.clntsctn h1{color:#0039a3; font-weight:700; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
 .clntsctn .clientSwiper .swiper-slide{overflow:visible;}
 .clntsctn .clientSwiper .swiper-slide img{width:100%; transition:0.5s ease;}
@@ -2600,8 +2603,8 @@ RIGHT ENGINEER IMAGE
 }
 .elctrcprdctbx h1{color:rgba(0, 65, 187, 1);}
 .elctrcprdctbx h1.textcnter{color:#FFF;}
-.elctrcsltnwrpr{grid-template-columns: repeat(5, 1fr); gap:20px; padding:0 3vw;}
-.elctrcsltnwrpr .pwrsltnwrprbx{padding:15px; gap:5px;}
+.elctrcsltnwrpr{grid-template-columns: repeat(3, 1fr); gap:40px;}
+.elctrcsltnwrpr .pwrsltnwrprbx{padding:15px; gap:15px;}
 .elctrcsltnwrpr .pwrsltnwrprbx h2{font-size:20px; line-height:22px;}
 .elctrcsltnwrpr .pwrsltnwrprbx h3{text-align:left; font-size:20px;}
 .elctrcsltnwrpr .pwrsltnwrprbx p{font-size:16px;}
