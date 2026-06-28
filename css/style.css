@@ -2717,6 +2717,7 @@ RIGHT ENGINEER IMAGE
 	gap:0;
 	margin-top:90px;
 	background:#002e86;
+	align-items:center;
 }
 .lwrdsgnwrprbx{padding:75px 45px; position:relative;}
 .lwrdsgnwrprbx.whitebox{background:#FFF;}
@@ -2726,9 +2727,34 @@ RIGHT ENGINEER IMAGE
 	margin: 0 auto;
     display: table;
     position: absolute;
-    top: -40px;
+    top: -80px;
     transform: translateX(100%);
 }
+.costsctn{
+	display: flex;
+    background: #e1b000;
+    flex-direction: column;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.costsctn p{text-align:center; margin-bottom:5px;}
+.costwrppr{
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap:0;
+	margin-top:60px;
+}
+.costwrpprbx{
+	display: flex;
+    justify-content: center;
+    gap:25px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.linebx{background:#000; width:50px; height:6px; border-radius:15px;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
