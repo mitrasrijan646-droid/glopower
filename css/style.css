@@ -2490,9 +2490,17 @@ RIGHT ENGINEER IMAGE
     align-items: flex-start;
 	margin:80px 0;
 }
-.fuelcntnr h2{color:#0048cf; text-align:left; font-weight:700; font-size:35px;}
-.fuelcntnr h2 span{font-weight:400;}
-.fuelcntnr p{font-size:18px; line-height:30px;}
+.fuelcntnrbx{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+}
+.fuelcntnrbx h2{color:#0048cf; text-align:left; font-weight:700; font-size:35px;}
+.fuelcntnrbx h2 span{font-weight:400;}
+.fuelcntnrbx h3{text-align:left; color:#0048cf; font-weight:800;}
+.fuelcntnrbx p{font-size:18px; line-height:27px;}
 .cardgridsctn{padding:0 1vw;}
 .card-grid{
 	display:grid;
