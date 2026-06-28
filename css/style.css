@@ -2565,22 +2565,40 @@ RIGHT ENGINEER IMAGE
     transition:opacity .3s ease .12s;   /* text fades in slightly after the box starts opening */
 }
 .card:hover .card-desc{  opacity:1; }
-.mttrsctn{background:#0041bb;}
+.mttrsctn{background:#FFF;}
 .mttrwrprcntnr{
 	display:grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr;
     gap: 70px;
     align-items:flex-start;
 }
-.mttrwrprbx h2{color:#FFF; text-align:left; font-weight:400;}
-.mttrwrprbx .infrastcn{margin-top:0; grid-template-columns: repeat(2, 1fr);}
+.mttrwrprbx h2{color:#0041bb; text-align:center; font-weight:400;}
+.mttrwrprbx .infrastcn{margin-top:0; grid-template-columns: repeat(3, 1fr);}
 .mttrwrprbx .infrastcn .infrastcnbx:nth-child(1) .card-image{ border-top-left-radius: 15px; overflow: hidden; }
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(2) .card-image{ border-top-right-radius: 15px; overflow: hidden;}
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3) .card-image{ border-bottom-left-radius: 15px; overflow: hidden;}
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(4) .card-image{ border-bottom-right-radius: 15px; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3) .card-image{ border-top-right-radius: 15px; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx:nth-child(4) .card-image{ border-bottom-left-radius: 15px; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6) .card-image{ border-bottom-right-radius: 15px; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content{bottom:25px;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content h3{line-height:27px;}
+.apprchsctn{background:#f0f0f0;}
+.apprchcntnr{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap:50px;
+	align-items:flex-start;
+}
+.yllowbx {
+    padding:20px;
+    background: #e1b000;
+    display: flex;
+    align-items: flex-start;
+    gap:25px;
+	margin-bottom:10px;
+}
+.yllowbx-content{ display: flex; flex-direction: column; gap:10px;}
+.yllowbx-content h3{text-align:left; font-weight:700;}
 .dpbluesctn{background:#001538;}
 .parallaxsctn{ position: relative; overflow: hidden;}
-.parallaxsctn .fuelcntnr{margin-top:0;}
 .parallaxsctn > .container,
 .parallaxsctn > .container-fluid{
 	position: relative;
@@ -2690,6 +2708,26 @@ RIGHT ENGINEER IMAGE
 	display:grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap:25px;
+}
+.lwrdsgnctn{background:#0041bb;}
+.lwrdsgnctn h1{color:#FFF;}
+.lwrdsgnwrpr{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap:0;
+	margin-top:90px;
+	background:#002e86;
+}
+.lwrdsgnwrprbx{padding:75px 45px; position:relative;}
+.lwrdsgnwrprbx.whitebox{background:#FFF;}
+.lwrdsgnwrprbx.whitebox p{color:#0041bb;}
+.lwrdsgnwrprbx.bluebox p{color:#FFF; text-align:center;}
+.lwrdsgnwrprbx img{
+	margin: 0 auto;
+    display: table;
+    position: absolute;
+    top: -40px;
+    transform: translateX(100%);
 }
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
