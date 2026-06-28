@@ -2501,6 +2501,8 @@ RIGHT ENGINEER IMAGE
 .fuelcntnrbx h2 span{font-weight:400;}
 .fuelcntnrbx h3{text-align:left; color:#0048cf; font-weight:800;}
 .fuelcntnrbx p{font-size:18px; line-height:27px;}
+.epcsltn{margin-bottom:60px;}
+.epcsltn .fuelcntnrbx:last-child{padding-right:3vw;}
 .cardgridsctn{padding:0 1vw;}
 .card-grid{
 	display:grid;
@@ -2755,6 +2757,9 @@ RIGHT ENGINEER IMAGE
     align-items: center;
 }
 .linebx{background:#000; width:50px; height:6px; border-radius:15px;}
+.epcsltn-grid{grid-template-columns: repeat(3, 1fr);}
+.epcsltn-grid .card{aspect-ratio:2.8/2.5;}
+.epcsltn-grid .card-overlay{height:80px;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
