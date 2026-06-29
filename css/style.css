@@ -1235,7 +1235,7 @@ a:focus, a:hover {
     gap:80px;
     align-items: flex-start;
 }
-.footerwrprbx h1{color:#FFF; text-align:left; font-family:"akzidenz-grotesk-next-extend"; text-transform:uppercase;}
+.footerwrprbx h1{color:#FFF; text-align:left; font-family:"akzidenz-grotesk-next-extend"; text-transform:uppercase; margin:0;}
 .footerwrprbx h4{color:#FFF; text-align:left; font-family:"akzidenz-grotesk-next-extend";}
 .footerwrpr p.cntrytxt{
 	color:#FFF; 
@@ -1247,7 +1247,7 @@ a:focus, a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap:62px;
+    gap:105px;
 }
 .footerwrpr p{color:#FFF; margin-bottom:30px; font-size:14px; line-height:20px;}
 .footerwrpr p a{color:#FFF;}
