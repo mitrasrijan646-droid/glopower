@@ -604,7 +604,6 @@ a:focus, a:hover {
     text-shadow: 1px 1px 1px rgba(0,0,0,.45);
 	margin-bottom:0;
 	margin-top: 0;
-	font-size:60px;
 	text-align:left;
 }
 .bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt h2{
@@ -1248,9 +1247,9 @@ a:focus, a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 86px;
+    gap:62px;
 }
-.footerwrpr p{color:#FFF; margin-bottom:30px;}
+.footerwrpr p{color:#FFF; margin-bottom:30px; font-size:14px; line-height:20px;}
 .footerwrpr p a{color:#FFF;}
 .footerwrpr p a:hover{color:#ffc100;}
 .footerwrpr h3{
@@ -1270,7 +1269,7 @@ a:focus, a:hover {
 }
 .lstbx ul{padding-inline-start:0;}
 .lstbx ul li{list-style-type:none; line-height:20px; padding-bottom:8px; margin-bottom:8px;}
-.lstbx ul li a{color:#FFF; transition: all 0.3s ease;}
+.lstbx ul li a{color:#FFF; transition: all 0.3s ease; font-size:14px;}
 .lstbx ul li a:hover{color:#ffc100; transform: translateY(-2px);}
 .ftrtxtbx{
 	margin-top:0;
@@ -1407,7 +1406,7 @@ RIGHT ENGINEER IMAGE
   transition: transform 0.1s linear;  /* ADD this — smooths the movement */
 }
 .cnnctstnbx{background:#0041bb;}
-.cnnctstnbx h1{font-size:65px; text-align:left; color:#FFF; font-weight:400;}
+.cnnctstnbx h1{text-align:left; color:#FFF; font-weight:400;}
 .discussion-wrapper{ margin:auto;}
 .required-field{
     color:#FFF;
@@ -1558,15 +1557,14 @@ RIGHT ENGINEER IMAGE
 .project-item h3{
 	text-align:left;
     margin-bottom:10px;
-    font-size:20px;
-    font-weight:600;
+    font-size:16px;
 }
 .project-item p{
     margin:0;
-    color:#000;
+    color:#0039a3;
     font-size:20px;
 }
-.project-item p svg{height:18px;}
+.project-item p svg{height:18px; fill:#0039a3;}
 .project-item span{
     width:32px;
     height:32px;
@@ -1693,9 +1691,9 @@ RIGHT ENGINEER IMAGE
     justify-content: flex-end;
     align-items: flex-end;
     gap: 15px;
-    bottom:50px;
+    bottom:60px;
 	z-index: 1;
-	padding:35px;
+	padding:25px;
 	transition: 0.4s ease;
 }
 .rangwrpr .cpbltsbx:hover .textbx{transform:translateY(-10px)}
@@ -2121,7 +2119,7 @@ RIGHT ENGINEER IMAGE
 .capabilities-content {
 	padding:60px 70px 60px 0;
 	display: flex;
-	gap:59px;
+	gap:29px;
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-start;
@@ -2132,11 +2130,9 @@ RIGHT ENGINEER IMAGE
 	text-align:left;
 }
 .capabilities-content p {
-	max-width:450px;
-    font-size:17px;
 	line-height:25px;
     color: #000;
-    margin-bottom: 15px;
+    margin-bottom:0;
 }
 /* Top Grid - 2 columns */
 .capabilities-grid {
@@ -2400,12 +2396,7 @@ RIGHT ENGINEER IMAGE
 	font-weight:400; 
 	line-height:25px;
 }
-.mngmntsctn h1{
-	text-align:left;
-	font-size:90px;
-	color:#0048cf;
-	font-weight:400;
-}
+.mngmntsctn h1{ text-align:left; color:#0048cf;}
 .mngmntsctnwrpr{
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2482,8 +2473,8 @@ RIGHT ENGINEER IMAGE
     transition: transform 0.1s linear;
 }
 #myNavbar .custom-dropdown-one{ display:none; left:-300px;}
-#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: 1.5fr 1.5fr 1fr 1fr;}
-.clntsctn{background:#dfdfdf;}
+#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns:2.3fr 1.5fr 1fr 1fr;}
+.clntsctn{background:#dfdfdf; padding:150px 0;}
 .clntsctn h1{color:#0039a3; font-weight:700; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
 .clntsctn .clientSwiper .swiper-slide{overflow:visible;}
@@ -2588,17 +2579,18 @@ RIGHT ENGINEER IMAGE
 .mttrwrprbx .infrastcn .infrastcnbx:nth-child(4){ border-bottom-left-radius: 15px; overflow: hidden;}
 .mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){ border-bottom-right-radius: 15px; overflow: hidden;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content{
-	bottom:0;
 	background: #0041bb;
     position: inherit;
     padding:15px ;
-	gap:15px;
+	gap:20px;
     display: grid;
-    grid-template-columns: 1.3fr 2fr;
+    grid-template-columns: 1.6fr 2fr;
     justify-content: flex-start;
     align-items:  flex-start;
 	height:100px;
 }
+.mttrwrprbx .infrastcn .infrastcnbx .card-content.epc-card-content{background:#0954e1;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content.gas-card-content{background:#5dba47;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content h3{line-height:22px; text-align:left; font-size:16px; font-weight:400;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content p{color:#FFF; margin-bottom:0; line-height:20px;}
 .apprchsctn{background:#f0f0f0;}
