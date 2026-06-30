@@ -685,7 +685,7 @@ a:focus, a:hover {
     position: relative;
     margin-top: -11px;
 }
-.services h1{text-align:left; color:#0039a3; font-size:60px; margin-bottom: 60px;}
+.services h1{text-align:left; color:#0039a3; margin-bottom: 60px;}
    /* ─────────────────────────────────────────
        POWERGRID — zigzag wrapper
        Row 1: indent-left  → shifts cards RIGHT
@@ -782,7 +782,7 @@ a:focus, a:hover {
 		flex-direction: column;
 		gap: 8px;
 	}
-.whtbx h1{color:#f2ae2c;}
+.whtbx h1{color:#f2ae2c; font-weight:400; font-size:60px;}
 .cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.22fr);}
 .cpbltswrpr{
 	margin-top:85px;
@@ -1069,18 +1069,18 @@ a:focus, a:hover {
     border: 2px solid #0039a3;
     border-radius: 50px;
     display: flex;
-    font-size: 18px;
+    font-size:22px;
     flex-wrap: wrap;
     align-items: center;
     color: #00153c;
     margin-bottom: 30px;
     font-weight: 700;
-    padding: 0 0 0 22px;
+    padding:10px 22px;
     transition: all 0.3s ease;
     justify-content: flex-start;
 }
 .sprtbx ul li:hover {border-color:#ffc100; transform:translateX(8px);}
-.sprtbx ul li img{width:90px; height:90px; margin-right:10px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 50px;}
+.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 50px;}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
@@ -1220,7 +1220,6 @@ a:focus, a:hover {
     font-weight:700;
 }
 #footer{border-top:30px solid #f2ae2c; background:#152c6d;}
-.upprftr{padding-bottom:30px;}
 .upprftr hr{
 	margin-top: 0;
     margin-bottom: 0;
@@ -1228,7 +1227,7 @@ a:focus, a:hover {
     border-top: 1px solid #ffaa00;
 }
 .footerwrpr{
-	padding:40px 0 0;
+	padding:70px 0 50px;
 	position:relative;
 	display: grid;
     grid-template-columns:5fr 2fr;
@@ -1633,8 +1632,8 @@ RIGHT ENGINEER IMAGE
 .project-highlights ul{padding-left:20px; padding-inline-start:20px;}
 .project-highlights li{
 	margin-bottom: 15px;
-    line-height: 22px;
-    font-size: 18px;
+    line-height: 20px;
+    font-size: 16px;
 }
 .project-preview{ display:none;}
 .project-preview.active{ display:block;}
@@ -1739,10 +1738,11 @@ RIGHT ENGINEER IMAGE
 /* ── SECTOR SLIDER ── */
 .sector-slider {  overflow: visible !important;  height: auto !important;}
 /* ── SWIPER ── */
-.mySectorSliderone { overflow: visible !important; height: auto !important;}
+.mySectorSliderone { overflow: hidden !important; height: auto !important;}
 .mySectorSliderone .swiper-wrapper { height: auto !important; align-items: flex-start !important;}
 /* ── EACH SLIDE ── */
 .mySectorSliderone .swiper-slide {
+	width:100% !important;
     height: auto !important;
     overflow: visible !important;
     display: block !important;
@@ -1754,7 +1754,7 @@ RIGHT ENGINEER IMAGE
     width: 55px;
     height: 3px;
     background: #dc9b15;
-    margin: 0 auto 22px;
+	margin: 30px auto;
     display: block !important;
     visibility: visible !important;
 }
@@ -1767,7 +1767,8 @@ RIGHT ENGINEER IMAGE
     font-weight: 700 !important;
     line-height: 1.3 !important;
     text-align: center !important;
-	margin-bottom:35px;
+	margin-top:0;
+	margin-bottom:10px;
 }
 /* ── SLIDE PARAGRAPH ── */
 .mySectorSliderone .swiper-slide p {
@@ -1778,6 +1779,8 @@ RIGHT ENGINEER IMAGE
     opacity: 1 !important;
 	width:auto;
 }
+.mySectorSliderone .swiper-slide img{display:table !important;}
+.mySectorSliderone .swiper-slide img:hover{transform: inherit;}
 /* ── PAGINATION DOTS ── */
 .mySectorSliderone-pagination {
     display: flex !important;
@@ -1826,7 +1829,7 @@ RIGHT ENGINEER IMAGE
 .sectnbxprdct{padding:130px 0 130px;}
 .grnprdctbx{
 	background: #FFFF;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 41%, rgba(15, 64, 3, 1) 23%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 29%, rgba(15, 64, 3, 1) 29%);
 }
 .prdctcntnr h2{text-align:left;  font-weight:bold; line-height:45px;}
 .prdctcntnr h2.prdctxt{color:#FFF; text-align:center;}
@@ -1843,17 +1846,18 @@ RIGHT ENGINEER IMAGE
 	gap:80px;
 	margin:120px 0;
 }
+.pwrsltnwrpr.slick-slider{display:grid;}
 .pwrsltnwrprbx{
 	position:relative;
 	background:#f3f0f0; 
-	padding:30px 70px 30px 50px; 
+	padding:30px; 
 	box-shadow: 4px 2.8px 9px rgba(0, 0, 0, .35);
 	display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
-    gap:35px;
+    gap:15px;
 	transition: background 0.5s;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -1867,6 +1871,11 @@ RIGHT ENGINEER IMAGE
 .pwrsltnwrprbx p{font-size:22px;}
 .pwrsltnwrprbx ul{padding-inline-start:20px;}
 .pwrsltnwrprbx ul li{margin-bottom:5px; padding-bottom:5px; font-size:22px; line-height:30px;}
+.gaswrpr .pwrsltnwrprbx{padding:50px;}
+.gaswrpr .pwrsltnwrprbx h2{font-size:20px; line-height:25px;}
+.gaswrpr .pwrsltnwrprbx p{font-size:16px;}
+.gaswrpr .pwrsltnwrprbx img{width:100px;}
+.gaswrpr .pwrsltnwrprbx ul li{font-size:16px; line-height:20px;}
 .pwrsltnwrprbx img{position:relative; margin-top:-90px;}
 .infrastcn{
 	display:grid;
@@ -2104,6 +2113,10 @@ RIGHT ENGINEER IMAGE
 .engine-table.diesel-table tbody tr.alt td { background: #ddf0fc;}
 .engine-table.diesel-table tbody tr:hover td { background: #ddf0fc;}
 .engine-tab-btn.diesel-tab-btn{background:#0048cf;}
+.engine-tab-btn.diesel-tab-btn:nth-child(2){background:#0041bb;}
+.engine-tab-btn.diesel-tab-btn:nth-child(3){background:#0039a5;}
+.engine-tab-btn.diesel-tab-btn:nth-child(4){background:#003497;}
+.engine-tab-btn.diesel-tab-btn:nth-child(5){background:#002e86;}
 .engine-tab-btn.diesel-tab-btn.active {background: #FFF;}
 .engine-tab-btn.diesel-tab-btn.active .tab-logo{
 	filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(1500%) hue-rotate(210deg) brightness(95%) contrast(105%) !important;
@@ -2208,7 +2221,7 @@ RIGHT ENGINEER IMAGE
     background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
     background-position-x: left 80px;
     background-repeat: no-repeat;
-    background-size: auto 40%;
+    background-size:fill;
     min-height:auto;
     display: flex;
     align-items: center;
@@ -2442,6 +2455,7 @@ RIGHT ENGINEER IMAGE
 .epc-caption h4{color: #FFF; text-align:left; font-weight:700; margin:0; font-size:20px;}
 .epc-caption p{color:#FFF; text-align:left;}
 .epc-nav-row {display:flex; flex:0 39%; align-items: center; gap:25px; padding:20px 0 0;}
+.epcrow{margin-bottom:60px;}
 .epc-arrow-btn{
 	width:32px; 
 	height:32px; 
@@ -2646,12 +2660,17 @@ RIGHT ENGINEER IMAGE
 }
 .elctrcprdctbx{
 	background: #FFFF;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 34%, rgba(0, 65, 187, 1) 34%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 29%, rgba(0, 65, 187, 1) 29%);
 }
 .elctrcprdctbx h1{color:rgba(0, 65, 187, 1);}
 .elctrcprdctbx h1.textcnter{color:#FFF;}
-.elctrcsltnwrpr{grid-template-columns: repeat(3, 1fr); gap:40px;}
-.elctrcsltnwrpr .pwrsltnwrprbx{padding:15px; gap:15px;}
+.elctrcsltnwrpr{
+	grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    display: grid;
+    margin: 100px 0 0;
+}
+.elctrcsltnwrpr .pwrsltnwrprbx{gap:15px;}
 .elctrcsltnwrpr .pwrsltnwrprbx h2{font-size:20px; line-height:22px;}
 .elctrcsltnwrpr .pwrsltnwrprbx h3{text-align:left; font-size:20px;}
 .elctrcsltnwrpr .pwrsltnwrprbx p{font-size:16px;}
@@ -2779,6 +2798,25 @@ RIGHT ENGINEER IMAGE
 .epcsltn-grid{grid-template-columns: repeat(3, 1fr);}
 .epcsltn-grid .card{aspect-ratio:2.8/2.5;}
 .epcsltn-grid .card-overlay{height:80px;}
+.epc-slick .epc-card.prdct-epcslide{
+	position:absolute;
+	background: #f3f0f0;
+    position: relative;
+    padding:20px;
+    display: flex;
+    aspect-ratio:2.8/ 4;
+    flex-wrap:no-wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap:10px;
+}
+.epc-slick .epc-card.prdct-epcslide img{margin-top:-15px; width:80px; height:80px; position:relative; z-index:99;}
+.epc-slick .epc-card.prdct-epcslide h2{font-size: 16px; line-height:22px;}
+.epc-slick .epc-card.prdct-epcslide h3{text-align: left; font-size: 16px;}
+.epc-slick .epc-card.prdct-epcslide p{font-size:16px; text-align:left; margin-bottom:0;}
+.epc-slick .epc-card.prdct-epcslide ul{padding-inline-start: 20px;}
+.epc-slick .epc-card.prdct-epcslide ul li{font-size:15px; line-height:18px; margin-bottom: 5px;  padding-bottom: 5px;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
