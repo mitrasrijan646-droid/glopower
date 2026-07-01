@@ -415,8 +415,8 @@
 <!-- InstanceEndEditable -->
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<section class="services">
-
+<section class="services parallax-section-service">
+	<div class="parallax-overlay"></div>
   <!-- Section Title -->
 	<div class="container">
 		<div class="row">
@@ -493,7 +493,7 @@
 
 </section>
 
-<section class="whtbx sectnbx">
+<section class="whtbx sectnbx cmprhnsv">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -797,7 +797,7 @@
 						<img src="images/power-solution/arise.jpg" class="img-responsive" alt="Project Image" />
 						<div class="project-content">
 							<h4>ARISE IIP, <br/>Gabon Africa</h4>
-							<a href="reference-projects.html" class="read-more">Read more button</a>
+							<a href="reference-projects.html" class="read-more">Read more</a>
 						</div>
 					</div>
 
@@ -806,7 +806,7 @@
 						<img src="images/power-solution/nxtra.jpg" class="img-responsive" alt="Project Image" />
 						<div class="project-content">
 							<h4>Airtel Nxtra, <br/>Nigeria</h4>
-							<a href="reference-projects.html" class="read-more">Read more button</a>
+							<a href="reference-projects.html" class="read-more">Read more</a>
 						</div>
 					</div>
 
@@ -815,7 +815,7 @@
 						<img src="images/power-solution/ticl.jpg" class="img-responsive" alt="Project Image" />
 						<div class="project-content">
 							<h4>TTCL, <br/>Tanzania</h4>
-							<a href="reference-projects.html" class="read-more">Read more button</a>
+							<a href="reference-projects.html" class="read-more">Read more</a>
 						</div>
 					</div>
 
@@ -1328,6 +1328,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+<script type="text/javascript">
+	window.addEventListener('scroll', function() {
+    var parallax = document.querySelector('.parallax-section-service');
+    if (parallax) {
+        var scrolled = window.pageYOffset;
+        var sectionTop = parallax.offsetTop;
+        var relativeScroll = scrolled - sectionTop;
+        parallax.style.backgroundPositionY = (relativeScroll * 0.4) + 'px';
+    }
+})
+</script>
+
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
