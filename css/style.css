@@ -28,8 +28,8 @@ li, td, table, tr, th, thead, input, label, select, textarea , button {
 }
 h1 {
 	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
-	font-weight:700;
-	font-size:50px;
+	font-weight:400;
+	font-size:65px;
 	text-align:center;
 	color: #010000;
 	margin-bottom:20px;
@@ -793,7 +793,7 @@ a:focus, a:hover {
 		flex-direction: column;
 		gap: 8px;
 	}
-.whtbx h1{color:#f2ae2c; font-weight:400; font-size:60px;}
+.whtbx h1{color:#f2ae2c; font-weight:400;}
 .cmprhnsv{ background:url(../images/spark-icon.png) no-repeat top right fixed; background-size:fill;}
 .cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.22fr);}
 .cpbltswrpr{
@@ -1092,7 +1092,7 @@ a:focus, a:hover {
     justify-content: flex-start;
 }
 .sprtbx ul li:hover {border-color:#ffc100; transform:translateX(8px);}
-.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 50px;}
+.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 10px;}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
@@ -1258,7 +1258,7 @@ a:focus, a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap:105px;
+    gap:70px;
 }
 .footerwrpr p{color:#FFF; margin-bottom:30px; font-size:14px; line-height:20px;}
 .footerwrpr p a{color:#FFF;}
@@ -1417,7 +1417,7 @@ RIGHT ENGINEER IMAGE
   transition: transform 0.1s linear;  /* ADD this — smooths the movement */
 }
 .cnnctstnbx{background:#0041bb;}
-.cnnctstnbx h1{text-align:left; color:#FFF; font-weight:400;}
+.cnnctstnbx h1{text-align:left; color:#FFF;}
 .discussion-wrapper{ margin:auto;}
 .required-field{
     color:#FFF;
@@ -1726,7 +1726,7 @@ RIGHT ENGINEER IMAGE
 }
 .rangwrpr .cpbltsbx:hover svg{ transform:translateX(6px);}
 .trstdsctn{margin:0 auto; justify-content: center; gap:95px; overflow: visible !important;  height: auto !important;}
-.trstdsctn h1{font-size:50px; text-align:center; color:#0041bb; font-weight:700;}
+.trstdsctn h1{ text-align:center; color:#0041bb; }
 .trstdsctn img{margin:0 auto; width:auto;}
 .prtnrimgbx{
 	justify-content:flex-start; 
@@ -1952,7 +1952,6 @@ RIGHT ENGINEER IMAGE
 .infrastcnbx .card-image:hover .card-content h3 { transform: translateY(-8px); color: #FFF;}
 /* Optional - green underline appears on hover */
 .ratngsctn{background:#f0f0f0;}
-.ratngsctn h1{font-weight:bold;}
 .ftrsctnsntn{
 	margin-top:68px; 
 	background:#FFF;
@@ -2139,8 +2138,11 @@ RIGHT ENGINEER IMAGE
 .engine-tab-btn.diesel-tab-btn:nth-child(5){background:#002e86;}
 .engine-tab-btn.diesel-tab-btn.active {background: #FFF;}
 .engine-tab-btn.diesel-tab-btn.active .tab-logo{filter: none !important;}
-.engine-tab-btn.diesel-tab-btn .tab-logo{ filter: brightness(0) invert(1); !important;}
-/* .engine-tab-btn.diesel-tab-btn:nth-child(2) .tab-logo{ filter: brightness(1) invert(0); !important;} */
+.engine-tab-btn.diesel-tab-btn .tab-logo{ filter: brightness(0) invert(1) !important;}
+.engine-tab-btn.diesel-tab-btn:nth-child(2) img.tab-logo { content: url("../images/logo/MTU-white.svg");}
+.engine-tab-btn.diesel-tab-btn.active:nth-child(2) img.tab-logo { content: url("../images/logo/MTU.svg");}
+.engine-tab-btn.diesel-tab-btn:nth-child(5) img.tab-logo { content: url("../images/logo/FMTU-white.svg");}
+.engine-tab-btn.diesel-tab-btn.active:nth-child(5) img.tab-logo { content: url("../images/logo/FMTU.svg");}
 .engine-tab-btn.diesel-tab-btn.active .tab-arrow svg { fill:#0048cf; height:30px; transform: rotate(180deg);}
 .bluebx h3{color:#FFF;}
 .prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 60px; max-width:100%;}
@@ -2150,16 +2152,16 @@ RIGHT ENGINEER IMAGE
 .exprtsctn{background:#bddcff;}
 /* Left Content */
 .capabilities-content {
-	padding:60px 70px 60px 0;
+	padding:30px 70px 40px 0;
 	display: flex;
-	gap:29px;
+	gap:19px;
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-start;
 }
 .capabilities-content h1{
-	font-weight:200; 
 	color: #0041bb; 
+	margin:0;
 	text-align:left;
 }
 .capabilities-content p {
@@ -2178,7 +2180,7 @@ RIGHT ENGINEER IMAGE
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    margin-top: 15px;
+    margin-top:0;
 }
 /* Card */
 .cap-card {
@@ -2208,7 +2210,7 @@ RIGHT ENGINEER IMAGE
     width:50px;
     height:6px;
     background: #e8a820;
-    margin:25px auto;
+    margin:10px auto;
     border-radius:6px;
     transition: width 0.4s ease;
 }
@@ -2274,7 +2276,6 @@ RIGHT ENGINEER IMAGE
 	text-align:left;
 	color:#0048cf;
 	font-weight:400;
-	font-size:90px;
 }
 .cards-grid {
     display: grid;
@@ -2475,7 +2476,7 @@ RIGHT ENGINEER IMAGE
 .epc-caption h4{color: #FFF; text-align:left; font-weight:700; margin:0; font-size:20px;}
 .epc-caption p{color:#FFF; text-align:left;}
 .epc-nav-row {display:flex; flex:0 39%; align-items: center; gap:25px; padding:20px 0 0;}
-.epcrow{margin-bottom:60px;}
+.epcrow{margin-bottom:60px; justify-content: center;}
 .epc-arrow-btn{
 	width:32px; 
 	height:32px; 
@@ -2649,9 +2650,13 @@ RIGHT ENGINEER IMAGE
     align-items: flex-start;
     gap:25px;
 	margin-bottom:10px;
+	transition: background 0.5s;
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-.yllowbx-content{ display: flex; flex-direction: column; gap:10px;}
-.yllowbx-content h3{text-align:left; font-weight:700;}
+.yllowbx-content{ display: flex; flex-direction: column; gap:10px; transition: background 0.5s; transition: transform 0.35s ease, box-shadow 0.35s ease;}
+.yllowbx-content h3{text-align:left; font-weight:700; }
+.yllowbx:hover{transform: translateY(-5px);}
+.yllowbx:hover .yllowbx-content{transform: translateY(-2px);}
 .dpbluesctn{background:#001538;}
 .parallaxsctn{ position: relative; overflow: hidden;}
 .parallaxsctn > .container,
@@ -2711,7 +2716,7 @@ RIGHT ENGINEER IMAGE
 	margin-bottom:60px;
 }
 .elctrctab-wrapper .engine-tab-btn{padding: 30px 25px; justify-content: space-between; gap:0;}
-.elctrctab-wrapper .diesel-tab-btn.active h3{color:#0f4003;}
+.elctrctab-wrapper .diesel-tab-btn.active h3{color:#0041bb;}
 .elctrctab-wrapper .diesel-tab-btn h3{color:#FFF; font-size:22px; text-align:center; font-weight:200;}
 .elctrcsctn{margin-top:90px;}
 .frstrow{
@@ -2825,10 +2830,8 @@ RIGHT ENGINEER IMAGE
     padding:20px;
     display: flex;
     aspect-ratio:2.8/ 4;
-    flex-wrap:no-wrap;
     flex-direction: column;
     align-items: flex-start;
-    align-content: flex-start;
     gap:10px;
 }
 .epc-slick .epc-card.prdct-epcslide img{margin-top:-15px; width:80px; height:80px; position:relative; z-index:99;}
