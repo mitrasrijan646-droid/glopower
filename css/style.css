@@ -1258,7 +1258,7 @@ a:focus, a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap:70px;
+    gap:50px;
 }
 .footerwrpr p{color:#FFF; margin-bottom:30px; font-size:14px; line-height:20px;}
 .footerwrpr p a{color:#FFF;}
@@ -1459,7 +1459,6 @@ RIGHT ENGINEER IMAGE
     font-size:20px;
     margin-bottom:30px;
     margin-top:50px;
-	
 }
 .form-grid{
     display:grid;
@@ -2226,11 +2225,15 @@ RIGHT ENGINEER IMAGE
 }
 .cap-card:hover h4 {color:#FFF; }
 .contactwrppr{background:#FFF;}
-.contactwrppr h1{color:#0041bb;}
+.contactwrppr h1{color:#0041bb; margin-bottom:50px;}
 .contactwrppr p.required-field{color:#0041bb; font-weight:bold;}
 .contactwrppr .form-group label{color:#0041bb;}
 .contactwrppr .form-group .chips span{border: 1px solid rgba(0, 65, 187, 0.7); color:#000;}
-.contactwrppr .form-group .chips:hover span{background:#FFF;}
+.contactwrppr .form-group .chips input:checked + span,
+.chips span:hover{
+    background:#0047d9;
+    color:#FFF !important;
+}
 .contactwrppr .contact-title{color:#0041bb;}
 .contactwrppr .form-grid .input-box label{color:#0041bb;}
 .contactwrppr .form-grid .input-box input, .input-box textarea{ background:#e1e1e1;}
@@ -2510,7 +2513,7 @@ RIGHT ENGINEER IMAGE
 #myNavbar .custom-dropdown-one{ display:none; left:-300px;}
 #myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns:2.3fr 1.5fr 1fr 1fr;}
 .clntsctn{background:#dfdfdf; padding:150px 0;}
-.clntsctn h1{color:#0039a3; font-weight:700; text-align:center;}
+.clntsctn h1{color:#0039a3; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
 .clntsctn .clientSwiper .swiper-slide{overflow:visible;}
 .clntsctn .clientSwiper .swiper-slide img{width:100%; transition:0.5s ease;}
