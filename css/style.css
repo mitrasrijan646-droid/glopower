@@ -747,7 +747,7 @@ a:focus, a:hover {
       pointer-events: none;
       user-select: none;
     }
-    .powerbx.blue::before { color:#0149d0; }
+    .powerbx.blue::before { color:#1854ff; }
     /* ─────────────────────────────────────────
        CARD ICON + TITLE (side by side)
     ───────────────────────────────────────── */
@@ -795,7 +795,7 @@ a:focus, a:hover {
 	}
 .whtbx h1{color:#f2ae2c; font-weight:400;}
 .cmprhnsv{ background:url(../images/spark-icon.png) no-repeat top right fixed; background-size:fill;}
-.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.22fr);}
+.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.18fr);}
 .cpbltswrpr{
 	margin-top:85px;
 	display: grid;
@@ -1074,14 +1074,14 @@ a:focus, a:hover {
 	align-items:start;
 }
 .sprtbx h2{text-align:left; color:#00153c; font-weight:700;}
-.sprtbx h1{font-size:40px; color:#00153c; padding-bottom:40px; font-weight:400; text-align:left;}
+.sprtbx h1{font-size:30px; color:#00153c; padding-bottom:20px; font-weight:400; text-align:left;}
 .sprtbx ul{padding-inline-start:0; width:90%;}
 .sprtbx ul li{
 	list-style-type: none;
     border: 2px solid #0039a3;
     border-radius: 50px;
     display: flex;
-    font-size:22px;
+    font-size:20px;
     flex-wrap: wrap;
     align-items: center;
     color: #00153c;
@@ -1091,8 +1091,9 @@ a:focus, a:hover {
     transition: all 0.3s ease;
     justify-content: flex-start;
 }
+.sprtbx ul li a{display:flex; align-items:center;}
 .sprtbx ul li:hover {border-color:#ffc100; transform:translateX(8px);}
-.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 10px;}
+.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 10px; width:70px; height:70px;}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
@@ -1966,10 +1967,10 @@ RIGHT ENGINEER IMAGE
 .ftrwrpprhdbx h1{ font-weight:200; font-size:72px; text-align:center; color:#8a9d43;}
 .ftrwrpprhdbx h3{font-size:30px;}
 .ftrwrppr{
-	margin-top:50px;
+	margin:50px 0;
 	display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:35px;
+    grid-template-columns: repeat(5, 1fr);
+    gap:30px;
     align-items: stretch;
     padding:0;
     align-content: space-between;
@@ -1980,31 +1981,22 @@ RIGHT ENGINEER IMAGE
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap:50px;
-	padding:60px;
+    gap:20px;
+	padding:20px 10px;
 	border-radius:15px;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 	transition: 0.8s ease;
 }
-.ftrwrpprbx:first-child{box-shadow:none; padding:20px;}
-.ftrwrpprbx:first-child h1{
-	text-align:left;
-	margin:0;
-	font-size:70px;
-	font-weight:200;
-}
 .ftrwrpprbx img{margin:0 auto; transition: 0.8s ease;}
-.ftrwrpprbx p:before{
-	content:'';
-    position: absolute;
-    background: #fba819;
-    width: 50px;
-    height: 6px;
-    top: -25px;
-    left: 42%;
-    border-radius:6px;
+.ftrwrpprbx .brdr-line{
+	background: #fba819;
+	border-radius:6px;
+	width:50px;
+	height:6px;
+	border-radius:6px;
 }
 .ftrwrpprbx p{
+	margin-bottom:0;
 	text-align:center; 
 	font-weight:200; 
 	font-size:18px; 
