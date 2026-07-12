@@ -1074,26 +1074,49 @@ a:focus, a:hover {
 	align-items:start;
 }
 .sprtbx h2{text-align:left; color:#00153c; font-weight:700;}
-.sprtbx h1{font-size:30px; color:#00153c; padding-bottom:20px; font-weight:400; text-align:left;}
+.sprtbx h1{font-size:45px; color:#00153c; padding-bottom:40px; font-weight:200; text-align:left;}
 .sprtbx ul{padding-inline-start:0; width:90%;}
 .sprtbx ul li{
 	list-style-type: none;
-    border: 2px solid #0039a3;
-    border-radius: 50px;
+    border-top: 2px solid #0039a3;
     display: flex;
     font-size:20px;
     flex-wrap: wrap;
     align-items: center;
     color: #00153c;
-    margin-bottom: 30px;
-    font-weight: 700;
-    padding:10px 22px;
+    font-weight:200;
+    padding:15px 0;
     transition: all 0.3s ease;
     justify-content: flex-start;
 }
-.sprtbx ul li a{display:flex; align-items:center;}
+.sprtbx ul li:last-child{border-bottom: 2px solid #0039a3;}
+.sprtbx ul li a{
+	display:flex; 
+	align-items:center;
+	background:#08389a;
+	border-radius:15px;
+}
 .sprtbx ul li:hover {border-color:#ffc100; transform:translateX(8px);}
-.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; border-radius: 10px; width:70px; height:70px;}
+.sprtbx ul li img{margin-right:20px; position:relative; z-index:1; margin-top:0; transition: filter 0.3s ease; width:64px; height:64px;}
+.astntbx{
+	background:#08389a;
+	border-radius:20px;
+	width:90%;
+	padding:20px;
+	margin-top: 40px;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	gap:50px;
+	transition: all 0.3s ease;
+}
+.astntbx a{
+	color:#FFF;
+	font-weight:bold;
+	font-size:25px;
+	display:block;
+}
+.astntbx:hover{ background:#ffc100; transform:translateX(8px);}
 .lwrsctn{padding-bottom:70px;}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
@@ -2014,6 +2037,9 @@ RIGHT ENGINEER IMAGE
 	display:grid; 
 	gap: 0;
 	grid-template-columns:1fr 1fr;
+	margin-bottom:60px;
+	/* width:100%; */
+	position:sticky;
 }
 .diesel-tab-wrappr{grid-template-columns:repeat(5, 1fr);}
 .engine-tab-wrapper .lefttab{
@@ -2232,7 +2258,7 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .textarea-box label{color:#0041bb;}
 .contactwrppr p.privacy-text{color:#000;}
 .contactwrppr p.privacy-text a{color:#000;}
-.blackbxsctn{background:#000; padding:120px 0;}
+.blackbxsctn{background:#001538; padding:120px 0;}
 .parallax-section {
     position: relative;
     background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
