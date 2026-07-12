@@ -1986,6 +1986,8 @@ RIGHT ENGINEER IMAGE
 	border-top-right-radius: 20px;
 	padding:0 0 60px;
 }
+.ftrsctnsntn h1.grntxt{font-size:45px; text-align:center;}
+.ftrsctnsntn h2.grntxt{text-align:center;}
 .ftrwrpprhdbx{}
 .ftrwrpprhdbx h1{ font-weight:200; font-size:72px; text-align:center; color:#8a9d43;}
 .ftrwrpprhdbx h3{font-size:30px;}
@@ -2022,8 +2024,8 @@ RIGHT ENGINEER IMAGE
 	margin-bottom:0;
 	text-align:center; 
 	font-weight:200; 
-	font-size:18px; 
-	line-height:25px; 
+	font-size:15px; 
+	line-height:18px; 
 	position:relative;
 	transition: 0.8s ease;
 }
@@ -2103,7 +2105,7 @@ RIGHT ENGINEER IMAGE
         transform: translateY(0);
     }
 }
-.blutxt{color:#0048cf !important; text-align:left;}
+.blutxt{color:#0048cf !important; font-size:40px;}
 /* Heading */
 .engine-tab-content h2 {
     font-size: 50px;
@@ -2148,11 +2150,11 @@ RIGHT ENGINEER IMAGE
 .engine-table.diesel-table thead tr.subhead th {background:#a5ddf8;}
 .engine-table.diesel-table tbody tr.alt td { background: #ddf0fc;}
 .engine-table.diesel-table tbody tr:hover td { background: #ddf0fc;}
-.engine-tab-btn.diesel-tab-btn{background:#0048cf;}
-.engine-tab-btn.diesel-tab-btn:nth-child(2){background:#0041bb;}
-.engine-tab-btn.diesel-tab-btn:nth-child(3){background:#0039a5;}
-.engine-tab-btn.diesel-tab-btn:nth-child(4){background:#003497;}
-.engine-tab-btn.diesel-tab-btn:nth-child(5){background:#002e86;}
+.engine-tab-btn.diesel-tab-btn{background:#c3c3c3;}
+.engine-tab-btn.diesel-tab-btn:nth-child(2){background:#b7b7b7;}
+.engine-tab-btn.diesel-tab-btn:nth-child(3){background:#a2a1a1;}
+.engine-tab-btn.diesel-tab-btn:nth-child(4){background:#8f8f8f;}
+.engine-tab-btn.diesel-tab-btn:nth-child(5){background:#818181;}
 .engine-tab-btn.diesel-tab-btn.active {background: #FFF;}
 .engine-tab-btn.diesel-tab-btn.active .tab-logo{filter: none !important;}
 .engine-tab-btn.diesel-tab-btn .tab-logo{ filter: brightness(0) invert(1) !important;}
@@ -2258,13 +2260,14 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .textarea-box label{color:#0041bb;}
 .contactwrppr p.privacy-text{color:#000;}
 .contactwrppr p.privacy-text a{color:#000;}
-.blackbxsctn{background:#001538; padding:120px 0;}
+.blackbxsctn{background:#001538; padding:120px 0; margin-top: -1px;}
+.blackbxsctn h3.blcbxtxt{color:#009cff;}
 .parallax-section {
     position: relative;
     background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
-    background-position-x: left 80px;
+    background-position-x:0;
     background-repeat: no-repeat;
-    background-size:fill;
+    /* background-size:fill; */
     min-height:auto;
     display: flex;
     align-items: center;
@@ -2861,6 +2864,7 @@ RIGHT ENGINEER IMAGE
 .epc-slick .epc-card.prdct-epcslide p{font-size:16px; text-align:left; margin-bottom:0;}
 .epc-slick .epc-card.prdct-epcslide ul{padding-inline-start: 20px;}
 .epc-slick .epc-card.prdct-epcslide ul li{font-size:15px; line-height:18px; margin-bottom: 5px;  padding-bottom: 5px;}
+.whtbx h1.sltntxt{text-align:left;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}

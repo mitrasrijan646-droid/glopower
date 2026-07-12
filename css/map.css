@@ -1,0 +1,248 @@
+:root {
+    --bg:            #1C47C7;
+    --bg-deep:       #15359A;
+    --land:          #D8DCE8;
+    --land-border:   #A8B4CC;
+    --gold:          #F0A500;
+
+    --samba:         #D23C35;
+    --samba-dark:    #B22E28;
+    --gulf:          #B2D2ED;
+    --gulf-dark:     #6FA8D4;
+    --east:          #458C8B;
+    --east-dark:     #2E6160;
+    --uila:          #5ABABC;
+    --uila-dark:     #3A9092;
+
+    --card-radius:   15px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── Section wrapper ───────────────────────────────── */
+  .presence-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5vw 4vw 4vw;
+    background:
+      radial-gradient(ellipse 70% 50% at 70% 10%, rgba(255,255,255,.06), transparent 65%),
+      linear-gradient(160deg, var(--bg) 0%, var(--bg-deep) 100%);
+    overflow: hidden;
+  }
+
+  /* ── Header ────────────────────────────────────────── */
+  /*  */
+
+  /* ── Layout ────────────────────────────────────────── */
+  .layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5vw;
+  }
+  .map-col { flex:0 0 70%; min-width: 0; }
+  .card-col {
+    flex: 0 0 70%;
+    max-width: 380px;
+    position: sticky;
+    top: 5vw;
+  }
+
+  /* ── SVG map ───────────────────────────────────────── */
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #map-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Land paths */
+  .land {
+    fill: var(--land);
+    stroke: var(--land-border);
+    stroke-width: .5;
+  }
+
+  /* Territory paths */
+  .territory {
+    cursor: pointer;
+    stroke: rgba(255,255,255,.25);
+    stroke-width: .6;
+    transition: filter .18s ease, stroke-width .18s ease;
+  }
+  .territory:hover { filter: brightness(1.18) saturate(1.1); }
+  .territory.active {
+    stroke: #fff;
+    stroke-width: 1.5;
+    filter: brightness(1.12);
+  }
+  .t-samba               { fill: var(--samba); }
+  .t-glopower-gulf       { fill: var(--gulf); }
+  .t-glopower-eastafrica { fill: var(--east); }
+  .t-uila                { fill: var(--uila); }
+
+  /* ── Legend ────────────────────────────────────────── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    margin-top: 1.4rem;
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+    font-size:14px;
+    color: rgba(255,255,255,.95);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color .15s, border-color .15s;
+  }
+  .legend-item:hover, .legend-item.active {
+    color: #fff;
+    border-color: rgba(255,255,255,.4);
+  }
+  .leg-dot {
+    width: 10px; height: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .leg-samba { background: var(--samba); }
+  .leg-gulf  { background: var(--gulf); }
+  .leg-east  { background: var(--east); }
+  .leg-uila  { background: var(--uila); }
+
+  /* ── Info card ─────────────────────────────────────── */
+  .info-card {
+    border-radius: var(--card-radius);
+    padding: 0;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 55px rgba(0,0,0,.32);
+    background: #FFF;
+  }
+
+  /* logo area — full-colour logo(s), no background tint */
+  .card-logo-strip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1.6rem 1.8rem 1.2rem;
+    min-height: 80px;
+  }
+  .card-logo-strip img {
+    max-height:106px;
+    width: 106px;
+    object-fit: contain;
+  }
+  /* thin vertical separator between dual logos */
+  .logo-sep {
+    width: 1px;
+    height: 40px;
+    background: #e5e7eb;
+    flex-shrink: 0;
+  }
+
+  /* card body */
+  .card-body {
+    padding: 0 1.8rem 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	gap:10px;
+  }
+
+  /* divider line between logo and text */
+  .card-divider {
+    height:2px;
+    background: #e5e7eb;
+    margin:0;
+	width:100%;
+  }
+
+  /* empty state */
+  .card-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    min-height: 320px;
+    border-radius: var(--card-radius);
+    border: 1px dashed rgba(255,255,255,.25);
+    background: rgba(255,255,255,.06);
+    color: rgba(255,255,255,.6);
+    font-size:18px;
+    font-weight:400;
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+    line-height:20px;
+	gap:15px;
+  }
+  .card-empty strong {
+	font-size:25px;
+    display: block;
+    color: rgba(255,255,255,.85);
+  }
+  .card-company {
+	font-size:25px;
+    font-weight:400;
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+    text-transform: uppercase;
+    color: #0041bb;
+    margin-bottom: 0;
+  }
+  .card-region {
+	font-size:15px;
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  .card-address {
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+	font-size:15px;
+    font-weight: 400;
+    color: #000;
+  }
+  .card-meta {
+    /* font-size: .86rem; */
+	font-family: "akzidenz-grotesk-next-extend", sans-serif;
+    font-weight: 400;
+    line-height: 1.85;
+    color: #000;
+  }
+  .card-meta b { font-weight: 700; color: #111827; }
+  .card-meta a {
+    color: #0041bb;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(29,78,216,.3);
+  }
+  .card-meta a:hover { border-color: #1d4ed8; }
+
+  .hint {
+    margin-top: .9rem;
+   /*  font-size: .73rem; */
+    color: rgba(255,255,255,.42);
+    text-align: center;
+    font-weight: 300;
+  }
+
+  /* ── Responsive ────────────────────────────────────── */
+  @media (max-width: 820px) {
+    .layout { flex-direction: column; }
+    .card-col { position: static; max-width: 100%; width: 100%; }
+    .map-col { width: 100%; }
+  }
+
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
