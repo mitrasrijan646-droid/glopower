@@ -19,6 +19,7 @@
 <noscript><link rel="stylesheet" href="css/owl.theme.default.min.css"></noscript>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <link href="css/map.css" rel="stylesheet" media="all">
 <!-- InstanceEndEditable -->
 </head>
@@ -669,10 +670,10 @@
 
 						</div>
 
-						<!-- Navigation -->
+						
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
-						<!-- Pagination -->
+						
 						<div class="swiper-pagination"></div>
 
 					</div>
@@ -686,11 +687,10 @@
 </section>
 
 <section class="mapsctn sectnbx">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<h1 class="">Our Presence</h1>
-				
 				<div class="layout">
 					<div class="map-col">
 						<div class="map-wrap">
@@ -736,6 +736,8 @@
 								<div class="card-meta"    id="card-meta"></div>
 							</div>
 						</div>
+						
+						<div class="hint">Hover to preview · Click to lock selection</div>
 						
 					</div>
 					
@@ -1068,7 +1070,7 @@ gsap.to(".logo-parallax", {
 <!-- InstanceBeginEditable name="EditRegion6" -->
 <script src="js/countries-data.js"></script>
 <script src="js/logos-data.js"></script>
-<script>
+<script type="text/javascript">
 (function () {
   /* ─────────────── Company data ─────────────── */
   const COMPANIES = {
@@ -1305,6 +1307,7 @@ var swiper = new Swiper(".mySectorSlider", {
 
 });
 </script>
+
 <script src="js/owl.carousel.js"></script>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
@@ -1360,7 +1363,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
-<script type="text/javascript">
+
+<!-- <script type="text/javascript">
 	window.addEventListener('scroll', function() {
     var parallax = document.querySelector('.parallax-section-service');
     if (parallax) {
@@ -1370,7 +1374,7 @@ document.addEventListener('DOMContentLoaded', function () {
         parallax.style.backgroundPositionY = (relativeScroll * 0.4) + 'px';
     }
 })
-</script>
+</script> -->
 
 <!-- InstanceEndEditable -->
 </body>
