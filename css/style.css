@@ -1853,7 +1853,7 @@ RIGHT ENGINEER IMAGE
 .ftrwrpprhdbx h1{ font-weight:200; font-size:72px; text-align:center; color:#8a9d43;}
 .ftrwrpprhdbx h3{font-size:30px;}
 .ftrwrppr{
-	margin:50px 0;
+	margin:50px 0 100px;
 	display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap:30px;
@@ -1968,7 +1968,7 @@ RIGHT ENGINEER IMAGE
 .blutxt{color:#0048cf !important; font-size:40px;}
 /* Heading */
 .engine-tab-content h2 {
-    font-size: 50px;
+    font-size:40px;
     color: #0f4003;
     margin-bottom: 20px;
     font-weight: 200;
