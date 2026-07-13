@@ -1140,7 +1140,7 @@ a:focus, a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap:120px;
+    gap:100px;
 }
 .footerwrpr p{color:#FFF; margin-bottom:30px; font-size:14px; line-height:20px;}
 .footerwrpr p a{color:#FFF;}
