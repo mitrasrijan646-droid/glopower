@@ -2676,7 +2676,7 @@ RIGHT ENGINEER IMAGE
 .lwrdsgnwrprbx{padding:75px 45px; position:relative;}
 .lwrdsgnwrprbx.whitebox{background:#FFF;}
 .lwrdsgnwrprbx.whitebox p{color:#0041bb;}
-.lwrdsgnwrprbx.bluebox p{color:#FFF; text-align:center;}
+.lwrdsgnwrprbx.bluebox p{color:#FFF; text-align:center; font-size:22px;}
 .lwrdsgnwrprbx img{
 	margin: 0 auto;
     display: table;
