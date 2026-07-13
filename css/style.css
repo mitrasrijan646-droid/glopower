@@ -923,7 +923,7 @@ a:focus, a:hover {
 .swiper-pagination-progressbar-fill{ background:#e5a51d !important;border-radius:30px;}
 .mapsctn{background:#0041bb; padding-right:6vw;}
 .mapsctn h1{color:#FFF; margin-bottom:50px; text-align:left; font-size:45px; padding-left:6vw;}
-.prdctspprt{padding:120px 0;}
+.prdctspprt{padding:180px 0;}
 .sprtbxcntnr{
 	display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
@@ -975,10 +975,10 @@ a:focus, a:hover {
 	display:block;
 }
 .astntbx:hover{ background:#ffc100; transform:translateX(8px);}
-.lwrsctn{padding-bottom:70px;}
+.lwrsctn{padding-bottom:30px;}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
-.projects-section{ width:100%; padding:0 0 80px 3vw;}
+.projects-section{ width:100%; padding:0 0 120px 3vw;}
 .projects-container{
     max-width:1300px;
     margin:auto;
