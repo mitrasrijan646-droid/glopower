@@ -1428,7 +1428,20 @@ RIGHT ENGINEER IMAGE
     align-items: stretch;
 }
 /* LEFT */
-.projects-list{ background:#FFF;}
+.projects-list{ 
+	/* background:#FFF;
+	height:600px;
+    overflow-y:auto;
+    overflow-x:hidden;
+	align-self:start; */
+	position:sticky;
+    top:60px; /* below your margin-top offset */
+    max-height:calc(100vh - 60px);
+    overflow-y:auto;
+    align-self:start;
+}
+.projects-list::-webkit-scrollbar{ width:5px;}
+.projects-list::-webkit-scrollbar-track{ background:#0039a3;}
 .project-item{
     display:flex;
     justify-content:space-between;
@@ -1471,7 +1484,6 @@ RIGHT ENGINEER IMAGE
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
-/* .project-preview{overflow:hidden;} */
 .preview-image{ position:relative;}
 .preview-image img{
     width:100%;
@@ -1496,17 +1508,6 @@ RIGHT ENGINEER IMAGE
 	text-align:left;
 }
 .preview-overlay p{ margin-top:5px; font-size:22px; color:#FFF;}
-/* GENSET */
-.genset-info{
-    background:#ffc000;
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    padding:10px;
-	justify-content: flex-start;
-}
-.genset-icon{font-size:42px;}
-.genset-text{font-size:18px; font-family: "akzidenz-grotesk-next-extend",sans-serif; color:#000;}
 /* HIGHLIGHTS */
 .project-highlights{
     padding:20px 25px;
@@ -1891,7 +1892,7 @@ RIGHT ENGINEER IMAGE
 	display:grid; 
 	gap: 0;
 	grid-template-columns:1fr 1fr;
-	margin-bottom:60px;
+	margin-bottom:100px;
 	/* width:100%; */
 	position:sticky;
 }
@@ -1916,8 +1917,8 @@ RIGHT ENGINEER IMAGE
     background: #0f4003;
     cursor: pointer;
     transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
-    padding:50px 25px;
-	gap:30px;
+	padding: 50px 100px 20px;
+	gap:20px;
 }
 .engine-tab-btn:hover { transform: translateY(-3px);}
 .engine-tab-btn.active {background: #FFF;}
@@ -2002,7 +2003,11 @@ RIGHT ENGINEER IMAGE
 .engine-table.diesel-table thead tr.subhead th {background:#a5ddf8;}
 .engine-table.diesel-table tbody tr.alt td { background: #ddf0fc;}
 .engine-table.diesel-table tbody tr:hover td { background: #ddf0fc;}
-.engine-tab-btn.diesel-tab-btn{background:#c3c3c3;}
+.engine-tab-btn.diesel-tab-btn{
+	background:#c3c3c3;
+	padding:50px 50px 20px;
+	gap:15px;
+}
 .engine-tab-btn.diesel-tab-btn:nth-child(2){background:#b7b7b7;}
 .engine-tab-btn.diesel-tab-btn:nth-child(3){background:#a2a1a1;}
 .engine-tab-btn.diesel-tab-btn:nth-child(4){background:#8f8f8f;}

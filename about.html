@@ -13,7 +13,7 @@
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 <link href="css/font.css" rel="stylesheet" media="all">
 <!-- InstanceBeginEditable name="head" -->
-
+<link href="css/map.css" rel="stylesheet" media="all">
 <!-- InstanceEndEditable -->
 </head>
 
@@ -474,41 +474,58 @@
 </section>
 
 <section class="mapsctn sectnbx">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>Our Presence</h1>
-				<div class="presence-layout">
-				
-					<div class="map-wrap mapbx">
-						<svg id="map-svg" viewBox="0 70 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of GloPower group presence across Africa and Asia">
-							<g id="land-layer"></g>
-							<g id="territory-layer"></g>
-						</svg>
-						
+				<h1 class="">Our Presence</h1>
+				<div class="layout">
+					<div class="map-col">
+						<div class="map-wrap">
+							<svg id="map-svg" viewBox="0 62 1400 650"
+								 xmlns="http://www.w3.org/2000/svg"
+								 role="img" aria-label="World map showing GloPower group presence">
+							  <g id="land-layer"></g>
+							  <g id="territory-layer"></g>
+							</svg>
+						</div>
+
 						<div class="legend" id="legend">
 							<span class="legend-item" data-group="samba">
-								<span class="legend-dot samba"></span> Samba Tech &amp; Co
+								<span class="leg-dot leg-samba"></span>Samba Tech &amp; Co
 							</span>
 							<span class="legend-item" data-group="glopower-gulf">
-								<span class="legend-dot gulf"></span> GloPower FZ LLC
+								<span class="leg-dot leg-gulf"></span>GloPower FZ LLC — Gulf &amp; MENA
 							</span>
 							<span class="legend-item" data-group="glopower-eastafrica">
-								<span class="legend-dot eastafrica"></span> GloPower FZ LLC
+								<span class="leg-dot leg-east"></span>Karimjee Energy — East Africa
 							</span>
 							<span class="legend-item" data-group="uila">
-								<span class="legend-dot uila"></span> Uila Power Pvt. Ltd.
+								<span class="leg-dot leg-uila"></span>Uila Power &amp; Boltz Energy — India
 							</span>
 						</div>
 					</div>
 					
-					<div class="info-panel-wrap mapbx">
-						<div class="info-card" id="info-card" data-theme="empty">
-							<div class="empty-state" id="empty-state">
-							  <strong>Select a territory</strong> Click any region on the map to view contact details for that entity.
+					<!-- CARD -->
+					<div class="card-col">
+						<div class="card-empty" id="card-empty">
+							<strong>Select a territory</strong>
+							Click any highlighted region on the map to view entity details.
+						</div>
+						<div class="info-card" id="info-card" style="display:none">
+							<div class="card-logo-strip" id="card-logo-strip">
+							  <!-- logos injected by JS -->
+							</div>
+							<div class="card-divider"></div>
+							<div class="card-body">
+								<div class="card-company" id="card-company"></div>
+								<div class="card-region"  id="card-region"></div>
+								<div class="card-address" id="card-address"></div>
+								<div class="card-meta"    id="card-meta"></div>
 							</div>
 						</div>
-					  <!-- <div class="hint">Hover to preview, click to lock a region in place.</div> -->
+						
+						<div class="hint">Hover to preview · Click to lock selection</div>
+						
 					</div>
 					
 				</div>
@@ -761,183 +778,191 @@ gsap.to(".logo-parallax", {
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
 <script src="js/countries-data.js"></script>
-<script>
-(function(){
-  const COMPANY_INFO = {
+<script src="js/logos-data.js"></script>
+<script type="text/javascript">
+(function () {
+  /* ─────────────── Company data ─────────────── */
+  const COMPANIES = {
     samba: {
-      theme: "samba",
-      name: "Samba Tech &amp; Co",
-      sub: "Gabon",
-      lines: [
-        "3 Quartier Station, Glass,<br>Libreville, Gabon"
-      ],
+      name: 'Samba Tech &amp; Co',
+      region: 'Gabon, Central &amp; West Africa',
+      logos: ['samba'],
+      address: '3 Quartier Station, Glass,<br>Libreville, Gabon',
       meta: [
-        "<b>Tel.:</b> +241 6558 2666",
-        "<b>Email:</b> <a href=\"mailto:contact@sambatechco.com\">contact@sambatechco.com</a>"
+        '<b>Tel.:</b> +241 6558 2666',
+        '<b>Email:</b> <a href="mailto:contact@sambatechco.com">contact@sambatechco.com</a>'
       ]
     },
-    "glopower-gulf": {
-      theme: "gulf",
-      name: "GloPower FZ LLC",
-      sub: "United Arab Emirates — Group Headquarters",
-      lines: [
-        "FDRK1086, Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates"
-      ],
+    'glopower-gulf': {
+      name: 'GloPower FZ LLC',
+      region: 'United Arab Emirates — Group Headquarters',
+      logos: ['glopower-gulf'],
+      address: 'FDRK1086, Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates',
       meta: [
-        "<b>Tel.:</b> +971 58 241 3303",
-        "<b>Email:</b> <a href=\"mailto:contact@glopower.ae\">contact@glopower.ae</a>",
+        '<b>Tel.:</b> +971 58 241 3303',
+        '<b>Email:</b> <a href="mailto:contact@glopower.ae">contact@glopower.ae</a>',
+        '<b>Web:</b> <a href="https://www.glopower.ae" target="_blank" rel="noopener">www.glopower.ae</a>'
       ]
     },
-    "glopower-eastafrica": {
-      theme: "eastafrica",
-      name: "GloPower FZ LLC",
-      sub: "East Africa Operations",
-      lines: [
-        "FDRK1086, Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates"
-      ],
+    'glopower-eastafrica': {
+      name: 'Karimjee Energy',
+      region: 'East Africa — Distributor for Uila Power',
+      logos: ['glopower-eastafrica'],
+      address: 'Dar es Salaam, Tanzania',
       meta: [
-        "<b>Tel.:</b> +971 58 241 3303",
-        "<b>Email:</b> <a href=\"mailto:contact@glopower.ae\">contact@glopower.ae</a>",
+        '<b>Operations:</b> <br/>Tanzania · Uganda · Kenya · Ethiopia · Rwanda · DRC',
       ]
     },
     uila: {
-      theme: "uila",
-      name: "Uila Power Pvt. Ltd.",
-      sub: "India",
-      lines: [
-        "Unit no. 503, Enkay Town Plaza, Palam Vihar, Gurugram – 122017 (Haryana), India"
-      ],
+      name: 'Uila Power Pvt. Ltd.',
+      region: 'India',
+      logos: ['uila', 'boltz'],
+      address: 'Unit no. 503, Enkay Town Plaza, <br>Palam Vihar, Gurugram – 122017 <br>(Haryana), India',
       meta: [
-        "<b>Ph:</b> +91 124 4400950 / +91 99106 27437",
-        "<b>Email:</b> <a href=\"mailto:hello@uilapower.com\">hello@uilapower.com</a>"
+        '<b>Ph:</b> +91 124 4400950 / +91 99106 27437',
+        '<b>Email:</b> <a href="mailto:hello@uilapower.com">hello@uilapower.com</a>'
       ]
     }
   };
 
   const GROUP_CLASS = {
-    samba: "t-samba",
-    "glopower-gulf": "t-glopower-gulf",
-    "glopower-eastafrica": "t-glopower-eastafrica",
-    uila: "t-uila"
+    samba: 't-samba',
+    'glopower-gulf': 't-glopower-gulf',
+    'glopower-eastafrica': 't-glopower-eastafrica',
+    uila: 't-uila'
   };
 
-  const landLayer = document.getElementById("land-layer");
-  const territoryLayer = document.getElementById("territory-layer");
+  /* ─────────────── Render map paths ─────────────── */
+  const NS = 'http://www.w3.org/2000/svg';
+  const landLayer = document.getElementById('land-layer');
+  const terrLayer = document.getElementById('territory-layer');
   const data = window.COUNTRY_DATA || [];
 
-  const landPaths = [];
-  const territoryPaths = [];
-
-  data.forEach(function(c){
-    if (c.group) {
-      territoryPaths.push(c);
-    } else {
-      landPaths.push(c);
-    }
-  });
-
   const landFrag = document.createDocumentFragment();
-  landPaths.forEach(function(c){
-    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    p.setAttribute("d", c.d);
-    p.setAttribute("class", "land");
-    p.setAttribute("data-name", c.name);
-    landFrag.appendChild(p);
-  });
-  landLayer.appendChild(landFrag);
-
   const terrFrag = document.createDocumentFragment();
-  territoryPaths.forEach(function(c){
-    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    p.setAttribute("d", c.d);
-    p.setAttribute("class", "territory " + GROUP_CLASS[c.group]);
-    p.setAttribute("data-group", c.group);
-    p.setAttribute("data-name", c.name);
-    p.setAttribute("tabindex", "0");
-    p.setAttribute("role", "button");
-    p.setAttribute("aria-label", c.name + " — " + (COMPANY_INFO[c.group] ? COMPANY_INFO[c.group].name.replace(/&amp;/g,'&') : ""));
-    terrFrag.appendChild(p);
-  });
-  territoryLayer.appendChild(terrFrag);
 
-  const infoCard = document.getElementById("info-card");
-  const legend = document.getElementById("legend");
+  for (const c of data) {
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', c.d);
+    if (c.group) {
+      p.setAttribute('class', 'territory ' + GROUP_CLASS[c.group]);
+      p.setAttribute('data-group', c.group);
+      p.setAttribute('data-name', c.name);
+      p.setAttribute('tabindex', '0');
+      p.setAttribute('role', 'button');
+      p.setAttribute('aria-label', c.name);
+      terrFrag.appendChild(p);
+    } else {
+      p.setAttribute('class', 'land');
+      landFrag.appendChild(p);
+    }
+  }
+  landLayer.appendChild(landFrag);
+  terrLayer.appendChild(terrFrag);
+
+  /* ─────────────── Card logic ─────────────── */
+  const logos = window.LOGO_DATA || {};
+  const cardEmpty   = document.getElementById('card-empty');
+  const infoCard    = document.getElementById('info-card');
+  const cardCompany = document.getElementById('card-company');
+  const cardRegion  = document.getElementById('card-region');
+  const cardAddress = document.getElementById('card-address');
+  const cardMeta    = document.getElementById('card-meta');
+  const legend      = document.getElementById('legend');
+
   let activeGroup = null;
+  let previewGroup = null;
 
-  function renderCard(groupKey){
-    const info = COMPANY_INFO[groupKey];
+  const ALL_CARD_CLASSES = ['card-samba','card-gulf','card-east','card-uila'];
+
+  function showCard(group) {
+    const info = COMPANIES[group];
     if (!info) return;
 
-    infoCard.setAttribute("data-theme", info.theme);
-    infoCard.innerHTML =
-      '<div class="company-name">' + info.name + '</div>' +
-      '<div class="company-sub">' + info.sub + '</div>' +
-      '<div class="addr">' + info.lines.join("<br><br>") + '</div>' +
-      '<div class="meta-row">' + info.meta.join("<br>") + '</div>';
-  }
+    cardEmpty.style.display = 'none';
+    infoCard.style.display = 'flex';
+    ALL_CARD_CLASSES.forEach(c => infoCard.classList.remove(c));
 
-  function clearCard(){
-    infoCard.setAttribute("data-theme", "empty");
-    infoCard.innerHTML = '<div class="empty-state"><strong>Select a territory</strong>Click any region on the map to view contact details for that entity.</div>';
-  }
-
-  function setActiveGroup(groupKey){
-    activeGroup = groupKey;
-    document.querySelectorAll(".territory").forEach(function(el){
-      el.classList.toggle("is-active", el.getAttribute("data-group") === groupKey);
+    // Build logo strip — one or more logos separated by a thin line
+    const strip = document.getElementById('card-logo-strip');
+    strip.innerHTML = '';
+    (info.logos || []).forEach((key, i) => {
+      if (i > 0) {
+        const sep = document.createElement('span');
+        sep.className = 'logo-sep';
+        strip.appendChild(sep);
+      }
+      if (logos[key]) {
+        const img = document.createElement('img');
+        img.src = logos[key].orig;
+        img.alt = key;
+        strip.appendChild(img);
+      }
     });
-    document.querySelectorAll(".legend-item").forEach(function(el){
-      el.classList.toggle("is-active", el.getAttribute("data-group") === groupKey);
-    });
-    if (groupKey) {
-      renderCard(groupKey);
-    } else {
-      clearCard();
-    }
+
+    cardCompany.innerHTML = info.name;
+    cardRegion.textContent = info.region.replace(/&amp;/g, '&');
+    cardAddress.innerHTML  = info.address;
+    cardMeta.innerHTML     = info.meta.join('<br>');
   }
 
-  territoryLayer.addEventListener("click", function(e){
-    const target = e.target.closest(".territory");
-    if (!target) return;
-    const groupKey = target.getAttribute("data-group");
-    if (activeGroup === groupKey) {
-      setActiveGroup(null);
-    } else {
-      setActiveGroup(groupKey);
-    }
+  function hideCard() {
+    cardEmpty.style.display = '';
+    infoCard.style.display = 'none';
+    ALL_CARD_CLASSES.forEach(c => infoCard.classList.remove(c));
+  }
+
+  function setActive(group) {
+    activeGroup = group;
+    // Highlight territories
+    document.querySelectorAll('.territory').forEach(el => {
+      el.classList.toggle('active', el.dataset.group === group);
+    });
+    // Highlight legend
+    document.querySelectorAll('.legend-item').forEach(el => {
+      el.classList.toggle('active', el.dataset.group === group);
+    });
+    if (group) showCard(group); else hideCard();
+  }
+
+  /* ─────────────── Events: territories ─────────────── */
+  terrLayer.addEventListener('click', e => {
+    const t = e.target.closest('.territory');
+    if (!t) return;
+    const g = t.dataset.group;
+    setActive(activeGroup === g ? null : g);
   });
 
-  territoryLayer.addEventListener("keydown", function(e){
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const target = e.target.closest(".territory");
-    if (!target) return;
+  terrLayer.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const t = e.target.closest('.territory');
+    if (!t) return;
     e.preventDefault();
-    const groupKey = target.getAttribute("data-group");
-    setActiveGroup(activeGroup === groupKey ? null : groupKey);
+    const g = t.dataset.group;
+    setActive(activeGroup === g ? null : g);
   });
 
-  legend.addEventListener("click", function(e){
-    const item = e.target.closest(".legend-item");
+  // Hover preview (only if no locked selection)
+  terrLayer.addEventListener('mouseover', e => {
+    const t = e.target.closest('.territory');
+    if (!t || activeGroup) return;
+    previewGroup = t.dataset.group;
+    showCard(previewGroup);
+  });
+
+  terrLayer.addEventListener('mouseout', e => {
+    const t = e.target.closest('.territory');
+    if (!t || activeGroup) return;
+    previewGroup = null;
+    hideCard();
+  });
+
+  /* ─────────────── Events: legend ─────────────── */
+  legend.addEventListener('click', e => {
+    const item = e.target.closest('.legend-item');
     if (!item) return;
-    const groupKey = item.getAttribute("data-group");
-    setActiveGroup(activeGroup === groupKey ? null : groupKey);
-  });
-
-  // hover preview (desktop) without locking selection
-  territoryLayer.addEventListener("mousemove", function(e){
-    const target = e.target.closest(".territory");
-    if (!target) return;
-    if (activeGroup) return; // don't override a locked selection
-    const groupKey = target.getAttribute("data-group");
-    if (infoCard.getAttribute("data-preview") === groupKey) return;
-    infoCard.setAttribute("data-preview", groupKey);
-    renderCard(groupKey);
-  });
-
-  territoryLayer.addEventListener("mouseleave", function(){
-    if (activeGroup) return;
-    infoCard.removeAttribute("data-preview");
-    clearCard();
+    const g = item.dataset.group;
+    setActive(activeGroup === g ? null : g);
   });
 })();
 </script>
