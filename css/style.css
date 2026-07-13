@@ -1877,10 +1877,11 @@ RIGHT ENGINEER IMAGE
 .ftrwrpprbx .brdr-line{
 	background: #fba819;
 	border-radius:6px;
-	width:50px;
-	height:6px;
+	width:30px;
+	height:2px;
 	border-radius:6px;
 }
+.ftrwrpprbx .brdr-grn-line{background:#62b214;}
 .ftrwrpprbx p{
 	margin-bottom:0;
 	text-align:center; 
@@ -2199,7 +2200,7 @@ RIGHT ENGINEER IMAGE
     letter-spacing:0;
     line-height:42px;
 }
-.card-divider {
+.brand-card .card-divider {
     width:40px;
     height:4px;
     background:#e8a020;
