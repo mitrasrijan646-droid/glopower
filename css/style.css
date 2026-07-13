@@ -1902,9 +1902,6 @@ RIGHT ENGINEER IMAGE
 	grid-template-columns:1fr 1fr;
 	margin-bottom:100px;
 	/* width:100%; */
-	position:sticky;
-	top:80px; /* replace 80px with your fixed header's actual height */
-    z-index:100;
 }
 .diesel-tab-wrappr{grid-template-columns:repeat(5, 1fr);}
 .engine-tab-wrapper .lefttab{
@@ -2038,7 +2035,7 @@ RIGHT ENGINEER IMAGE
 .exprtsctn{background:#bddcff;}
 /* Left Content */
 .capabilities-content {
-	padding:30px 70px 40px 0;
+	padding:30px 70px 76px 0;
 	display: flex;
 	gap:19px;
     flex-direction: column;
@@ -2133,7 +2130,7 @@ RIGHT ENGINEER IMAGE
     position: relative;
     background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
     /* background-position-x:0; */
-	background-position: -100px 0%;
+	background-position: -150px 5%;
     background-repeat: no-repeat;
     /* background-size:fill; */
     min-height:auto;
@@ -2339,7 +2336,7 @@ RIGHT ENGINEER IMAGE
 .mngmntsctnwrpr svg{height:90px; fill:#ffc100;}
 .mngmntsctnwrpr p span{color:#0048cf; font-size:15px; font-weight:700;}
 .pwrsctn h1{color:#0048cf;}
-.epcsctn{ position: relative; overflow: hidden;}
+.epcsctn{ position: relative; overflow: hidden; margin-top:-1px;}
 .epcsctn h1{text-align:left; color:#0048cf;}
 .epc-slick{margin-top:60px;}
 .epc-slick .epc-card {
