@@ -688,7 +688,7 @@ a:focus, a:hover {
 }
 .parallax-section-service{
 	position: relative;
-    background-image: url(../images/power-man.png);
+    background-image: url(../images/power-man.svg);
 	background-position:140% 0;
     background-repeat: no-repeat;
     background-size: contain;
