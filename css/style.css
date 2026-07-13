@@ -1149,7 +1149,8 @@ a:focus, a:hover {
 	font-weight: 700;
 	text-align:left;
 	color:#FFF;
-	margin-bottom:30px;
+	margin-bottom:20px;
+	font-size:18px;
 }
 .footerwrpr p.phntxt{margin-bottom:0;}
 .ftrtxtbx p a:hover{color:#ffc100;}
@@ -1178,6 +1179,7 @@ a:focus, a:hover {
 	display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap:45px;
+	padding-top:80px;
 }
 .spprtsctnbx{
     position:relative;
