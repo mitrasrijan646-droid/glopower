@@ -1922,12 +1922,14 @@ RIGHT ENGINEER IMAGE
     align-items: center;
     justify-content: center;
     width: auto;
-    background: #0f4003;
+    /* background: #0f4003; */
     cursor: pointer;
     transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
 	padding: 50px 100px 20px;
 	gap:20px;
 }
+.engine-tab-btn:nth-child(1){background:#b7b7b7;}
+.engine-tab-btn:nth-child(2){background:#a2a1a1;}
 .engine-tab-btn:hover { transform: translateY(-3px);}
 .engine-tab-btn.active {background: #FFF;}
 .engine-tab-wrapper.active .tab-logo{
