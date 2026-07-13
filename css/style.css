@@ -801,7 +801,7 @@ a:focus, a:hover {
 	}
 .whtbx h1{color:#f2ae2c; font-weight:400;}
 .cmprhnsv{ background:url(../images/spark-icon.png) no-repeat top right;}
-.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 0.18fr);}
+.cpbltswrpr.prdctrngbx{/* grid-template-columns: repeat(3, 0.18fr); */   gap:15px; grid-template-columns: repeat(3, 0.25fr);}
 .cpbltswrpr{
 	margin-top:85px;
 	display: grid;
