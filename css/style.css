@@ -2119,6 +2119,7 @@ RIGHT ENGINEER IMAGE
     color:#FFF !important;
 }
 .contactwrppr .contact-title{color:#0041bb;}
+.contactwrppr .contact-title span{font-size:12px; color:#000;}
 .contactwrppr .form-grid .input-box label{color:#0041bb;}
 .contactwrppr .form-grid .input-box input, .input-box textarea{ background:#e1e1e1;}
 .contactwrppr .textarea-box label{color:#0041bb;}
@@ -2284,6 +2285,7 @@ RIGHT ENGINEER IMAGE
       justify-content: center;
       transition: border-color 0.25s, background 0.25s;
       flex-shrink: 0;
+	  rotate: 274deg;
     }
 .brand-card:hover .discover-btn .arrow-circle {border-color: #FFF; background:#ffc100; rotate: 312deg;}
 .enerjsctn{
