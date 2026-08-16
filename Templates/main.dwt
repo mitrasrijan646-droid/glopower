@@ -65,11 +65,11 @@
                                             	<img src="images/icon/nav-diesel-icon.png" class="img-responsive" alt=""/>
                                             	<h4><a href="../product-diesel-generating-set.html">Diesel <br />Generating Sets</a></h4>
                                                 <ul>
-                                                	<li><a href="#">Perkins</a></li>
-                                                    <li><a href="#">MTU</a></li>
-                                                    <li><a href="#">Volvo Penta</a></li>
-                                                    <li><a href="#">Baudouin</a></li>
-                                                    <li><a href="#">FMTU</a></li>
+                                                	<li><a href="../product-diesel-generating-set.html#perkins">Perkins</a></li>
+                                                    <li><a href="../product-diesel-generating-set.html#mtu">MTU</a></li>
+                                                    <li><a href="../product-diesel-generating-set.html#volvo">Volvo Penta</a></li>
+                                                    <li><a href="../product-diesel-generating-set.html#baudouin">Baudouin</a></li>
+                                                    <li><a href="../product-diesel-generating-set.html#force">FMTU</a></li>
                                                 </ul>
                                             </div>
                                             
@@ -77,8 +77,8 @@
                                             	<img src="images/icon/nav-gas-icon.png" class="img-responsive" alt=""/>
                                             	<h4><a href="../product-gas-generating-set.html">Gas <br />Generating Sets</a></h4>
                                                 <ul>
-                                                    <li><a href="#">MTU</a></li>
-                                                    <li><a href="#">Generac</a></li>
+                                                    <li><a href="../product-gas-generating-set.html#mtu">MTU</a></li>
+                                                    <li><a href="../product-gas-generating-set.html#generac">Generac</a></li>
                                                 </ul>
                                             </div>
                                             
@@ -86,9 +86,11 @@
                                             	<img src="images/icon/nav-electrial-icon.png" class="img-responsive" alt=""/>
                                             	<h4><a href="../product-electrical-equipments.html">Electrical <br />Equipment</a></h4>
                                                 <ul>
-                                                    <li><a href="#">Electrical Panels</a></li>
-                                                    <li><a href="#">Cables & Cable Trays</a></li>
-                                                    <li><a href="#">Transformers</a></li>
+                                                    <li><a href="../product-electrical-equipments.html#perkins">Electrical Panels</a></li>
+                                                    <li><a href="../product-electrical-equipments.html#mtu">Cables & Cable Trays</a></li>
+                                                    <li><a href="../product-electrical-equipments.html#volvo">Transformers</a></li>
+                                                    <li><a href="../product-electrical-equipments.html#control">Control & Monitoring Accessories</a></li>
+                                                    <li><a href="../product-electrical-equipments.html#safety">Protection & Safety Devices</a></li>
                                                 </ul>
                                             </div>
                                             
@@ -98,7 +100,6 @@
                             </li>
                             <li><a href="../product-support.html" class="hvr-fade">product support</a></li>
                             <li><a href="../reference-projects.html" class="hvr-fade">reference projects</a></li>
-                            <!--<li><a href="../product-solution.html" class="hvr-fade">solutions</a></li>-->
                             <li>
                             	 <div class="nav-dropdown">
                                  	<a href="../solutions.html" class="dropdown-toggle">
@@ -486,6 +487,8 @@ gsap.to(".logo-parallax", {
     }
 }, { passive: true });
 </script>
+
+
 
 <!-- TemplateBeginEditable name="EditRegion6" -->
 
