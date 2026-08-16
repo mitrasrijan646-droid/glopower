@@ -677,54 +677,6 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1 class="">Our Presence</h1>
-				<!-- <div class="layout">
-					<div class="map-col">
-						<div class="map-wrap">
-							<svg id="map-svg" viewBox="0 62 1400 650"
-								 xmlns="http://www.w3.org/2000/svg"
-								 role="img" aria-label="World map showing GloPower group presence">
-							  <g id="land-layer"></g>
-							  <g id="territory-layer"></g>
-							</svg>
-						</div>
-
-						<div class="legend" id="legend">
-							<span class="legend-item" data-group="samba">
-								<span class="leg-dot leg-samba"></span>Samba Tech &amp; Co
-							</span>
-							<span class="legend-item" data-group="glopower-gulf">
-								<span class="leg-dot leg-gulf"></span>GloPower FZ LLC — Gulf &amp; MENA
-							</span>
-							<span class="legend-item" data-group="glopower-eastafrica">
-								<span class="leg-dot leg-east"></span>Karimjee Energy — East Africa
-							</span>
-							<span class="legend-item" data-group="uila">
-								<span class="leg-dot leg-uila"></span>Uila Power &amp; Boltz Energy — India
-							</span>
-						</div>
-					</div>
-
-					<div class="card-col">
-						<div class="card-empty" id="card-empty">
-							<strong>Select a territory</strong>
-							Click any highlighted region on the map to view entity details.
-						</div>
-						<div class="info-card" id="info-card" style="display:none">
-							<div class="card-logo-strip" id="card-logo-strip"> </div>
-							<div class="card-divider"></div>
-							<div class="card-body">
-								<div class="card-company" id="card-company"></div>
-								<div class="card-region"  id="card-region"></div>
-								<div class="card-address" id="card-address"></div>
-								<div class="card-meta"    id="card-meta"></div>
-							</div>
-						</div>
-						
-						<div class="hint">Hover to preview · Click to lock selection</div>
-						
-					</div>
-					
-				</div> -->
 				
 				<div class="layout">
 					<!-- MAP -->
@@ -793,7 +745,7 @@
 	</div>
 </section>
 
-<section class="whtbx sectnbx prdctspprt">
+<!-- <section class="whtbx sectnbx prdctspprt">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -840,6 +792,70 @@
 			</div>
 		</div>
 	</div>
+</section> -->
+
+<section class="ap-section" id="whatSection">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 no-pad">
+				<!-- Regular img tag for parallax -->
+				<div class="ap-bg " id="whatBg">
+					<img src="images/support/support-image-new.jpg" alt="" class="ap-bg-img" />
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+						
+							<div class="what-content">
+								<div class="ap-card " id="whatCard">
+									<div class="sprtbxcntnr sectnbx">
+				
+										<div class="sprtbx"></div>
+					
+										<div class="sprtbx">
+											<h2>product support</h2>
+											<h1>unmatched support for uninterrupted power</h1>
+											<div class="spprtblubx">
+												<ul>
+													<li>
+														<img src="images/icon/trained-icon.svg" class="img-responsive" alt=""/>
+														Trained & Skilled Manpower
+													</li>
+													<li>
+														<img src="images/icon/spare-part.svg" class="img-responsive" alt=""/>
+														Spare parts inventory
+													</li>
+													<li>
+														<img src="images/icon/amc-om-contracts.svg" class="img-responsive" alt=""/>
+														AMC and O&M Contracts
+													</li>
+													<li>
+														<img src="images/icon/engine-overhaul.png" class="img-responsive" alt=""/>
+														Engine Overhaul & Major Repairs
+													</li>
+													
+												</ul>
+											
+												<div class="astntbx">
+													<img src="images/icon/Get-Assitance.svg" class="img-responsive" alt=""/>
+													<a href="contact.html#form">Get Assistance</a>
+												</div>
+											</div>
+										</div>
+									
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+    <!-- Card content -->
 </section>
 
 <section class="lwrsctn">
@@ -1170,8 +1186,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Init main carousel
     var mainOwl = $('.owl-main').owlCarousel({
         items: 1,
-        loop: false,
-        autoplay: false,
+        loop: true,
+        autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,
         dots: false,
@@ -1418,6 +1434,31 @@ document.addEventListener('DOMContentLoaded', function () {
     setActive(activeGroup === g ? null : g);
   });
 })();
+</script>
+<script type="text/javascript">
+/* ── What Section Parallax ── */
+{
+    const section = document.getElementById('whatSection');
+    const card    = document.getElementById('whatCard');
+    const bg      = document.getElementById('whatBg');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) card.classList.add('visible');
+        });
+    }, { threshold: 0.55 });
+    observer.observe(section);
+
+    function doParallaxWhat() {
+        const rect     = section.getBoundingClientRect();
+        const viewH    = window.innerHeight;
+        const progress = (viewH - rect.top) / (viewH + rect.height);
+        const shift    = (progress - 0.5) * 400;
+        bg.style.transform = `translateY(${shift}px)`;
+    }
+    doParallaxWhat();
+    window.addEventListener('scroll', doParallaxWhat, { passive: true });
+}
 </script>
 <!-- InstanceEndEditable -->
 </body>
