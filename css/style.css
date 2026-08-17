@@ -903,6 +903,7 @@ a:focus, a:hover {
     gap:35px;
 	align-items:start;
 }
+.sprtbxcntnr.sectnbx{padding:150px 0;}
 .sprtbx h2{text-align:left; color:#FFF; font-weight:700;}
 .sprtbx h1{font-size:45px; color:#FFF; padding-bottom:20px; font-weight:200; text-align:left;}
 .sprtbx .spprtblubx{
@@ -2714,10 +2715,7 @@ RIGHT ENGINEER IMAGE
     gap: 10px;
 }
 .prvcycntnr p{font-size:16px; line-height:22px; font-weight:200;}
-#whatSection {
-  position: relative;
-  overflow: hidden;
-}
+#whatSection { position: relative; overflow: hidden;}
 .ap-bg {
   position: absolute;
   top: 0;
@@ -2734,10 +2732,7 @@ RIGHT ENGINEER IMAGE
   object-fit: cover;
   display: block;
 }
-.what-content {
-  position: relative;
-  z-index: 1;
-}
+.what-content {  position: relative; z-index: 1;}
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
