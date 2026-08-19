@@ -250,7 +250,6 @@ a:focus, a:hover {
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     gap:45px;
-	cursor:pointer;
 	padding: 35px 28px;
 }
 #myNavbar .dropdown-grid .grid-nav{
@@ -2389,8 +2388,16 @@ RIGHT ENGINEER IMAGE
 #myNavbar .custom-dropdown-one .dropdown-grid .grid-nav{gap:10px;}
 #myNavbar .custom-dropdown-one .dropdown-grid .grid-nav h1{font-size:25px;}
 #myNavbar .custom-dropdown-one .dropdown-grid .grid-nav p{font-size:15px; line-height:22px;}
-#myNavbar .custom-dropdown-one .dropdown-grid .grid-nav h4 a{ font-size:15px !important; border-bottom:1px solid #FFF; transition: all 0.4s ease;}
-#myNavbar .custom-dropdown-one .dropdown-grid .grid-nav h4 a:hover{border-bottom:1px solid #ddd; transform: translateX(6px);}
+#myNavbar .custom-dropdown-one .dropdown-grid .grid-nav h4 a{ 
+	font-size:15px !important; 
+	border-bottom:1px solid #0048cf;
+	transition: all 0.4s ease;
+}
+#myNavbar .custom-dropdown-one .dropdown-grid .grid-nav h4 a:hover{
+	border-bottom:1px solid #ffc100;
+	transform: translateX(6px);
+	color:#0048cf !important;
+}
 .clntsctn{background:#dfdfdf; padding:150px 0;}
 .clntsctn h1{color:#0039a3; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
