@@ -12,6 +12,7 @@
 <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 <link href="css/font.css" rel="stylesheet" media="all">
+<link href="css/mobile-menu.css" rel="stylesheet" media="all">
 <!-- InstanceBeginEditable name="head" -->
 <link rel="preload" href="css/owl.carousel.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/owl.carousel.css"></noscript>
@@ -177,105 +178,54 @@
 
 <div class="slider-opacity"></div>
 
-<div class="mobile-header visible-md visible-sm visible-xs" id="">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-            
-				<div class="col-sm-6 col-xs-8 no-pad">
-					<div class="logoBox">
-						<a class="navbar-brand" href="index.html" id="">
-							<img src="images/logo-new.png" class="img-responsive logo-parallax" alt=""/>
-						</a>
-					</div>
-				</div>
-                
-                <div class="col-sm-6 col-xs-4 no-pad">
-                	<div id="main">
-                        <a href="contact.html" class="">
-                        	<i class="fas fa-envelope logo-parallax"></i>
-                        </a>
-                   		<button class="openbtn" onclick="openNav()">
-                            <img src="images/mobile-nav.svg" class="img-responsive logo-parallax" alt=""/>
-                        </button>
-                        <div class="clearfix"></div>
-                	</div>
-                </div>
-                
-                <div class="clearfix"></div>
-				
-				<div class="col-xs-6 col-sm-7 no-pad">
-					<div class="navigatnBox">
-						<div id="mySidebar" class="sidebar">
-                        	<div class="sclbox">
-                            	<div class="col-xs-8 col-sm-3 no-pad">
-                                    <a class="navbar-brand" href="#" id="">
-                                        <img src="images/logo-new.png" class="img-responsive mblimg" alt=""/>
-                                    </a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            
-							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                            	<img src="images/mobile-nav-close.svg" class="img-responsive" alt=""/>
-                            </a>
-                            <div class="mblnav">
-                            	<a href="index.html" class="hvr-fade">Home</a>
-                                <a href="about-us.html" class="hvr-fade">About Us</a>
-                                <div class="panel-group" id="accordion">
-                                    <div class="panel panel-default">
-                                    	<div class="panel-heading">
-                                            <h4 class="panel-title">
-                                              	<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Our Services <i class="fas fa-chevron-down"></i></a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapse2" class="panel-collapse collapse">
-                                        	<div class="panel-body">
-                                            	<div class="panel1">
-                                                    <ul>
-                                                    	<li><a href="service-silica-sand-mining.html" class="hvr-sweep-to-right">Silica Sand Mining</a></li>
-                                                        <li><a href="service-limestone-mining.html" class="hvr-sweep-to-right">Limestone Mining</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="panel-group" id="accordion">
-                                    <div class="panel panel-default">
-                                    	<div class="panel-heading">
-                                            <h4 class="panel-title">
-                                              	<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Our Products <i class="fas fa-chevron-down"></i></a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapse3" class="panel-collapse collapse">
-                                        	<div class="panel-body">
-                                            	<div class="panel1">
-                                                    <ul>
-                                                    	<li><a href="product-silica-sand.html" class="hvr-sweep-to-right">Silica Sand</a></li>
-                                                        <li><a href="product-calcium-carbonate.html" class="hvr-sweep-to-right">Calcium Carbonate</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <a href="contact.html" class="hvr-fade">Contact</a>
-                            </div>
-                            <div class="clearfix"></div>
-						</div>
-                        <div class="clearfix"></div>
-					</div>
-                    <div class="clearfix"></div>
-				</div>
-                
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
+<div class="mobile-header visible-md visible-sm visible-xs">
+	<!--<div class="phone-screen">-->
+    	<div class="phone-header">
+        	<div class="logo"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></div>
+            <button class="toggle-btn" id="toggleBtn"><span></span><span></span><span></span></button>
+        </div>
+        <div class="backdrop" id="backdrop"></div>
+        <nav class="mmenu" id="mmenu">
+        	<div class="mmenu-head">
+            	<img src="images/logo-new.png" class="img-responsive main-logo" alt=""/>
+            	<button class="mmenu-close" id="closeBtn">&times;</button>
+            </div>
+            <ul class="mmenu-list">
+            	<li class="mitem"><a href="index.html"><span class="link-label">Home</span></a></li>
+                <li class="mitem mhas-sub">
+                	<div class="msub-row">
+                        <a href="products.html" class="msub-link"><span class="link-label">Products</span></a>
+                        <button type="button" class="mcaret-btn"><span class="mcaret"></span></button>
+                    </div>
+                    <div class="msub-wrap">
+                        <div class="msub">
+                            <a href="product-diesel-generating-set.html"><span class="link-label">Diesel Generating Sets</span></a>
+                            <a href="product-gas-generating-set.html"><span class="link-label">Gas Generating Sets</span></a>
+                            <a href="product-electrical-equipments.html"><span class="link-label">Electrical Equipment</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mitem"><a href="product-support.html"><span class="link-label">Product Support</span></a></li>
+        		<li class="mitem"><a href="reference-projects.html"><span class="link-label">Reference Projects</span></a></li>
+                <li class="mitem mhas-sub">
+                	<div class="msub-row">
+                        <a href="solutions.html" class="msub-link"><span class="link-label">Solutions</span></a>
+                        <button type="button" class="mcaret-btn"><span class="mcaret"></span></button>
+                    </div>
+                    <div class="msub-wrap">
+                        <div class="msub">
+                            <a href="solutions-electrical-epc.html"><span class="link-label">Electrical EPC Solutions</span></a>
+                            <a href="solutions-acoustic-delivery.html"><span class="link-label">Acoustic Solutions</span></a>
+                            <a href="solutions-fuel-delivery.html"><span class="link-label">Fuel Delivery Solutions</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mitem"><a href="about.html"><span class="link-label">About</span></a></li>
+        		<li class="mitem"><a href="contact.html"><span class="link-label">Contact</span></a></li>
+            </ul>
+            <a href="contact.html" class="mcontact">Get In Touch</a>
+        </nav>
+    <!--</div>-->
 </div>
 
 <!-- InstanceBeginEditable name="banner" -->
@@ -975,7 +925,7 @@ $(window).on("load resize", function() {
   }
 });
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 function openNav() {
   document.getElementById("mySidebar").style.width = "85%";
   document.getElementById("main").style.marginright = "85%";
@@ -984,7 +934,7 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginright= "0";
 }
-</script>
+</script>-->
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
@@ -1005,7 +955,6 @@ function closeNav() {
 });
 </script>
 
-
 <script type="text/javascript">
 $(function() {
     var header = $(".navbar");
@@ -1020,7 +969,7 @@ $(function() {
 });
 
 $(function() {
-    var header = $(".mobile-header");
+    var header = $(".phone-frame");
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         if (scroll >= 10) {
@@ -1074,7 +1023,83 @@ gsap.to(".logo-parallax", {
 }, { passive: true });
 </script>
 
+<script type="text/javascript">
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById('toggleBtn');
+  const menu = document.getElementById('mmenu');
+  const backdrop = document.getElementById('backdrop');
+  const closeBtn = document.getElementById('closeBtn');
+  const switchBtns = document.querySelectorAll('.style-switch button');
 
+  function openMenu(){
+    menu.classList.add('open');
+    toggleBtn.classList.add('open');
+    backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden'; // lock background scroll
+  }
+
+  function closeMenu(){
+    menu.classList.remove('open');
+    toggleBtn.classList.remove('open');
+    backdrop.classList.remove('show');
+    document.querySelectorAll('.mhas-sub.mopen').forEach(li => li.classList.remove('mopen'));
+    document.body.style.overflow = ''; // restore scroll
+  }
+
+  toggleBtn.addEventListener('click', () => menu.classList.contains('open') ? closeMenu() : openMenu());
+  backdrop.addEventListener('click', closeMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.mcaret-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      btn.closest('.mhas-sub').classList.toggle('mopen');
+    });
+  });
+
+  const presets = {
+    snappy: {
+      '--panel-duration':'.32s', '--panel-ease':'cubic-bezier(.4,0,.2,1)',
+      '--item-duration':'.28s', '--item-ease':'cubic-bezier(.4,0,.2,1)',
+      '--accordion-duration':'.28s', '--accordion-ease':'cubic-bezier(.4,0,.2,1)',
+      '--stagger-gap':'.03s'
+    },
+    spring: {
+      '--panel-duration':'.55s', '--panel-ease':'cubic-bezier(.34,1.56,.64,1)',
+      '--item-duration':'.5s', '--item-ease':'cubic-bezier(.34,1.56,.64,1)',
+      '--accordion-duration':'.5s', '--accordion-ease':'cubic-bezier(.34,1.56,.64,1)',
+      '--stagger-gap':'.06s'
+    },
+    silky: {
+      '--panel-duration':'.75s', '--panel-ease':'cubic-bezier(.16,1,.3,1)',
+      '--item-duration':'.65s', '--item-ease':'cubic-bezier(.16,1,.3,1)',
+      '--accordion-duration':'.6s', '--accordion-ease':'cubic-bezier(.16,1,.3,1)',
+      '--stagger-gap':'.08s'
+    },
+    elastic: {
+      '--panel-duration':'.6s', '--panel-ease':'cubic-bezier(.68,-0.6,.32,1.6)',
+      '--item-duration':'.55s', '--item-ease':'cubic-bezier(.68,-0.6,.32,1.6)',
+      '--accordion-duration':'.5s', '--accordion-ease':'cubic-bezier(.68,-0.6,.32,1.6)',
+      '--stagger-gap':'.07s'
+    }
+  };
+
+  function applyPreset(name){
+    const p = presets[name];
+    Object.keys(p).forEach(key => root.style.setProperty(key, p[key]));
+  }
+
+  switchBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeMenu();
+      switchBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyPreset(btn.dataset.style);
+    });
+  });
+
+  applyPreset('snappy');
+</script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
 <script src="js/countries-data.js"></script>

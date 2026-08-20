@@ -344,7 +344,7 @@ a:focus, a:hover {
 }
 .sidenav ul li a.active{background:#35d397; color:#FFF;}	
 .sidenav ul li:last-child{border-bottom:none;}
-.mobile-header{ position:sticky; z-index:99; padding:20px 0 10px; width:100%; top:0;}
+.mobile-header{ position:sticky; z-index:99; width:100%; top:0;}
 .sidebar {
 	height: 100%;
 	width: 0;
