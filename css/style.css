@@ -2790,6 +2790,23 @@ RIGHT ENGINEER IMAGE
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(2){border-top-right-radius: 15px; overflow: hidden;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(5){border-bottom-left-radius: 15px; overflow: hidden;}
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content p{line-height:16px;}
+	.gear-animation{width:150px; height:150px;}
+	.prdctsprtsctnbx{gap:0;}
+	.projects-main{ grid-template-columns: 1fr 1fr;}
+	.preview-overlay{bottom: 0;}
+	.capabilities-grid-bottom{grid-template-columns: repeat(2, 1fr); margin-top: 15px;}
+	.capabilities-content{padding: 30px 0 76px 0;}
+	.epc-slick .epc-card{padding-bottom:30vh; aspect-ratio:1.5/3;}
+	.apprchcntnr{grid-template-columns: repeat(1, 1fr); gap:20px;}
+	.apprchcntnr .apprchcntnrbx:first-child{gap: 20px;}
+	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3){border-top-right-radius:0;}
+	.card-grid{grid-template-columns: repeat(2, 1fr);}
+	.costwrppr{ grid-template-columns: repeat(2, 1fr); gap: 30px;}
+	.prflewrppr{grid-template-columns: 1fr;}
+	.cards-grid{grid-template-columns: repeat(2, 1fr);}
+	.card-name h2{font-size:30px;}
+	.enerjsctn{grid-template-columns:1fr; gap:25px;}
+	.mngmntsctnwrpr{grid-template-columns: repeat(1, 1fr); gap: 0; margin-top:40px;}
 }
 @media screen and (max-width:767px){
 	.projects-section{ padding:50px 15px; }
@@ -2826,12 +2843,34 @@ RIGHT ENGINEER IMAGE
 	.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(1, 1fr);}
 	.pwrsltnwrpr{ grid-template-columns: repeat(1, 1fr);}
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content{ grid-template-columns: 1fr; gap:0px; }
-	.pwrsltnwrpr { gap: 90px; }
+	.pwrsltnwrpr {gap: 90px;}
+	.prdctcntnr h2{margin-bottom:20px;}
+	.services-grid .support-card:nth-child(1){grid-column: 1;}
+	.services-grid .support-card:nth-child(2){grid-column:1;}
+	.services-grid .support-card:nth-child(3){grid-column: 1;}
+	.services-grid .support-card:nth-child(4){grid-column: 1;}
+	.services-grid .support-card:nth-child(5){grid-column: 1;}
+	.prdctimgbx img{height:auto; width:100%;}
+	.prdctsprtsctnbx p{width:auto;}
+	.services-grid{grid-template-columns: repeat(1, 1fr);}
+	.preview-overlay h2{font-size:20px;}
+	.lwrdsgnwrpr{grid-template-columns: repeat(1, 1fr);}
+	.lwrdsgnwrprbx.whitebox{border-radius:15px 15px 0 0;}
+	.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(2, 1fr);}
+	.lwrdsgnwrprbx{ padding: 35px 27px;}
+	.lwrdsgnwrprbx img{
+		position:relative;
+		margin: 0 auto 25px;
+		top:0;
+		transform: translateX(0%);
+	}
+	.fuelcntnr{grid-template-columns:1fr; gap:25px;}
+	.cards-grid{grid-template-columns: repeat(1, 1fr);}
 }
 @media screen and (max-width:540px){
 }
 @media (max-width:480px){
-	.innrbnnr .evntbxbnnr{min-height: 77vh;}
+	/* .innrbnnr .evntbxbnnr{min-height: 77vh;} */
 	.scndrow{grid-template-columns: repeat(1, 1fr); gap: 35px;}
 	.frstrow{grid-template-columns: 1fr;}
 	.ftrwrppr { grid-template-columns: repeat(1, 1fr); }
@@ -2843,6 +2882,14 @@ RIGHT ENGINEER IMAGE
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(5){border-bottom-left-radius:0;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){border-bottom-left-radius:15px;}
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content{height:auto; gap: 10px; padding: 25px;}
+	.elctrcprdctbx{background: linear-gradient(180deg, rgba(255, 255, 255, 1) 18%, rgba(0, 65, 187, 1) 18%);}
+	.gasgrrnbx{padding: 15px;}
+	.projects-list{position: relative; top:0; max-height: calc(50vh - 60px);}
+	.projects-main{ grid-template-columns:1fr; gap:10px;}
+	.capabilities-grid{grid-template-columns:1fr;}
+	.capabilities-grid-bottom{grid-template-columns: repeat(1, 1fr);}
+	.prdctsltn-grid .cpbltswrpr {grid-template-columns: repeat(1, 1fr);}
+	.card-grid{grid-template-columns: repeat(1, 1fr);}
 }
 @media (max-width:390px){h1{font-size: 35px;}}
 @media (max-width:375px){}
