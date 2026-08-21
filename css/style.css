@@ -304,7 +304,7 @@ a:focus, a:hover {
 }
 .scrolled #myNavbar .dropdown-toggle svg{fill:#0039a3;}
 .scrolled #myNavbar ul li.active a.dropdown-toggle svg{fill:#FFF;}
-#myNavbar .dropdown-toggle svg {
+ #myNavbar .dropdown-toggle svg {
     margin-left:5px;
     height: 10px;
     fill: #FFF;
@@ -313,187 +313,6 @@ a:focus, a:hover {
     transition: transform 0.3s ease;
 }
 #myNavbar .nav-dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
-.sidenav{margin-bottom:30px; background:#f6f5f1; padding:12px 0; border-radius: 6px;}
-.sidenav h1.cntxt{margin: 15px 20px;}
-.sidenav ul{padding-inline-start:0;}
-.sidenav ul li{
-	list-style-type:none;
-	border-bottom:1px solid #e0d6d6;
-	position:relative;
-	font-size:15px;
-}
-.sidenav ul li a{padding:17px 25px; display:block; line-height:20px; font-family: 'Glory', sans-serif;}
-.sidenav ul li a:hover:after{
-	content: '';
-    position:absolute;
-    right:0;
-    border-top:10px solid transparent;
-    border-bottom:10px solid transparent;
-    border-right:10px solid #f6f5f1;
-    top:15px;
-}
-.sidenav ul li a.hvr-sweep-to-right:before{background:#35d397;}
-.sidenav ul li a.active:after{
-	content: '';
-    position:absolute;
-    right:0;
-    border-top:10px solid transparent;
-    border-bottom:10px solid transparent;
-    border-right:10px solid #f6f5f1;
-    top:15px;
-}
-.sidenav ul li a.active{background:#35d397; color:#FFF;}	
-.sidenav ul li:last-child{border-bottom:none;}
-.mobile-header{ position:sticky; z-index:99; width:100%; top:0;}
-.sidebar {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	background:rgba(255, 255 ,255, .98);
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top:0;
-}
-.sidebar hr{margin-bottom:20px;}
-.sidebar a {
-    padding:0 24px;
-    text-decoration: none;
-    color:#21140d;
-    display: block;
-    line-height:60px;
-    border-bottom: 1px solid #ddd;
-    font-size:20px;
-}
-.sidebar a img{padding:0; outline:none;}
-.sidebar a.hvr-fade:hover{background:#890000; color:#FFF;}
-.sidebar .closebtn {
-	position: absolute;
-    top:30px;
-    right:0%;
-    font-size: 50px;
-    margin-left: 0;
-    color: #000;
-    padding: 0;
-	font-weight: 100;
-    border-bottom: none;
-}
-.openbtn {
-    cursor:pointer;
-    background-color:transparent;
-    color: #000;
-    border:none;
-    outline:none;
-    right:0;
-}
-.openbtn:hover {background-color:transparent;}
-#main {
-    transition: margin-right .5s;
-    padding: 0;
-	float:right;
-	margin-top:15px;
-}
-#main a.bktxt:hover{background:#FFF; color:#000;}
-#main a i.fas{
-	color:#e11f26;
-    font-size:35px;
-    margin-right: 5px;
-    margin-top: 0;
-    position: absolute;
-    right:56px;
-    top:15px;
-}
-#main a i.fab{
-	color: #35d397;
-    font-size:40px;
-    margin-right: 5px;
-    margin-top: 0;
-    position: absolute;
-    right:50px;
-    top:0;
-}
-.sclbox img{width:100%;}
-/* ACCORDIAN CSS */
-.panel-group {margin-bottom: 0;}
-.panel-group .panel {
-    margin-bottom: 0;
-    border-radius: 0;
-    border-color: transparent;
-	border:none;
-}
-.panel-group .panel+.panel {margin-top: 0;}
-.panel .panel-heading{
-	padding: 0;
-    background-color: rgba(255, 255 ,255, .98);
-    border-color: transparent;
-    border-bottom: none;
-    color: #282828;
-}
-.panel .panel-heading a i.fas{float:right; margin-top:18px;}
-.panel-body { padding: 0;}
-.panel {
-  padding:0;
-  color:#FFF;
-  text-align:left;
-  overflow: hidden;
-  background:#890000;
-}
-.panel ul{
-	padding-inline-start: 0;
-    margin-top: 0;
-    margin-bottom:0;
-	margin-left:0;
-}
-.panel ul li{list-style-type:none; border-bottom:1px solid #ddd;}
-.panel ul li:last-child{border-bottom:none;}
-.panel ul li a{
-	outline: none;
-	font-size:19px;
-    line-height:22px;
-    padding:15px 26px;
-	outline:none;
-	color:#FFF;
-	border-bottom:none;
-}
-.panel ul li a:hover {color:#FFF; background-color:#FFF !important;}
-.sidebar .sclbox{padding: 27px 17px; background: #FFF;}
-.sidebar .sclbox a{border-bottom:none; padding:0; margin-top: 0;}
-.sidebar .fllwbox{padding:30px 24px;}
-.sidebar .fllwbox h4{font-size:20px; color:#9fc755;}
-.sidebar .fllwbox ul{padding-inline-start: 0;}
-.sidebar .fllwbox ul li{
-	list-style-type:none;
-	display:inline-block;
-	margin:0;
-}
-.sidebar .fllwbox ul li a{padding:0; outline:none; border-bottom:none;}
-.sidebar .fllwbox ul li a i.fab{
-	-webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    color: #FFF;
-    width: 40px;
-    height: 40px;
-    background: #105836;
-    padding: 0px 8px;
-    font-size: 18px;
-}
-.sidebar .fllwbox ul li a svg{
-	-webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    fill: #FFF;
-    width:37px;
-    height: 40px;
-	background:#282828;
-    padding: 0px 8px;
-}
 .dscvrbttnnew {
   display: inline-flex;
   align-items: center;
@@ -530,6 +349,15 @@ a:focus, a:hover {
 .dscvrbttnnew:hover {border-color: rgba(0, 0, 0, 0.5); color:#FFF;}
 .dscvrbttnnew:hover svg {transform: translateX(6px);}
 .bnnrsctn{width:100%; position: relative; overflow: hidden; margin-top:0;}
+.hero .banner-wrapper {
+	position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    gap:160px;
+}
 .bnnrsctn .owl-carousel1 .evntbxbnnr img{
 	width:100%;
 	object-fit:cover;
@@ -612,55 +440,6 @@ a:focus, a:hover {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-}
-/* ── Thumbnail Carousel ── */
-.owl-thumbs {  margin-top: 0;}
-.owl-carousel .owl-item img {
-    width: 100% !important;
-    height: 100%;
-	border-radius:0 !important;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-	border:none !important;
-	padding:0 !important;
-}
-.thumb-item:hover img {transform: scale(1.01);}
-/* Wrapper to contain both */
-.banner-wrapper { position: relative;}
-/* Thumbnails sit on top of the banner, pinned to the bottom */
-.thumb-overlay {
-    position: absolute;
-    bottom:3vw;
-    left: 0;
-    right: 0;
-    z-index: 20;	
-}
-.thumb-item {
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: border 0.3s ease;
-}
-.banner-wrapper .thumb-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-	border-radius:20px !important;
-    display: block;
-    transition: transform 0.3s ease;
-}
-.thumb-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-	font-size:18px;
-    text-align: left;
-    padding: 20px 25px;
-    line-height:25px;
-	font-family: "akzidenz-grotesk-next-extend",sans-serif; 
 }
 .services{
 	padding: 100px 5vw;
