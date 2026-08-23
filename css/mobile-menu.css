@@ -29,11 +29,11 @@
 
   /* ============ HAMBURGER ============ */
   .toggle-btn{
-    width:40px; height:40px; border:none; background:var(--blue);
+    width:40px; height:40px; border:none; background:var(--white);
      position:relative; cursor:pointer; flex-shrink:0;
   }
   .toggle-btn span{
-    position:absolute; left:9px; right:9px; height:2px; background:var(--white); border-radius:2px;
+    position:absolute; left:9px; right:9px; height:2px; background:var(--blue); border-radius:2px;
     transition:transform var(--panel-duration) var(--panel-ease), opacity .25s ease, top var(--panel-duration) var(--panel-ease);
   }
   .toggle-btn span:nth-child(1){top:13px;}

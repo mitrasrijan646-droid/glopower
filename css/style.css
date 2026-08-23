@@ -196,7 +196,7 @@ a:focus, a:hover {
 	background:transparent; 
 	padding:0 0;
 }
-.navbar #myNavbar ul.navbar-nav li{margin:0 5px;}
+.navbar #myNavbar ul.navbar-nav li{margin:0 3px;}
 .navbar #myNavbar ul.navbar-nav li:last-child{margin:0 0 0 10px;}
 .navbar #myNavbar ul.navbar-nav li a{
     padding:0 15px;
@@ -2645,11 +2645,12 @@ RIGHT ENGINEER IMAGE
 	}
 	.fuelcntnr{grid-template-columns:1fr; gap:25px;}
 	.cards-grid{grid-template-columns: repeat(1, 1fr);}
+	.sprtbx .spprtblubx{grid-template-columns: repeat(1, 1fr); gap: 15px;}
 }
 @media screen and (max-width:540px){
 }
 @media (max-width:480px){
-	/* .innrbnnr .evntbxbnnr{min-height: 77vh;} */
+	.powerbx{padding: 30px 30px;}
 	.scndrow{grid-template-columns: repeat(1, 1fr); gap: 35px;}
 	.frstrow{grid-template-columns: 1fr;}
 	.ftrwrppr { grid-template-columns: repeat(1, 1fr); }

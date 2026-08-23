@@ -554,16 +554,6 @@ $(window).on("load resize", function() {
   }
 });
 </script>
-<!--<script type="text/javascript">
-function openNav() {
-  document.getElementById("mySidebar").style.width = "85%";
-  document.getElementById("main").style.marginright = "85%";
-}
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginright= "0";
-}
-</script>-->
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
@@ -598,7 +588,7 @@ $(function() {
 });
 
 $(function() {
-    var header = $(".phone-frame");
+    var header = $(".mobile-header");
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         if (scroll >= 10) {
@@ -644,6 +634,15 @@ gsap.to(".logo-parallax", {
 <script type="text/javascript">
 	window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}, { passive: true });
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.mobile-header');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {

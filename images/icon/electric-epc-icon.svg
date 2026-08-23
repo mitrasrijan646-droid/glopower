@@ -7,7 +7,7 @@
    width="88"
    height="80"
    viewBox="0 0 88 80"
-   sodipodi:docname="db197420-2b51-408f-93eb-b5d867acb456.ai"
+   sodipodi:docname="3dca6b44-0656-4e4d-85cf-def43a7026fd.ai"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -46,8 +46,8 @@
      inkscape:label="Layer 1">
     <path
        id="path1"
-       d="M 66,0 H 0 v 60 h 66 z"
-       style="fill:none;stroke:#0041bb;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,0 H 66 V 60 H 0 Z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,80)" />
     <path
        id="path2"
