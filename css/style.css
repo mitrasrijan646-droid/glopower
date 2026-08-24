@@ -280,8 +280,8 @@ a:focus, a:hover {
 	list-style-type:none; 
 	margin:0;
 	border-bottom:1px solid #fdd694;
-	padding-bottom: 7px;
-    padding-top: 7px;
+	padding-bottom:10px;
+    padding-top:10px;
 }
 #myNavbar .dropdown-grid .grid-nav ul li:last-child{border-bottom:none; margin:0;}
 #myNavbar .dropdown-grid.grid-nav ul li{background-color:transparent !important; color:#000 !important;}
@@ -289,7 +289,7 @@ a:focus, a:hover {
 #myNavbar .dropdown-grid .grid-nav ul li a{
 	color: #000 !important;
     background-color: transparent !important;
-    line-height: 22px;
+    line-height: 20px;
 	padding:0;
 	font-weight:300;
 	font-size:14px;
@@ -1180,113 +1180,6 @@ RIGHT ENGINEER IMAGE
 }
 .tab-btn.active,
 .tab-btn:hover{ background:#f2b600; color:#FFF;}
-.projects-main{
-	margin-top: 60px;
-    display: grid;
-    grid-template-columns:520px 1fr;
-    gap: 0;
-    justify-items: stretch;
-    align-content: stretch;
-    align-items: stretch;
-}
-/* LEFT */
-.projects-list{ 
-	/* background:#FFF;
-	height:600px;
-    overflow-y:auto;
-    overflow-x:hidden;
-	align-self:start; */
-	position:sticky;
-    top:60px; /* below your margin-top offset */
-    max-height:calc(100vh - 60px);
-    overflow-y:auto;
-    align-self:start;
-}
-.projects-list::-webkit-scrollbar{ width:5px;}
-.projects-list::-webkit-scrollbar-track{ background:#0039a3;}
-.project-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px;
-    border-bottom:1px solid #ddd;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-.project-item:hover{background:#f9f7f7;}
-.project-item.active{ background:#e6e6e6;}
-.project-item h3{
-	text-align:left;
-    margin-bottom:10px;
-    font-size:16px;
-}
-.project-item p{
-    margin:0;
-    color:#0039a3;
-    font-size:20px;
-}
-.project-item p svg{height:18px; fill:#0039a3;}
-.project-item span{
-    width:32px;
-    height:32px;
-    background:#f2b600;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:14px;
-}
-/* RIGHT */
-.project-preview-wrapper{
-	background:#ffc000;
-	-webkit-border-top-right-radius:15px;
-	-webkit-border-bottom-right-radius: 15px;
-	-moz-border-radius-topright: 15px;
-	-moz-border-radius-bottomright: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-}
-.preview-image{ position:relative;}
-.preview-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-	-webkit-border-top-right-radius: 15px;
-	-moz-border-radius-topright: 15px;
-	border-top-right-radius: 15px;
-}
-.preview-overlay{
-    position:absolute;
-    left:30px;
-    bottom:30px;
-    color:#fff;
-}
-.preview-overlay h2{
-    margin:0;
-	color:#FFF;
-    font-size:45px;
-    font-weight:700;
-	text-align:left;
-}
-.preview-overlay p{ margin-top:5px; font-size:22px; color:#FFF;}
-/* HIGHLIGHTS */
-.project-highlights{
-    padding:20px 25px;
-    border-top: 1px solid rgba(0, 0, 0, .99);
-    display: grid;
-    align-items: stretch;
-    gap:15px;
-}
-.project-highlights h3{margin-top:0; text-align:left; font-weight:bold;}
-.project-highlights ul{padding-left:20px; padding-inline-start:20px;}
-.project-highlights li{
-	margin-bottom: 15px;
-    line-height: 20px;
-    font-size: 16px;
-}
-.project-preview{ display:none;}
-.project-preview.active{ display:block;}
 .client-section{
     background:#003cbf;
     padding:120px 0 100px;

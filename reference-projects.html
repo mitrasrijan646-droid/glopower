@@ -14,6 +14,7 @@
 <link href="css/font.css" rel="stylesheet" media="all">
 <link href="css/mobile-menu.css" rel="stylesheet" media="all">
 <!-- InstanceBeginEditable name="head" -->
+<link href="css/reference.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <!-- InstanceEndEditable -->
 </head>
@@ -275,362 +276,53 @@
 			<div class="col-md-12">
 				<h1 class="text-left">Our Projects and Highlights</h1>
 				
-				<div class="projects-main">
+				<div class="wrap">
 				
-					<div class="projects-list">
+					<div class="carousel-wrap">
+						<button class="carousel-arrow prev" id="prevBtn" aria-label="Previous projects">&#8592;</button>
+						<div class="carousel-track" id="grid"></div>
+						<button class="carousel-arrow next" id="nextBtn" aria-label="Next projects">&#8594;</button>
+						<div class="carousel-edge-fade left"></div>
+						<div class="carousel-edge-fade right"></div>
+					</div>
 					
-						<div class="project-item active" data-project="project1" data-category="healthcare">
-							<div class="project-info">
-								<h3>ARISE IIP</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Gabon Africa</p>
+					<div class="detail-panel">
+						<div class="detail-image">
+							<img id="detailImg" src="" alt="">
+							<div class="img-overlay"></div>
+							<div class="title-block">
+								<h2 id="detailTitle"></h2>
+								<div class="loc" id="detailLoc"></div>
 							</div>
 						</div>
 						
-						<div class="project-item" data-project="project2" data-category="datacentres">
-							<div class="project-info">
-								<h3>Airtel Nxtra Datacentre</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Nigeria</p>
-							</div>
-						</div>
-						
-						<div class="project-item" data-project="project3" data-category="industrial">
-							<div class="project-info">
-								<h3>Samsung Display (SDN)</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Greater Noida, India</p>
-							</div>
-						</div>
-
-						<div class="project-item" data-project="project4" data-category="commercial">
-							<div class="project-info">
-								<h3>Bawe Retreat</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Zanzibar, Tanzania</p>
-							</div>
-						</div>
-						
-						<div class="project-item" data-project="project5" data-category="commercial">
-							<div class="project-info">
-								<h3>Le Meridian</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Zanzibar, Tanzania</p>
-							</div>
-						</div>
-
-						<div class="project-item" data-project="project6" data-category="airports">
-							<div class="project-info">
-								<h3>Delhi International Airport</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> India</p>
-							</div>
-						</div>
-
-						<div class="project-item" data-project="project7" data-category="powerplants">
-							<div class="project-info">
-								<h3>Tanzania Telecommunications Corporation</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Tanzania</p>
-							</div>
-						</div>
-
-						<div class="project-item" data-project="project8" data-category="commercial">
-							<div class="project-info">
-								<h3>ITC HOTELS</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> India</p>
-							</div>
-						</div>
-
-						<div class="project-item" data-project="project9" data-category="commercial">
-							<div class="project-info">
-								<h3>IKEA</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Gurugram, India</p>
-							</div>
-						</div>
-						
-						<div class="project-item" data-project="project10" data-category="commercial">
-							<div class="project-info">
-								<h3>LMEL</h3>
-								<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Gabon</p>
+						<div class="detail-highlights" id="detailHighlights">
+							<h4>Key Project Highlights</h4>
+							<ul id="detailList"></ul>
+							<div class="highlights-fade"></div>
+							<div class="scroll-hint">
+								<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								  <polyline points="6 9 12 15 18 9"></polyline>
+								</svg>
 							</div>
 						</div>
 
 					</div>
-
-					<div class="project-preview-wrapper">
-
-						<div class="project-preview active" id="project1">
-						
-							<div class="preview-image">
-								<img src="images/reference-projects/arise-image.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>ARISE IIP</h2>
-									<p>Gabon Africa</p>
-								</div>
-							</div>
-							
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Augmentation of Gabon’s power supply in 8 cities using diesel generator sets.</li>
-									<li><strong>Scope:</strong> Supply, testing and commissioning of 17 x 2250 kVA Perkins
-									DG sets and Accessories including acoustic enclosures, isolator panel, protection panels, critical and routine spares.</li>
-								</ul>
-							</div>
-
-						</div>
-
-						<div class="project-preview" id="project2">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/nxtra.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>Airtel Nxtra</h2>
-									<p>Eko Atlantic City, Lagos, Nigeria</p>
-								</div>
-							</div>
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Generator sets for critical application of data center by Nxtra (Airtel).</li>
-									<li><strong>Scope:</strong> Design, Supply, Installation, Testing and Commissioning of DG sets.</li>
-									<!-- <li><strong>Value:</strong> USD 2.5 million (INR 22Cr.) Appx.</li>
-									<li><strong>Status:</strong> Under Execution</li> -->
-								</ul>
-							</div>
-							
-						</div>
-
-						<div class="project-preview" id="project3">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/samsung.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>Samsung Display</h2>
-									<p>Greater Noida, India</p>
-								</div>
-							</div>
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Balance of Plant Works for buyback and replacement of existing 4 x 2910 @11kV MTU Diesel generators with 3 x 2.5 MWe MTU Gas Generators and all related works.</li>
-									<!-- <li><strong>Customer:</strong> MTU India Pvt. Ltd. (Rolls Royce Power Systems)</li> -->
-									<li><strong>Scope:</strong> Buyback of existing sets, including removal and installation of new gas gensets. Includes supply, installation, testing, and commissioning of genset accessories, gas supply and exhaust systems, electrical panels (integrated with existing systems), civil foundations, cooling and earthing systems, and control/power cabling.</li>
-									<!-- <li><strong>Value:</strong> USD 419,894 (INR 3.60 Cr.) Appx.</li>
-									<li><strong>Status:</strong> Completed</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
-						<div class="project-preview" id="project4">
-						
-							<div class="preview-image">
-								<img src="images/reference-projects/bawe.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>Bawe Retreat</h2>
-									<p>Tanzania</p>
-								</div>
-							</div>
-							<!-- 
-							<div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 4 Nos. 650 kVA DG sets</div>
-							</div>
- -->
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Bawe is a high-end tourist resort at Zanzibar developed by one of the largest business houses of Tanzania. DG Sets will be a primary source of power and will provide 24x7 power to the  resort.</li>
-									<!-- <li><strong>Customer:</strong> Karimjee Jivanjee Limited, Tanzania</li> -->
-									<li><strong>Scope:</strong> Scope included supply, supervision of installation and commissioning of DG sets.</li>
-									<!-- <li><strong>Value:</strong> USD 233,275 (INR 2 Cr.) Appx.</li>
-									<li><strong>Status:</strong> Completed</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
-						<div class="project-preview" id="project5">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/le-meridian.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>Le Meridian</h2>
-									<p>Tanzania</p>
-								</div>
-							</div>
-<!-- 
-							<div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 3x500 kVA DG sets @400V; 1250 kVA 33kV/0.4kV Transformer; 25 kL Bulk Oil Tank <br/>1250 kVA Servo Voltage Stabilizer, Synchronization Panel for DG sets, Low side material incl Exhaust piping, Cables and Cable trays </div>
-							</div>
- -->
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Supply of Generator sets along with electrical equipment like electric voltage stabilizer, DG synchronization system complete with exhaust structure and piping to supplement the power needs at the resort.</li>
-									<!-- <li><strong>Customer:</strong> Le Meridien Resorts, Tanzania</li> -->
-									<li><strong>Scope:</strong> Supply and supervision of DG sets along with electrical equipment like 33kV Transformer, Voltage Stabilizer, Automated Fuel Storage tank along with Low Side material including Exhaust piping, Cables etc. for their new resort in Zanzibar</li>
-									<!-- <li><strong>Value:</strong> USD 320,000 (INR 2.8 Cr.) Appx.</li>
-									<li><strong>Status:</strong> Under Execution</li> -->
-								</ul>
-							</div>
-							
-						</div>
-						
-						<div class="project-preview" id="project6">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/delhi-airport.jpg" class="img-responsive" alt=""/>
-								<div class="preview-overlay">
-									<h2>Delhi International Airport</h2>
-									<p>India</p>
-								</div>
-							</div>
-<!-- 
-							<div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 14 Nos. 3000 kVA DG sets</div>
-							</div>
- -->
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Contract for 24x7 Operation and Maintenance of DG powerhouse supplying backup power to the passenger terminal building.</li>
-									<!-- <li><strong>Customer:</strong> Encotech through APS, Bengaluru</li> -->
-									<li><strong>Scope:</strong> Provide operation and maintenance services to ensure zero downtime of the powerhouse and accessories. </li>
-									<!-- <li><strong>Value:</strong> USD 232,474 (INR 2 Cr.) Appx per annum</li>
-									<li><strong>Status:</strong> Ongoing</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
-						<div class="project-preview" id="project7">
-						
-							<div class="preview-image">
-								<img src="images/reference-projects/ttcl.jpg" class="img-responsive" alt=""/>
-								<div class="preview-overlay">
-									<h2>Tanzania Telecommunications Corporation</h2>
-									<p>Tanzania</p>
-								</div>
-							</div>
-							
-							<!-- <div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 11 KV Electrical Panels + Transformers with Grid Sync HT Electrical Panels; 2 MVA 33kV/0.4kV and 11 kV/0.4 kV Distribution transformers; DG Grid Synchronisation system; Distribution Panels with n+1 configuration</div>
-							</div> -->
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Supplement the digital ecosystem by setting up a substation compliant with Tier 3 International Standard and maintain an uptime of 99.98% for critical application of data center by TTCL</li>
-									<!-- <li><strong>Customer:</strong> TTCL, Dar Es Salaam, Tanzania</li> -->
-									<li><strong>Scope:</strong> SITC of robust Tier-3 power infrastructure for TTCL’s data center, including 2MVA transformers, HT / LT panels, DG-grid synchronization, and fully redundant N+1 distribution systems. This solution is engineered to deliver uninterrupted, intelligent, and scalable power—ensuring compliance with international Tier-3 standards and achieving 99.982% uptime for TTCL’s mission - critical operations</li>
-									<!-- <li><strong>Value:</strong> USD 200,000 (INR 1.8 Cr.) Appx</li>
-									<li><strong>Status:</strong> Under Execution</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
-						<div class="project-preview" id="project8">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/itc-hotel.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>ITC HOTELS</h2>
-									<p>India</p>
-								</div>
-							</div>
-
-							<!-- <div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> </div>
-							</div> -->
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> 24x7 product support agreements at various locations of ITC group</li>
-									<!-- <li><strong>Customer:</strong> ITC Hotels</li> -->
-									<li><strong>Scope:</strong> Upkeep and maintenance of the backup power plant through an Annual Maintenance Contract by conducting troubleshooting, preventive and routine maintenance including repairs and spare parts</li>
-									<!-- <li>
-										<strong>Locations:</strong>
-										<ol>
-											<li>ITC Ltd, Saket - 2x1250kVA Perkins Gensets @415 V</li>
-											<li>ITC Maurya, New Delhi - 2x1500kVA MTU Gensets @415V</li>
-											<li>ITC Grand Bharat, Gurgaon - 2x1010kVA MTU Gensets @415V</li>
-											<li>ITC Ltd., Manesar - 2x1010kVA MTU & 1x500kVA Perkins Gensets @415V</li>
-											<li>ITC Baddi, Himachal Pradesh - 1x1500kVA MTU Genset @415V </li>
-										</ol>
-									</li> 
-									<li><strong>Value:</strong> USD 233,274 (INR 2 Cr.) Appx</li>
-									<li><strong>Status:</strong> Ongoing</li>-->
-								</ul>
-							</div>
-							
-						</div>
-						
-						<div class="project-preview" id="project9">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/ikea.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>IKEA Centre</h2>
-									<p>Gurugram, India</p>
-								</div>
-							</div>
-
-							<!-- <div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 3 Nos. 2 MWe Gas gensets</div>
-							</div> -->
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Backup power requirement for the upcoming IKEA center in Gurugram</li>
-									<!-- <li><strong>Customer:</strong> MTU India Pvt. Ltd. (Rolls Royce Power Systems)</li> -->
-									<li><strong>Scope:</strong> Supply and supervision of Balance of plant works for 3x2 MWe MTU Gas Generators installation of Gas Genset Accessories, Heat Exchangers, Silencers,  Gas Train Auxiliarypanels, Coolant Pumps Etc</li>
-									<!-- <li><strong>Value:</strong> USD 81,646 (INR 70 Lakhs) Appx</li>
-									<li><strong>Status:</strong> Under Execution</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
-						<div class="project-preview" id="project10">
-
-							<div class="preview-image">
-								<img src="images/reference-projects/lmel.jpg" class="img-responsive" alt="" />
-								<div class="preview-overlay">
-									<h2>LMEL</h2>
-									<p>Gabon</p>
-								</div>
-							</div>
-
-							<!-- <div class="genset-info">
-								<div class="genset-icon">⚡</div>
-								<div class="genset-text"><strong>Quantity and Ratings:</strong> 3 Nos. 2 MWe Gas gensets</div>
-							</div> -->
-
-							<div class="project-highlights">
-								<h3>Key Project Highlights</h3>
-								<ul>
-									<li><strong>Project:</strong> Augmentation of Gabon’s power supply in 8 cities using diesel generator sets</li>
-									<!-- <li><strong>Customer:</strong> MTU India Pvt. Ltd. (Rolls Royce Power Systems)</li> -->
-									<li><strong>Scope:</strong> Supply, installation and commissioning of 30x2500 kVA Baudouin DG sets to power the baselod operations at Kolwezi mines. Deputing manpower for 24x7 Operation and Maintenance of the DG sets to ensure uninterrupted power</li>
-									<!-- <li><strong>Value:</strong> USD 81,646 (INR 70 Lakhs) Appx</li>
-									<li><strong>Status:</strong> Under Execution</li> -->
-								</ul>
-							</div>
-
-						</div>
-						
+					
+					<div class="detail-nav">
+						<button class="detail-nav-btn prev" id="detailPrevBtn">
+							<span class="detail-nav-arrow">&#8592;</span>
+							<span class="detail-nav-label">Previous project</span>
+						</button>
+						<span class="detail-nav-count" id="detailCount"></span>
+						<button class="detail-nav-btn next" id="detailNextBtn">
+							<span class="detail-nav-label">Next project</span>
+							<span class="detail-nav-arrow">&#8594;</span>
+						</button>
 					</div>
-
+					
 				</div>
-
 				<div class="clearfix"></div>
-				
 			</div>
 		</div>
 	</div>
@@ -1048,7 +740,202 @@ window.addEventListener('scroll', () => {
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
+<script type="text/javascript">
+const projects = [
+  {
+    id: 'arise', name: 'ARISE IIP', loc: 'Gabon Africa', region: 'Africa',
+    img: '/images/reference-projects/arise-image.jpg',
+    highlights: [
+      { label: 'Project', text: "Augmentation of Gabon’s power supply in 8 cities using diesel generator sets." },
+      { label: 'Scope', text: 'Supply, testing and commissioning of 17 x 2250 kVA Perkins DG sets and Accessories including acoustic enclosures, isolator panel, protection panels, critical and routine spares.' }
+    ]
+  },
+  {
+    id: 'nxtra', name: 'Airtel Nxtra Datacentre', loc: 'Eko Atlantic City, Lagos, Nigeria', region: 'Africa',
+    img: '/images/reference-projects/nxtra.jpg',
+    highlights: [
+      { label: 'Project', text: 'Generator sets for critical application of data center by Nxtra (Airtel).' },
+      { label: 'Scope', text: 'Design, Supply, Installation, Testing and Commissioning of DG sets.' }
+    ]
+  },
+  {
+    id: 'samsung', name: 'Samsung Display (SDN)', loc: 'Greater Noida, India', region: 'Asia',
+    img: '/images/reference-projects/samsung.jpg',
+    highlights: [
+      { label: 'Project', text: 'Balance of Plant Works for buyback and replacement of existing 4 x 2910 @11kV MTU Diesel generators with 3 x 2.5 MWe MTU Gas Generators and all related works.' },
+      { label: 'Scope', text: 'Buyback of existing sets, including removal and installation of new gas gensets. Includes supply, installation, testing, and commissioning of genset accessories, gas supply and exhaust systems, electrical panels (integrated with existing systems), civil foundations, cooling and earthing systems, and control/power cabling.' }
+    ]
+  },
+  {
+    id: 'bawe', name: 'Bawe Retreat', loc: 'Zanzibar, Tanzania', region: 'Africa',
+    img: '/images/reference-projects/bawe.jpg',
+    highlights: [
+      { label: 'Project', text: 'Bawe is a high-end tourist resort at Zanzibar developed by one of the largest business houses of Tanzania. DG Sets will be a primary source of power and will provide 24x7 power to the resort.' },
+      { label: 'Scope', text: 'Scope included supply, supervision of installation and commissioning of DG sets.' }
+    ]
+  },
+  {
+    id: 'lemeridian', name: 'Le Meridian', loc: 'Zanzibar, Tanzania', region: 'Africa',
+    img: '/images/reference-projects/le-meridian.jpg',
+    highlights: [
+      { label: 'Project', text: 'Supply of Generator sets along with electrical equipment like electric voltage stabilizer, DG synchronization system complete with exhaust structure and piping to supplement the power needs at the resort.' },
+      { label: 'Scope', text: 'Supply and supervision of DG sets along with electrical equipment like 33kV Transformer, Voltage Stabilizer, Automated Fuel Storage tank along with Low Side material including Exhaust piping, Cables etc. for their new resort in Zanzibar.'}
+    ]
+  },
+  {
+    id: 'delhi', name: 'Delhi International Airport', loc: 'India', region: 'Aia',
+    img: '/images/reference-projects/delhi-airport.jpg',
+    highlights: [
+      { label: 'Project', text: 'Contract for 24x7 Operation and Maintenance of DG powerhouse supplying backup power to the passenger terminal building.'},
+      { label: 'Scope', text: 'Provide operation and maintenance services to ensure zero downtime of the powerhouse and accessories.'}
+    ]
+  },
+  {
+    id: 'ttcl', name: 'Tanzania Telecommunications Corporation', loc: 'Tanzania', region: 'Africa',
+    img: '/images/reference-projects/ttcl.jpg',
+    highlights: [
+      { label: 'Project', text: "Supplement the digital ecosystem by setting up a substation compliant with Tier 3 International Standard and maintain an uptime of 99.98% for critical application of data center by TTCL." },
+      { label: 'Scope', text: "SITC of robust Tier-3 power infrastructure for TTCL’s data center, including 2MVA transformers, HT / LT panels, DG-grid synchronization, and fully redundant N+1 distribution systems. This solution is engineered to deliver uninterrupted, intelligent, and scalable power—ensuring compliance with international Tier-3 standards and achieving 99.982% uptime for TTCL’s mission - critical operations." }
+    ]
+  },
+  {
+    id: 'itc', name: 'ITC Hotels', loc: 'India', region: 'Asia',
+    img: '/images/reference-projects/itc-hotel.jpg',
+    highlights: [
+      { label: 'Project', text: '24x7 product support agreements at various locations of ITC group.' },
+      { label: 'Scope', text: 'Upkeep and maintenance of the backup power plant through an Annual Maintenance Contract by conducting troubleshooting, preventive and routine maintenance including repairs and spare parts.' }
+    ]
+  },
+  {
+    id: 'ikea', name: 'IKEA Centre', loc: 'Gurugram, India', region: 'Asia',
+    img: '/images/reference-projects/ikea.jpg',
+    highlights: [
+      { label: 'Project', text: 'Backup power requirement for the upcoming IKEA center in Gurugram.'},
+      { label: 'Scope', text: 'Supply and supervision of Balance of plant works for 3x2 MWe MTU Gas Generators installation of Gas Genset Accessories, Heat Exchangers, Silencers, Gas Train Auxiliarypanels, Coolant Pumps Etc.' }
+    ]
+  },
+  {
+    id: 'lmel', name: 'LMEL', loc: 'Gabon', region: 'Africa',
+    img: '/images/reference-projects/lmel.jpg',
+    highlights: [
+      { label: 'Project', text: "Augmentation of Gabon’s power supply in 8 cities using diesel generator sets." },
+      { label: 'Scope', text: 'Supply, installation and commissioning of 30x2500 kVA Baudouin DG sets to power the baselod operations at Kolwezi mines. Deputing manpower for 24x7 Operation and Maintenance of the DG sets to ensure uninterrupted power.' }
+    ]
+  }
+];
 
+const grid = document.getElementById('grid');
+const detailImg = document.getElementById('detailImg');
+const detailTitle = document.getElementById('detailTitle');
+const detailLoc = document.getElementById('detailLoc');
+const detailList = document.getElementById('detailList');
+const detailHighlights = document.getElementById('detailHighlights');
+const detailCount = document.getElementById('detailCount');
+const detailPrevBtn = document.getElementById('detailPrevBtn');
+const detailNextBtn = document.getElementById('detailNextBtn');
+
+const pinIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>`;
+
+function renderGrid() {
+  grid.innerHTML = projects.map((p, i) => `
+    <div class="card text-card" data-id="${p.id}" style="--bg-img:url('${p.img}')">
+      <div class="card-scrim"></div>
+      <span class="tab-num">${String(i + 1).padStart(2, '0')}</span>
+      <h3>${p.name}</h3>
+      <div class="loc">${pinIcon} ${p.loc}</div>
+    </div>
+  `).join('');
+}
+
+function showDetail(id) {
+  const index = projects.findIndex(x => x.id === id);
+  const p = projects[index];
+  detailImg.style.opacity = 0;
+  setTimeout(() => {
+    detailImg.src = p.img;
+    detailImg.style.opacity = 1;
+  }, 150);
+  detailTitle.textContent = p.name;
+  detailLoc.textContent = p.loc;
+  detailList.innerHTML = p.highlights.map(h => `<li><b>${h.label}:</b> ${h.text}</li>`).join('');
+  detailCount.textContent = `${index + 1} of ${projects.length}`;
+
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+  const activeCard = document.querySelector(`.card[data-id="${id}"]`);
+  if (activeCard) {
+    activeCard.classList.add('active');
+    // keep the thumbnail row in sync when navigation happens from the below-panel
+    // buttons, so the two controls never fall out of step with each other
+    activeCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }
+
+  // reset scroll to top for the new project, then check if it actually overflows
+  detailHighlights.scrollTop = 0;
+  checkHighlightsOverflow();
+}
+
+function goToAdjacentProject(direction) {
+  const currentIndex = projects.findIndex(x => x.id === document.querySelector('.card.active')?.dataset.id);
+  const startIndex = currentIndex === -1 ? 0 : currentIndex;
+  // wraps around at either end, so "next" from the last project loops back to the first
+  const nextIndex = (startIndex + direction + projects.length) % projects.length;
+  showDetail(projects[nextIndex].id);
+}
+
+detailPrevBtn.addEventListener('click', () => goToAdjacentProject(-1));
+detailNextBtn.addEventListener('click', () => goToAdjacentProject(1));
+
+function checkHighlightsOverflow() {
+  const overflowing = detailHighlights.scrollHeight > detailHighlights.clientHeight + 4;
+  detailHighlights.classList.toggle('has-overflow', overflowing);
+}
+
+// hide the bounce hint once the person has scrolled close to the bottom —
+// it's only useful as a "there's more" cue, not a permanent fixture
+detailHighlights.addEventListener('scroll', () => {
+  const nearBottom = detailHighlights.scrollTop + detailHighlights.clientHeight >= detailHighlights.scrollHeight - 6;
+  detailHighlights.classList.toggle('has-overflow', !nearBottom && detailHighlights.scrollHeight > detailHighlights.clientHeight + 4);
+});
+
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const edgeFadeLeft = document.querySelector('.carousel-edge-fade.left');
+const edgeFadeRight = document.querySelector('.carousel-edge-fade.right');
+
+function updateArrowState() {
+  const maxScroll = grid.scrollWidth - grid.clientWidth - 2; // small buffer for rounding
+  const atStart = grid.scrollLeft <= 0;
+  const atEnd = grid.scrollLeft >= maxScroll;
+  prevBtn.classList.toggle('disabled', atStart);
+  nextBtn.classList.toggle('disabled', atEnd);
+  // same start/end logic drives the mobile edge fades, so both navigation
+  // styles (arrows on desktop, fade+swipe on mobile) stay consistent
+  if (edgeFadeLeft) edgeFadeLeft.style.opacity = atStart ? '0' : '1';
+  if (edgeFadeRight) edgeFadeRight.style.opacity = atEnd ? '0' : '1';
+}
+
+function scrollByAmount(direction) {
+  // scroll by roughly one visible "page" of cards, not just one card,
+  // so prev/next feels like a meaningful step
+  const amount = grid.clientWidth * 0.8 * direction;
+  grid.scrollBy({ left: amount, behavior: 'smooth' });
+}
+
+prevBtn.addEventListener('click', () => scrollByAmount(-1));
+nextBtn.addEventListener('click', () => scrollByAmount(1));
+grid.addEventListener('scroll', updateArrowState);
+window.addEventListener('resize', updateArrowState);
+window.addEventListener('resize', checkHighlightsOverflow);
+
+renderGrid();
+showDetail(projects[0].id);
+updateArrowState();
+
+grid.addEventListener('click', e => {
+  const card = e.target.closest('.card');
+  if (card) showDetail(card.dataset.id);
+});
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript">
 var swiper = new Swiper(".clientSwiper", {
@@ -1087,121 +974,6 @@ var swiper = new Swiper(".clientSwiper", {
         }
 
     }
-
-});
-
-</script>
-
-<script type="text/javascript">
-
-document.addEventListener("DOMContentLoaded", function(){
-
-    /* =========================
-       FILTER BUTTONS
-    ========================= */
-
-    const filterBtns = document.querySelectorAll('.tab-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-    const previews = document.querySelectorAll('.project-preview');
-
-    filterBtns.forEach(btn => {
-
-        btn.addEventListener('click', function(){
-
-            /* ACTIVE TAB */
-
-            filterBtns.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            this.classList.add('active');
-
-            /* FILTER VALUE */
-
-            const filter = this.getAttribute('data-tab');
-
-            /* SHOW/HIDE PROJECT ITEMS */
-
-            let firstVisible = null;
-
-            projectItems.forEach(item => {
-
-                const category = item.getAttribute('data-category');
-
-                if(category.includes(filter)){
-
-                    item.style.display = 'flex';
-
-                    if(!firstVisible){
-                        firstVisible = item;
-                    }
-
-                }else{
-
-                    item.style.display = 'none';
-
-                }
-
-            });
-
-            /* AUTO ACTIVATE FIRST VISIBLE ITEM */
-
-            if(firstVisible){
-
-                projectItems.forEach(el => {
-                    el.classList.remove('active');
-                });
-
-                firstVisible.classList.add('active');
-
-                const target = firstVisible.getAttribute('data-project');
-
-                previews.forEach(preview => {
-                    preview.classList.remove('active');
-                });
-
-                const activePreview = document.getElementById(target);
-
-                if(activePreview){
-                    activePreview.classList.add('active');
-                }
-
-            }
-
-        });
-
-    });
-
-
-    /* =========================
-       LEFT SIDE CLICK
-    ========================= */
-
-    projectItems.forEach(item => {
-
-        item.addEventListener('click', function(){
-
-            projectItems.forEach(el => {
-                el.classList.remove('active');
-            });
-
-            this.classList.add('active');
-
-            const target = this.getAttribute('data-project');
-
-            previews.forEach(preview => {
-                preview.classList.remove('active');
-            });
-
-            const activePreview = document.getElementById(target);
-
-            if(activePreview){
-                activePreview.classList.add('active');
-            }
-
-        });
-
-    });
 
 });
 

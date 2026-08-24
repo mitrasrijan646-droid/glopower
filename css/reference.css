@@ -1,0 +1,319 @@
+.wrap {  margin: 0 auto; padding:30px 0;}
+
+  /* single-row carousel */
+  .carousel-wrap {
+    position: relative;
+    margin-bottom: 48px;
+    padding: 0 52px; /* room for arrow buttons */
+  }
+  .carousel-track {
+    display: flex;
+    gap:8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 4px;
+    /* hide scrollbar across browsers */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .carousel-track::-webkit-scrollbar { display: none; }
+
+  /* edge fade — only active on mobile (see breakpoint below), where the arrow
+     buttons are hidden in favor of native swipe; the fade is the replacement
+     cue that there's more to scroll, without needing a tappable button for it */
+  .carousel-edge-fade { display: none; }
+
+  :root { --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+  .card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 220px;
+    height: 150px;
+    scroll-snap-align: start;
+  }
+
+  /* project thumbnail card — echoes the homepage hero tab strip:
+     numbered marker, hairline rule, gold accent on the active item,
+     with the project photo as a darkened background layer so the
+     number/title/location stay the dominant, legible element. */
+  .card.text-card {
+    position: relative;
+    isolation: isolate; /* keeps the -1 z-index image pseudo-element contained to this card */
+    overflow: hidden;
+    border: none;
+    border-top: 3px solid #e2e2e2;
+    border-radius: 4px;
+    padding: 18px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* top-align, not centered — fixes uneven starting position */
+    outline: none;
+    transition: border-color 0.5s var(--ease-smooth);
+  }
+  /* image lives on a pseudo-element, separate from the card box itself,
+     so it can zoom on hover without distorting the padding/text above it.
+     Same duration+curve as the card's own lift, so the two motions read as one. */
+  .text-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.5s var(--ease-smooth);
+    z-index: -1;
+  }
+  .card.text-card:hover::before { transform: scale(1.05); }
+  .text-card .card-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,14,22,0.62) 0%, rgba(10,14,22,0.55) 45%, rgba(10,14,22,0.82) 100%);
+    z-index: 0;
+    transition: background 0.5s var(--ease-smooth);
+  }
+  .text-card .tab-num, .text-card h3, .text-card .loc { position: relative; z-index: 1; }
+  .card.text-card:hover { border-top-color: #e8a93a; }
+  .card.text-card:hover .card-scrim,
+  .card.text-card.active .card-scrim { background: linear-gradient(180deg, rgba(10,14,22,0.48) 0%, rgba(10,14,22,0.42) 45%, rgba(10,14,22,0.78) 100%); }
+  .card.text-card.active {
+    outline: none;
+    border-top-color: #ffc100;
+    border-top-width: 3px;
+  }
+  .text-card .tab-num {
+    display: block;
+    font-size: 12px; 
+	font-weight:400; 
+	letter-spacing: 1.8px;
+    color:#ffc100; 
+	margin-bottom: 12px;
+	font-family:"akzidenz-grotesk-next-extend";
+  }
+  .text-card h3 {
+    font-size:16px; 
+	font-weight:700; 
+	color: #FFF;
+    line-height: 1.32;
+	text-align:left;
+	margin-bottom: 12px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: calc(14.5px * 1.32 * 2);
+  }
+  .text-card .loc {
+    display: flex; 
+	align-items:center; 
+	gap: 6px;
+    font-size:15px; 
+	font-weight:400;
+	color: rgba(255,255,255,0.9);
+    margin-top: auto;
+	font-family:"akzidenz-grotesk-next-extend";
+  }
+  .text-card .loc svg { width: 12px; height: 12px; flex-shrink: 0; }
+  /* prev/next arrow buttons */
+  .carousel-arrow {
+    position: absolute; top: 0; bottom: 0;
+    width: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: auto; margin-bottom: auto;
+    height: 44px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: background 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 2;
+    font-size: 18px;
+    color: #16305c;
+  }
+  .carousel-arrow:hover {
+    background: #0039a3; color: #fff;
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 8px 22px rgba(22,48,92,0.28);
+  }
+  .carousel-arrow.prev { left: 0; transform: translateY(-50%); top: 50%; }
+  .carousel-arrow.next { right: 0; transform: translateY(-50%); top: 50%; }
+  .carousel-arrow.prev:hover, .carousel-arrow.next:hover { top: 50%; }
+  .carousel-arrow.disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+  .detail-panel {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    background: #fff;
+    height: 480px; /* constant, never changes between projects */
+  }
+  .detail-image {
+    position: relative;
+    height: 100%; /* fills the full panel height now, not just a top band */
+    overflow: hidden;
+  }
+  .detail-image img {
+    width:100%; height:100%; object-fit:cover;
+    transition: opacity 0.35s ease;
+  }
+  .detail-image .img-overlay {
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(10,20,40,0) 50%, rgba(10,20,40,0.75) 100%);
+  }
+  .detail-image .title-block {
+    position:absolute; bottom:0; left:0; padding: 24px 28px;
+    color:#fff;
+  }
+  .detail-image .title-block h2 { font-weight: 700; margin-bottom: 4px; color:#FFF; text-align:left;}
+  .detail-image .title-block .loc { color:#FFF; font-family: "akzidenz-grotesk-next-extend", sans-serif; font-size:22px;}
+
+  .detail-highlights {
+    position: relative;
+    background: #ffc100;
+    padding: 24px 22px;
+    height: 100%; /* fills the full panel height, matching the image column */
+    overflow-y: auto; /* long content scrolls WITHIN the box instead of pushing layout */
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-highlights h4 { font-size: 25px; font-weight: 700; margin-bottom: 14px; }
+  .detail-highlights ul { padding-left: 16px; }
+  .detail-highlights li { font-size:16px; line-height: 1.6; margin-bottom: 14px; }
+  .detail-highlights li b { font-weight: 700; display: block; margin-bottom: 2px; }
+
+  /* prominent scrollbar — thicker and higher contrast than a default thin scrollbar,
+     so it visually registers as "there's more here" rather than blending into the yellow */
+  .detail-highlights::-webkit-scrollbar { width: 9px; }
+  .detail-highlights::-webkit-scrollbar-track { background: rgba(0,0,0,0.08); border-radius: 5px; }
+  .detail-highlights::-webkit-scrollbar-thumb {
+    background: rgba(22,48,92,0.55); /* navy, matches brand, reads clearly against yellow */
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  .detail-highlights::-webkit-scrollbar-thumb:hover { background: rgba(22,48,92,0.75); }
+  .detail-highlights { scrollbar-width: auto; scrollbar-color: rgba(22,48,92,0.55) rgba(0,0,0,0.08); }
+
+  /* bottom fade + bounce arrow — only shown when content actually overflows (JS toggles .has-overflow) */
+  .highlights-fade {
+    position: absolute; left: 0; right: 12px; bottom: 0; height: 46px;
+    background: linear-gradient(180deg, rgba(232,169,58,0) 0%, rgba(232,169,58,0.95) 75%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .detail-highlights.has-overflow .highlights-fade { opacity: 1; }
+  .scroll-hint {
+    position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%);
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(22,48,92,0.85);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.25s ease;
+    animation: bounceHint 1.6s ease-in-out infinite;
+  }
+  .detail-highlights.has-overflow .scroll-hint { opacity: 1; }
+  .scroll-hint svg { width: 12px; height: 12px; }
+  @keyframes bounceHint {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(4px); }
+  }
+
+  /* below-panel navigation — lets people step through projects right where
+     their mouse already is, without a long trip back up to the carousel */
+  .detail-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 18px;
+  }
+  .detail-nav-btn {
+    display: flex; align-items: center; gap: 10px;
+    background: #fff; border: 1px solid #e2e2e2; border-radius: 24px;
+    padding: 11px 20px; cursor: pointer;
+    font-size: 13.5px; font-weight: 500; color: #16305c;
+    transition: background 0.35s var(--ease-smooth), border-color 0.35s var(--ease-smooth),
+                color 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+    box-shadow: 0 3px 10px rgba(10,20,40,0);
+  }
+  .detail-nav-btn:hover {
+    background:#0039a3; 
+	color: #fff; 
+	border-color:#0039a3;
+    box-shadow: 0 8px 20px rgba(22,48,92,0.22);
+  }
+  .detail-nav-arrow { font-size: 16px; line-height: 1; }
+  .detail-nav-count { font-size: 12.5px; color: #888; letter-spacing: 0.3px; font-family:"akzidenz-grotesk-next-extend";}
+
+  @media (max-width: 480px) {
+    .detail-nav-label { display: none; } /* icon-only buttons on very small screens to save width */
+    .detail-nav-btn { padding: 12px 16px; } /* kept generous for a comfortable tap target */
+  }
+
+  @media (max-width: 900px) {
+    .detail-panel { grid-template-columns: 2fr 1fr; }
+  }
+
+  /* ===== Mobile ===== */
+  @media (max-width: 640px) {
+    .wrap { padding: 32px 18px 60px; }
+    .page-head { margin-bottom: 18px; }
+
+    .detail-panel { height: auto; grid-template-columns: 1fr; }
+    .detail-image { height: 300px; } /* the project photo gets more room now that the thumbnails no longer carry images */
+    .detail-highlights { height: auto; max-height: 200px; }
+
+    /* arrow buttons removed on touch screens — swipe is the native, expected
+       gesture here, and the buttons were just adding visual clutter and
+       eating horizontal space that the row can use for the cards instead */
+    .carousel-wrap { padding: 0; margin-bottom: 28px; }
+    .carousel-arrow { display: none; }
+    .carousel-track { padding-left: 2px; padding-right: 2px; }
+
+    .carousel-edge-fade {
+      display: block;
+      position: absolute; top: 0; bottom: 4px; width: 28px;
+      pointer-events: none; z-index: 3;
+      transition: opacity 0.3s ease;
+    }
+    .carousel-edge-fade.left { left: 0; background: linear-gradient(90deg, #f4f5f7 0%, rgba(244,245,247,0) 100%); }
+    .carousel-edge-fade.right { right: 0; background: linear-gradient(270deg, #f4f5f7 0%, rgba(244,245,247,0) 100%); }
+
+    /* thumbnails drop the background photo entirely on mobile — a whole row of
+       tall photo tiles ate too much vertical space before anyone reached actual
+       content. Falls back to a compact, plain-text card: name + location only. */
+    .card { flex-basis: 132px; height: 64px; }
+    .text-card::before { display: none; } /* the photo pseudo-element */
+    .text-card .card-scrim { display: none; }
+    .card.text-card {
+      background: #fff;
+      border-top: 3px solid #e2e2e2;
+      padding: 0 12px;
+      justify-content: center; /* with the number gone, center the remaining
+                                   two lines rather than pinning them to the top */
+    }
+    .card.text-card.active { background: #f7f3ea; border-top-color: #e8a93a; }
+    .text-card .tab-num { display: none; } /* numbering removed on mobile — name + location only */
+    .text-card h3 {
+      font-size: 12px; margin-bottom: 5px; color: #1a1a1a; text-shadow: none;
+      min-height: 0; /* the fixed 2-line reservation is a desktop-only fix, not needed here */
+      display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .text-card .loc { font-size: 10.5px; color: #2f5fa8; margin-top: 0; }
+    .text-card .loc svg { width: 10px; height: 10px; }
+
+    .detail-nav { margin-top: 14px; }
+  }
+
+  /* very small phones (SE-class widths / short viewport heights) —
+     tighten further so the detail panel + nav still fit without excessive scroll */
+  @media (max-width: 380px) {
+    .detail-image { height: 260px; }
+    .detail-highlights { max-height: 170px; padding: 18px 16px; }
+    .card { flex-basis: 118px; height: 60px; }
+  }
