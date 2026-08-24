@@ -6,15 +6,6 @@
     --gold-bright:#ffc100;
     --white:#ffffff;
     --ink:#0a1b3d;
-
-    /* these get swapped by JS per animation style */
-    --panel-ease:cubic-bezier(.22,.85,.32,1);
-    --panel-duration:.5s;
-    --item-ease:cubic-bezier(.22,.85,.32,1);
-    --item-duration:.45s;
-    --accordion-ease:cubic-bezier(.22,.85,.32,1);
-    --accordion-duration:.45s;
-    --stagger-gap:.05s;
   }
 
   /* ============ DEMO CHROME ============ */

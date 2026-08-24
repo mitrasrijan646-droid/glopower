@@ -200,7 +200,7 @@
     background-clip: padding-box;
   }
   .detail-highlights::-webkit-scrollbar-thumb:hover { background: rgba(22,48,92,0.75); }
-  .detail-highlights { scrollbar-width: auto; scrollbar-color: rgba(22,48,92,0.55) rgba(0,0,0,0.08); }
+  .detail-highlights { scrollbar-width: auto; scrollbar-color: rgba(0,57,163,0.95) rgba(255,193,0,.18); }
 
   /* bottom fade + bounce arrow — only shown when content actually overflows (JS toggles .has-overflow) */
   .highlights-fade {

@@ -1779,11 +1779,9 @@ RIGHT ENGINEER IMAGE
 .blackbxsctn h3.blcbxtxt{color:#009cff;}
 .parallax-section {
     position: relative;
-    background-image: url(../images/product/diesel-genset/diesel-engine.png); /* your image path */
-    /* background-position-x:0; */
+    background-image: url(../images/product/diesel-genset/diesel-engine.png);
 	background-position: -150px 5%;
     background-repeat: no-repeat;
-    /* background-size:fill; */
     min-height:auto;
     display: flex;
     align-items: center;
@@ -1798,7 +1796,7 @@ RIGHT ENGINEER IMAGE
 .prflesctn{background:#001538;}
 .prflewrppr{
 	display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap:50px;
     align-items: stretch;
     justify-items: stretch;
@@ -1815,6 +1813,7 @@ RIGHT ENGINEER IMAGE
 .brndsctn h1{
 	text-align:left;
 	color:#0048cf;
+	font-size:90px;
 	font-weight:400;
 }
 .cards-grid {
@@ -1825,7 +1824,7 @@ RIGHT ENGINEER IMAGE
     }
 /* ── Card ── */
 .brand-card {
-      background: #0048cf;
+      background: #dcddde;
       border-radius:15px;
       padding:0;
       position: relative;
@@ -1841,12 +1840,11 @@ RIGHT ENGINEER IMAGE
 .brand-card:hover { transform: translateY(-7px);  box-shadow: 0 22px 44px rgba(27, 71, 184, 0.38);}
     /* ── Top: name + divider ── */
 .card-top { position: relative; z-index:4; padding:30px;}
-.card-name {}
 .card-name h2{
 	text-align:left;
 	font-size:40px;
-    font-weight:400;
-    color: #FFF;
+    font-weight:700;
+    color: #0042bd;
     letter-spacing:0;
     line-height:42px;
 }
@@ -1878,27 +1876,30 @@ RIGHT ENGINEER IMAGE
 .card-hover-desc {
       position: absolute;
       bottom:0;
-	  height:78%;
+	  height:100%;
       left: 0;
       right: 0;
       /* sits just below name+divider: top padding 2rem + ~3.5rem for name+divider */
       padding:54px 40px;
       opacity: 0;
       transform: translateY(50%);
-      /* transition: opacity 0.38s ease 0.05s,
-                  transform 0.38s cubic-bezier(0.25, 0.8, 0.25, 1) 0.05s; */
 	transition:
-        transform 2s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.4s ease;
+        transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.2s ease;
       pointer-events: none;
-      z-index:1;
-	  background:#0042bd;
+      z-index:1000;
+	  background: #0048CF;
+		background: linear-gradient(180deg,rgba(0, 72, 207, 1) 30%, rgba(0, 66, 189, 1) 30%);
+	  display:flex;
+	  flex-direction:column;
+	  gap:30px;
 }
 .card-hover-desc p{
 	color: #FFF;
     font-size:18px;
     line-height:25px;
 }
+.card-hover-desc .card-name h2{color:#FFF;}
 .brand-card:hover .card-hover-desc {
     opacity: 1;
     transform: translateY(0);
@@ -1941,21 +1942,56 @@ RIGHT ENGINEER IMAGE
 	  rotate: 274deg;
     }
 .brand-card:hover .discover-btn .arrow-circle {border-color: #FFF; background:#ffc100; rotate: 312deg;}
+.brndsctn h2{text-align:left; color:#0048cf; font-weight:700; margin-bottom:10px;}
+.brndsctn h3{text-align:left; color:#0048cf;}
 .enerjsctn{
 	display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:35px;
+    grid-template-columns:1fr 2.5fr;
+    gap:15px;
 	margin-top:50px;
+}
+.enerjsctnbx{
+	display:flex;
+	flex-direction:column;
+	gap:40px;
+	align-items:flex-start;
 }
 .enerjsctnbx .card-divider{
 	width:40px;
     height:4px;
     background:#e8a020;
     border-radius:6px;
-    margin:0 0 25px;
+    margin:0 0 10px;
 }
-.enerjsctnbx h3{ text-align:left; color:#0048cf; line-height:35px;}
-.enerjsctnbx p{font-size:25px; line-height:35px; }
+.enerjsctnbx h3{ text-align:left; color:#0048cf; line-height:35px; font-weight:700; font-size:35px;}
+.enerjsctnbx h4{
+	color:#dc9b15;
+	font-size:22px;
+	font-weight:700;
+	margin-bottom:10px;
+}
+.enerjsctnbxparabx{
+	display: grid;
+    grid-template-columns:1fr 1fr;
+    gap:125px;
+}
+.regnal-wrppr{
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:15px;
+}
+.wrpprbx{
+	border: 1px solid #0042bd;
+    padding: 15px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+	transition: all 0.4s ease;
+}
+.wrpprbx p{margin-bottom:0; text-align:center;}
+.wrpprbx:hover{transform: translateX(6px);}
 .abtprsncsctn h1{font-size:90px; text-align:left; color:#FFF;  font-weight:400;}
 .abtprsntwrpr{ margin-top:60px; grid-template-columns:1.4fr 1fr;}
 .abtprsntwrpr .abtprsnbx{
@@ -1974,8 +2010,8 @@ RIGHT ENGINEER IMAGE
 	font-weight:400; 
 	line-height:25px;
 }
-.mngmntsctn{background:#f0f0f0;}
-.mngmntsctn h1{ text-align:left; color:#0048cf;}
+.mngmntsctn{background:#0048cf;}
+.mngmntsctn h1{color:#FFF; font-size:6rem;}
 .mngmntsctnwrpr{
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1990,7 +2026,8 @@ RIGHT ENGINEER IMAGE
     flex-direction: column;
 }
 .mngmntsctnwrpr svg{height:90px; fill:#ffc100;}
-.mngmntsctnwrpr p span{color:#0048cf; font-size:15px; font-weight:700;}
+.mngmntsctnwrpr p{color:#FFF;}
+.mngmntsctnwrpr p span{color:#dc9b15; font-size:15px; font-weight:700;}
 .pwrsctn h1{color:#0048cf;}
 .epcsctn{ position: relative; overflow: hidden; margin-top:-1px;}
 .epcsctn h1{text-align:left; color:#0048cf;}
