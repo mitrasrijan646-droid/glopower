@@ -270,7 +270,7 @@ a:focus, a:hover {
 	font-size:18px !important;
 	line-height:22px !important;
 	padding: 0 !important;
-	transform: translateX(6px);
+	transform: translateX(0px);
 }
 #myNavbar .dropdown-grid .grid-nav h4 a:hover{transform: translateX(6px); color:#0048cf !important;}
 .scrolled #myNavbar ul.navbar-nav li.active a.dropdown-grid .grid-nav h4 a{color:#0039a3;}
