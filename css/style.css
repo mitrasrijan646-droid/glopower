@@ -2335,9 +2335,8 @@ RIGHT ENGINEER IMAGE
 	height:100%;
 	padding:35px 45px;
 }
-.whtbxnew .card-overlay p:before{top:30px;}
+.whtbxnew .card-overlay p:before{top:-15px;}
 .whtbxnew:hover .card-overlay { transform: translateY(0); /* slides up to fill the card */}
-/* optional: fade the text in slightly after the slide starts */
 .whtbxnew .card-overlay .card-desc { opacity: 0; transition: opacity .4s ease .25s;}
 .whtbxnew:hover .card-overlay .card-desc { opacity: 1;}
 .whtbxnew:hover{transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);}
