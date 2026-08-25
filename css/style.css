@@ -2422,8 +2422,8 @@ RIGHT ENGINEER IMAGE
 .epc-slick .epc-card.prdct-epcslide ul{padding-inline-start: 20px;}
 .epc-slick .epc-card.prdct-epcslide ul li{font-size:15px; line-height:18px; margin-bottom: 5px;  padding-bottom: 5px;}
 .whtbx h1.sltntxt{text-align:left;}
-.prvcycntnr{gap:50px; margin-bottom:100px;}
-.prvcycntnr h4{text-align:left; font-size:25px; font-weight:700; margin:0;}
+.prvcycntnr{gap:50px; margin-bottom:100px; grid-template-columns: 1fr 1fr 1fr;}
+.prvcycntnr h4{text-align:left; font-size:25px; font-weight:700; margin:0; color:#0039a3;}
 .prvcycntnr div{
 	display: flex;
     flex-direction: column;

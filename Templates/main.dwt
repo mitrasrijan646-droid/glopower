@@ -173,11 +173,13 @@
 
 <div class="mobile-header visible-md visible-sm visible-xs">
 	<!--<div class="phone-screen">-->
-    	<div class="phone-header">
-        	<div class="logo"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></div>
-            <button class="toggle-btn" id="toggleBtn"><span></span><span></span><span></span></button>
-        </div>
-        <div class="backdrop" id="backdrop"></div>
+    <div class="phone-header">
+       <div class="logo"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></div>
+      <button class="toggle-btn" id="toggleBtn"><span></span><span></span><span></span></button>
+   </div>
+    <!--</div>-->
+</div>
+<div class="backdrop" id="backdrop"></div>
         <nav class="mmenu" id="mmenu">
         	<div class="mmenu-head">
             	<a href="../index.html"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></a>
@@ -222,9 +224,6 @@
                 <p><a href="#" target="_blank">Instagram</a></p>
             </div>
         </nav>
-    <!--</div>-->
-</div>
-
 <!-- TemplateBeginEditable name="banner" -->
 
 <!-- TemplateEndEditable -->
