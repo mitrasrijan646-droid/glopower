@@ -7,12 +7,14 @@
     --white:#ffffff;
     --ink:#0a1b3d;
   }
-
-  /* ============ DEMO CHROME ============ */
-  
+  .mobile-header{
+	position:fixed;
+	z-index:100;
+	width:100%;
+  }
   .phone-header{
     display:flex; align-items:center; justify-content:space-between;
-    padding:16px 18px; background:var(--white); border-bottom:1px solid #eceff8;
+    padding:16px 18px; background:transparent; border-bottom:none;
   }
   .phone-header .logo{font-weight:800; color:var(--blue); font-size:16px;}
   .phone-header .logo span{color:var(--gold);}
@@ -20,19 +22,19 @@
 
   /* ============ HAMBURGER ============ */
   .toggle-btn{
-    width:40px; height:40px; border:none; background:var(--white);
+    width:40px; height:40px; border:none; background:transparent;
      position:relative; cursor:pointer; flex-shrink:0;
   }
   .toggle-btn span{
-    position:absolute; left:9px; right:9px; height:2px; background:var(--blue); border-radius:2px;
-    transition:transform var(--panel-duration) var(--panel-ease), opacity .25s ease, top var(--panel-duration) var(--panel-ease);
+    position:absolute; left:9px; right:9px; height:2px; background:var(--gold); border-radius:2px;
+    /* transition:transform var(--panel-duration) var(--panel-ease), opacity .25s ease, top var(--panel-duration) var(--panel-ease); */
   }
   .toggle-btn span:nth-child(1){top:13px;}
   .toggle-btn span:nth-child(2){top:19px;}
   .toggle-btn span:nth-child(3){top:25px;}
-  .toggle-btn.open span:nth-child(1){top:19px; transform:rotate(45deg);}
+  .toggle-btn.open span:nth-child(1){top:29px; transform:rotate(45deg);}
   .toggle-btn.open span:nth-child(2){opacity:0;}
-  .toggle-btn.open span:nth-child(3){top:19px; transform:rotate(-135deg);}
+  .toggle-btn.open span:nth-child(3){top:29px; transform:rotate(-135deg);}
 
   .backdrop{
   position:fixed; inset:0; background:rgba(6,15,40,0.5);
@@ -94,8 +96,8 @@
   .mitem > a::after, .msub-link::after{
     content:counter(menuItem, decimal-leading-zero);
     order:-1;
-    font-size:11px; font-weight:700; letter-spacing:.5px;
-    color:rgba(255,255,255,.4);
+    font-size:12px; font-weight:700; letter-spacing:.5px;
+    color:rgba(255,255,255,.5);
     margin-right:14px;
     transition:color var(--item-duration) ease, transform var(--item-duration) var(--item-ease);
   }
@@ -133,9 +135,13 @@
   .msub a:hover{color:var(--gold-bright); padding-left:36px;}
 
   .mcontact{
-    display:block; margin:18px 22px; padding:12px; text-align:center; border-radius:26px;
-    background:var(--gold); color:var(--white); font-weight:700; font-size:16px; text-decoration:none;
-    opacity:0; transform:translateY(8px);
+    display:block; 
+	margin:18px 20px; 
+	padding:12px; 
+    opacity:0; 
+	transform:translateY(8px);
     transition:opacity .4s ease, transform .4s var(--item-ease);
   }
+  .mcontact h3{ text-align:left; color:var(--white); font-weight:200; font-size:20px; line-height:35px; text-decoration:underline;}
+  .mcontact p a{color:var(--gold-bright);}
   .mmenu.open .mcontact{opacity:1; transform:translateY(0); transition-delay:.4s;}

@@ -719,7 +719,7 @@ a:focus, a:hover {
 	display: flex;
     flex-wrap: wrap;
     align-items: center;
-	gap:50px;
+	gap:20px;
 	transition: all 0.3s ease;
 }
 .astntbx a{
@@ -2600,6 +2600,8 @@ RIGHT ENGINEER IMAGE
 	.prdctsltn-grid .cpbltswrpr {grid-template-columns: repeat(1, 1fr);}
 	.card-grid{grid-template-columns: repeat(1, 1fr);}
 }
-@media (max-width:390px){h1{font-size: 35px;}}
+@media (max-width:390px){
+	h1{font-size: 35px;}
+}
 @media (max-width:375px){}
 @media (max-width:320px){}

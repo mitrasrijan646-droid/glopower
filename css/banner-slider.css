@@ -152,9 +152,15 @@
     .tab-item { font-size: 11.5px; padding: 10px 10px 11px; }
   }
   @media (max-width: 480px) {
+	.hero .banner-wrapper{min-height:80vh;}
 	.tabs-list{grid-template-columns: 1fr 1fr; gap:12px; }
 	.hero-content h1 { font-size: 35px; }
 	.hero-content{margin-top: 0vh;}
+  }
+  @media (max-width:390px){
+	.hero .banner-wrapper{min-height:90vh;}
+	.hero-content{margin-top:10vh;}
+	.hero-content a.dscvrbttnnew{margin-top:0; margin-bottom:20px;}
   }
   @media (prefers-reduced-motion: reduce) {
     .hero-bg.active { animation: fadeIn 0.9s ease forwards; }

@@ -180,7 +180,7 @@
         <div class="backdrop" id="backdrop"></div>
         <nav class="mmenu" id="mmenu">
         	<div class="mmenu-head">
-            	<img src="images/logo-new.png" class="img-responsive main-logo" alt=""/>
+            	<a href="../index.html"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></a>
             	<button class="mmenu-close" id="closeBtn">&times;</button>
             </div>
             <ul class="mmenu-list">
@@ -216,7 +216,11 @@
                 <li class="mitem"><a href="../about.html"><span class="link-label">About</span></a></li>
         		<li class="mitem"><a href="../contact.html"><span class="link-label">Contact</span></a></li>
             </ul>
-            <a href="../contact.html" class="mcontact">Get In Touch</a>
+            <!--<a href="../contact.html" class="mcontact">Get In Touch</a>-->
+            <div class="mcontact">
+            	<h3>Follow Us:</h3>
+                <p><a href="#" target="_blank">Instagram</a></p>
+            </div>
         </nav>
     <!--</div>-->
 </div>
