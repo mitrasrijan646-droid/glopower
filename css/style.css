@@ -2575,6 +2575,8 @@ RIGHT ENGINEER IMAGE
 	.fuelcntnr{grid-template-columns:1fr; gap:25px;}
 	.cards-grid{grid-template-columns: repeat(1, 1fr);}
 	.sprtbx .spprtblubx{grid-template-columns: repeat(1, 1fr); gap: 15px;}
+	.enerjsctnbxparabx{gap: 25px;}
+	.regnal-wrppr{grid-template-columns: repeat(2, 1fr);}
 }
 @media screen and (max-width:540px){
 }
@@ -2599,6 +2601,9 @@ RIGHT ENGINEER IMAGE
 	.capabilities-grid-bottom{grid-template-columns: repeat(1, 1fr);}
 	.prdctsltn-grid .cpbltswrpr {grid-template-columns: repeat(1, 1fr);}
 	.card-grid{grid-template-columns: repeat(1, 1fr);}
+	.mngmntsctn h1{font-size:50px;}
+	.enerjsctnbxparabx { gap: 15px; grid-template-columns: 1fr; }
+	.regnal-wrppr{grid-template-columns: repeat(1, 1fr);}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
