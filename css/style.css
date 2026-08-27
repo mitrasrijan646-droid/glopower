@@ -227,6 +227,7 @@ a:focus, a:hover {
     height:auto;
     background: transparent;
 }
+#myNavbar .nav-dropdown.force-close .custom-dropdown{display: none !important;}
 #myNavbar .custom-dropdown {
     display:none;
     position: absolute;
@@ -2484,7 +2485,7 @@ RIGHT ENGINEER IMAGE
 	.engine-tab-content{padding: 0 30px;}
 	.ftrwrppr{grid-template-columns: repeat(3, 1fr);}
 	.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 1fr);}
-	.engine-tab-btn{overflow:auto; padding: 50px 50px 20px;}
+	.engine-tab-btn{ padding: 50px 50px 20px;}
 	.pwrsltnwrpr{gap:20px;}
 	.gaswrpr .pwrsltnwrprbx{padding: 30px;}
 	.engine-tab-btn.diesel-tab-btn{padding: 20px 20px 20px;}
@@ -2515,6 +2516,7 @@ RIGHT ENGINEER IMAGE
 	.card-name h2{font-size:30px;}
 	.enerjsctn{grid-template-columns:1fr; gap:25px;}
 	.mngmntsctnwrpr{grid-template-columns: repeat(1, 1fr); gap: 0; margin-top:40px;}
+	.elctrctab-wrapper{overflow:auto;}
 }
 @media screen and (max-width:767px){
 	.projects-section{ padding:50px 15px; }
@@ -2604,6 +2606,9 @@ RIGHT ENGINEER IMAGE
 	.mngmntsctn h1{font-size:50px;}
 	.enerjsctnbxparabx { gap: 15px; grid-template-columns: 1fr; }
 	.regnal-wrppr{grid-template-columns: repeat(1, 1fr);}
+	.engine-tab-content h2{font-size:35px;}
+	.prdctbnnr .evntbxbnnr{min-height:90vh;}
+	.powerbx .card-head{flex-direction: column;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
