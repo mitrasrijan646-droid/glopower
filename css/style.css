@@ -714,7 +714,7 @@ a:focus, a:hover {
 .astntbx{
 	background:#e1a900;
 	border-radius:20px;
-	width:90%;
+	width:350px;
 	padding:20px;
 	margin-top: 40px;
 	display: flex;
@@ -2206,6 +2206,7 @@ RIGHT ENGINEER IMAGE
     justify-content: flex-start;
     align-items:  flex-start;
 	height:100px;
+	border-radius: 0px 0 15px 15px;
 }
 .mttrwrprbx .infrastcn .infrastcnbx .card-content.epc-card-content{background:#0954e1;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content.gas-card-content{background:#9ea90a;}
@@ -2356,8 +2357,8 @@ RIGHT ENGINEER IMAGE
 	grid-template-columns: repeat(3, 1fr);
 	gap:25px;
 }
-.lwrdsgnctn{background:#0041bb;}
-.lwrdsgnctn h1{color:#FFF;}
+.lwrdsgnctn{background:#FFF;}
+.lwrdsgnctn h1{color:#0041bb;}
 .lwrdsgnwrpr{
 	display:grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -2367,7 +2368,7 @@ RIGHT ENGINEER IMAGE
 	align-items:center;
 }
 .lwrdsgnwrprbx{padding:75px 45px; position:relative;}
-.lwrdsgnwrprbx.whitebox{background:#FFF;}
+.lwrdsgnwrprbx.whitebox{background:#e2b002; border-radius: 15px 0 0 15px;}
 .lwrdsgnwrprbx.whitebox p{color:#0041bb;}
 .lwrdsgnwrprbx.bluebox p{color:#FFF; text-align:center; font-size:22px;}
 .lwrdsgnwrprbx img{
@@ -2449,6 +2450,7 @@ RIGHT ENGINEER IMAGE
   display: block;
 }
 .what-content {  position: relative; z-index: 1;}
+
 /* MEDIA QUERY CSS STARTS HERE */
 @media only screen and (orientation:portrait){}
 @media screen and (max-width:1366px){}
@@ -2517,6 +2519,7 @@ RIGHT ENGINEER IMAGE
 	.enerjsctn{grid-template-columns:1fr; gap:25px;}
 	.mngmntsctnwrpr{grid-template-columns: repeat(1, 1fr); gap: 0; margin-top:40px;}
 	.elctrctab-wrapper{overflow:auto;}
+	.epc-slick .epc-card.prdct-epcslide{aspect-ratio:2.8/ 7;}
 }
 @media screen and (max-width:767px){
 	.projects-section{ padding:50px 15px; }
@@ -2609,6 +2612,7 @@ RIGHT ENGINEER IMAGE
 	.engine-tab-content h2{font-size:35px;}
 	.prdctbnnr .evntbxbnnr{min-height:90vh;}
 	.powerbx .card-head{flex-direction: column;}
+	.epc-slick .epc-card.prdct-epcslide{aspect-ratio:2.8/ 4;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
