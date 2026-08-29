@@ -1074,11 +1074,10 @@ var swiper = new Swiper(".mySectorSlider", {
 // It is intentionally separate from the 4 product slides below.
 const defaultSlide = {
   img: 'images/banner/banner-default.jpg',
-  eyebrow: 'Power Infrastructure',
-  heading: 'Powering your business with Modern Diesel Technology',
-  cta: 'Discover More',
-  link: '#'
+  eyebrow: 'POWERING POSSIBILITY',
+  heading: 'From generation to control. From power to progress'
 };
+
 const slides = [
   {
     img: 'images/banner/banner-one.jpg',
@@ -1124,7 +1123,7 @@ const tabItems = document.querySelectorAll('.tab-item');
 // ---- auto-play config ----
 const AUTO_INTERVAL = 9000; // ms between slides
 let autoTimer = null;
-const heroEl = document.querySelector('.hero') || document.body; // adjust selector to your actual hero container
+const heroEl = document.querySelector('.hero') || document.body;
 
 function goToSlide(index) {
   const slide = slides[index];
@@ -1136,6 +1135,9 @@ function goToSlide(index) {
   incoming.classList.add('active');
   outgoing.classList.remove('active');
   activeIsA = !activeIsA;
+
+  // make sure CTA is visible once a real slide is shown
+  heroCta.style.display = '';
 
   // text swap with a tiny fade
   [heroEyebrow, heroHeading, heroCta].forEach(el => {
@@ -1188,13 +1190,12 @@ tabItems.forEach(item => {
 heroEl.addEventListener('mouseenter', stopAutoPlay);
 heroEl.addEventListener('mouseleave', startAutoPlay);
 
-// init: show the default hero image, no tab highlighted, underline hidden
+// init: show the default hero image, no tab highlighted, underline hidden, CTA hidden
 bgA.style.backgroundImage = `url('${defaultSlide.img}')`;
 bgA.classList.add('active');
 heroEyebrow.textContent = defaultSlide.eyebrow;
 heroHeading.textContent = defaultSlide.heading;
-heroCta.childNodes[0].textContent = defaultSlide.cta + ' ';
-heroCta.href = defaultSlide.link;
+heroCta.style.display = 'none'; // no CTA on the default slide
 
 // kick off auto-play after the default slide has been shown for one interval
 startAutoPlay();
