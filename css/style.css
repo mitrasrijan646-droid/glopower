@@ -392,7 +392,7 @@ a:focus, a:hover {
     top:auto; /* remove the fixed top:200px */
     transform: none;
 }
-.prdctbnnr .evntbxbnnr .bannrbx {top:-9vh;}
+.prdctbnnr .evntbxbnnr .bannrbx {top:0;}
 .bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt { position: relative; z-index: 99;}
 .bnnrsctn .evntbxbnnr .imgbx {
     position: absolute;   /* image stays behind */
@@ -1235,6 +1235,7 @@ RIGHT ENGINEER IMAGE
     padding-bottom: 0;
     height: 560px;
 }
+.solutionwrpr .cpbltsbx{height:410px;}
 .rangwrpr .cpbltsbx p{color:#FFF;}
 .rangwrpr .cpbltsbx .textbx{
 	display: flex;
@@ -1784,8 +1785,8 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .form-grid .input-box input, .input-box textarea, .input-box select{ background:#e1e1e1;}
 .contactwrppr .form-grid .input-box select{background:#e1e1e1 !important;}
 .contactwrppr .textarea-box label{color:#0041bb;}
-.blackbxsctn{background:#001538; padding:120px 0; margin-top: -1px;}
-.blackbxsctn h3.blcbxtxt{color:#009cff;}
+.blackbxsctn{background:#f0f0f0; padding:120px 0; margin-top: -1px;}
+.blackbxsctn h3.blcbxtxt{color:#0041bb;}
 .parallax-section {
     position: relative;
     background-image: url(../images/product/diesel-genset/diesel-engine.png);
