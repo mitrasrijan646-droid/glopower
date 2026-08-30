@@ -1956,7 +1956,7 @@ RIGHT ENGINEER IMAGE
 .enerjsctnbx{
 	display:flex;
 	flex-direction:column;
-	gap:40px;
+	gap:20px;
 	align-items:flex-start;
 }
 .enerjsctnbx .card-divider{
@@ -1964,9 +1964,9 @@ RIGHT ENGINEER IMAGE
     height:4px;
     background:#e8a020;
     border-radius:6px;
-    margin:0 0 10px;
+    margin:0 0 20px;
 }
-.enerjsctnbx h3{ text-align:left; color:#0048cf; line-height:35px; font-weight:700; font-size:35px;}
+.enerjsctnbx h3{ text-align:left; color:#0048cf; line-height:35px; font-weight:700; font-size:35px; margin-bottom:20px;}
 .enerjsctnbx h4{
 	color:#dc9b15;
 	font-size:22px;
