@@ -557,7 +557,7 @@ a:focus, a:hover {
 	}
 .whtbx h1{color:#f2ae2c; font-weight:400;}
 .cmprhnsv{ background:url(../images/spark-icon.png) no-repeat top right;}
-.cpbltswrpr.prdctrngbx{ gap:15px; grid-template-columns: repeat(3, 0.18fr);}
+.cpbltswrpr.prdctrngbx{ gap:15px; grid-template-columns: repeat(3, 0.32fr);}
 .cpbltswrpr{
 	margin-top:85px;
 	display: grid;
@@ -713,7 +713,7 @@ a:focus, a:hover {
 .sprtbx .blubx-container img{margin-top:0; transition: filter 0.3s ease; width:54px; height:54px; filter: brightness(0) invert(1);}
 .astntbx{
 	background:#e1a900;
-	border-radius:20px;
+	border-radius:10px;
 	width:280px;
 	padding:10px;
 	margin-top: 40px;
@@ -1228,7 +1228,13 @@ RIGHT ENGINEER IMAGE
 	background:#f2ae2c !important;
     opacity:1;
 }
-.rangwrpr .cpbltsbx{background:#0041bb; position:relative; z-index:1;}
+.rangwrpr .cpbltsbx{
+	background: #0041bb;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0;
+    height: 560px;
+}
 .rangwrpr .cpbltsbx p{color:#FFF;}
 .rangwrpr .cpbltsbx .textbx{
 	display: flex;
@@ -1237,7 +1243,7 @@ RIGHT ENGINEER IMAGE
     justify-content: flex-end;
     align-items: flex-end;
     gap: 15px;
-    bottom:60px;
+    bottom:70px;
 	z-index: 1;
 	padding:25px;
 	transition: 0.4s ease;
@@ -1684,7 +1690,7 @@ RIGHT ENGINEER IMAGE
 .bluebx h3{color:#FFF;}
 .prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 60px; max-width:100%;}
 .prdctsltn-grid p{width:auto;}
-.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(3, .30fr); gap:10px; margin-top:0;}
+.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(3, .33fr); gap:10px; margin-top:0;}
 .prdctsprtsctnbx h1.blutxt{color:#0041bb;}
 .exprtsctn{background:#bddcff;}
 /* Left Content */

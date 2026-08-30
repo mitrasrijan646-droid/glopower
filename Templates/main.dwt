@@ -115,7 +115,7 @@
                                         	
                                             <div class="grid-nav">
                                             	<h1>Solution</h1>
-                                                <p>We thrive to deliver the most sophisticated Standby Power Products</p>
+                                                <p>Our solutions span Electrical EPC, Acoustic, and Fuel Delivery – engineered to solve the execution, compliance, and reliability challenges that surface while running critical power systems.</p>
                                             </div>
                                             
                                             <div class="grid-nav">
@@ -182,7 +182,7 @@
 <div class="backdrop" id="backdrop"></div>
 <nav class="mmenu" id="mmenu">
         	<div class="mmenu-head">
-            	<a href="../index.html"><img src="images/logo-new.png" class="img-responsive main-logo" alt=""/></a>
+            	<a href="../index.html"><img src="images/mobile-logo-inner.svg" class="img-responsive main-logo" alt=""/></a>
             	<button class="mmenu-close" id="closeBtn">&times;</button>
             </div>
             <ul class="mmenu-list">
