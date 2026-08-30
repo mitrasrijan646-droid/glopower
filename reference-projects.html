@@ -745,8 +745,8 @@ window.addEventListener('scroll', () => {
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
-<script type="text/javascript">
-const projects = [
+<script>
+	const projects = [
   {
     id: 'arise', name: 'ARISE IIP', loc: 'Gabon Africa', region: 'Africa',
     img: '/images/reference-projects/arise-image.jpg',
@@ -932,9 +932,41 @@ grid.addEventListener('scroll', updateArrowState);
 window.addEventListener('resize', updateArrowState);
 window.addEventListener('resize', checkHighlightsOverflow);
 
+// Check if a specific project was linked via URL hash (e.g. reference-projects.html#arise)
+function getInitialProjectId() {
+  const hash = window.location.hash.replace('#', '').trim();
+  const match = projects.find(p => p.id === hash);
+  return match ? match.id : projects[0].id;
+}
+
 renderGrid();
-showDetail(projects[0].id);
+showDetail(getInitialProjectId());
 updateArrowState();
+
+// If a specific project was requested via hash, scroll the page down to
+// the projects section so the person doesn't land on top of the page
+// and have to scroll manually to see it
+if (window.location.hash) {
+  const initialHash = window.location.hash.replace('#', '').trim();
+  const matchedProject = projects.find(p => p.id === initialHash);
+  if (matchedProject) {
+    // slight delay lets layout/images settle before measuring scroll position
+    setTimeout(() => {
+      const section = document.querySelector('.rfrncsctnbx') || grid.closest('section');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
+}
+
+// If the hash changes while already on the page (e.g. clicking another
+// hash link without a full reload), react and show that project
+window.addEventListener('hashchange', () => {
+  const id = window.location.hash.replace('#', '').trim();
+  const match = projects.find(p => p.id === id);
+  if (match) showDetail(match.id);
+});
 
 grid.addEventListener('click', e => {
   const card = e.target.closest('.card');
