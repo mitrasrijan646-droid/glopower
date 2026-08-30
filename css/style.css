@@ -1774,8 +1774,6 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .form-grid .input-box label{color:#0041bb;}
 .contactwrppr .form-grid .input-box input, .input-box textarea{ background:#e1e1e1;}
 .contactwrppr .textarea-box label{color:#0041bb;}
-.contactwrppr p.privacy-text{color:#000;}
-.contactwrppr p.privacy-text a{color:#000;}
 .blackbxsctn{background:#001538; padding:120px 0; margin-top: -1px;}
 .blackbxsctn h3.blcbxtxt{color:#009cff;}
 .parallax-section {
@@ -1814,7 +1812,7 @@ RIGHT ENGINEER IMAGE
 .brndsctn h1{
 	text-align:left;
 	color:#0048cf;
-	font-size:90px;
+	font-size:50px;
 	font-weight:400;
 }
 .cards-grid {
@@ -1843,11 +1841,11 @@ RIGHT ENGINEER IMAGE
 .card-top { position: relative; z-index:4; padding:30px;}
 .card-name h2{
 	text-align:left;
-	font-size:40px;
+	font-size:27px;
     font-weight:700;
     color: #0042bd;
     letter-spacing:0;
-    line-height:42px;
+    line-height:30px;
 }
 .brand-card .card-divider {
     width:40px;
@@ -1971,28 +1969,6 @@ RIGHT ENGINEER IMAGE
 	font-weight:700;
 	margin-bottom:10px;
 }
-.enerjsctnbxparabx{
-	display: grid;
-    grid-template-columns:1fr 1fr;
-    gap:125px;
-}
-.regnal-wrppr{
-	display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:15px;
-}
-.wrpprbx{
-	border: 1px solid #0042bd;
-    padding: 15px 25px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap:10px;
-	transition: all 0.4s ease;
-}
-.wrpprbx p{margin-bottom:0; text-align:center;}
-.wrpprbx:hover{transform: translateX(6px);}
 .abtprsncsctn h1{font-size:90px; text-align:left; color:#FFF;  font-weight:400;}
 .abtprsntwrpr{ margin-top:60px; grid-template-columns:1.4fr 1fr;}
 .abtprsntwrpr .abtprsnbx{
@@ -2387,7 +2363,7 @@ RIGHT ENGINEER IMAGE
     justify-content: center;
     align-items: center;
 }
-.costsctn p{text-align:center; margin-bottom:5px;}
+.costsctn p{text-align:center; margin-bottom:5px; font-size:18px;}
 .costwrppr{
 	display:grid;
 	grid-template-columns: repeat(4, 1fr);
