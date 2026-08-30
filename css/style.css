@@ -557,7 +557,7 @@ a:focus, a:hover {
 	}
 .whtbx h1{color:#f2ae2c; font-weight:400;}
 .cmprhnsv{ background:url(../images/spark-icon.png) no-repeat top right;}
-.cpbltswrpr.prdctrngbx{/* grid-template-columns: repeat(3, 0.18fr); */   gap:15px; grid-template-columns: repeat(3, 0.25fr);}
+.cpbltswrpr.prdctrngbx{ gap:15px; grid-template-columns: repeat(3, 0.18fr);}
 .cpbltswrpr{
 	margin-top:85px;
 	display: grid;
@@ -677,7 +677,7 @@ a:focus, a:hover {
     overflow:hidden;
 }
 .swiper-pagination-progressbar-fill{ background:#e5a51d !important;border-radius:30px;}
-.mapsctn{background:#0041bb; padding-right:6vw;}
+.mapsctn{background:#0041bb; padding-right:6vw; padding-top:100px;}
 .mapsctn h1{color:#FFF; margin-bottom:50px; text-align:left; font-size:45px; padding-left:6vw;}
 .prdctspprt{padding:180px 0;}
 .sprtbxcntnr{
@@ -714,19 +714,19 @@ a:focus, a:hover {
 .astntbx{
 	background:#e1a900;
 	border-radius:20px;
-	width:350px;
-	padding:20px;
+	width:280px;
+	padding:10px;
 	margin-top: 40px;
 	display: flex;
     flex-wrap: wrap;
     align-items: center;
-	gap:20px;
+	gap:10px;
 	transition: all 0.3s ease;
 }
 .astntbx a{
 	color:#FFF;
 	font-weight:bold;
-	font-size:25px;
+	font-size:20px;
 	display:block;
 }
 .astntbx:hover{ background:#ffc100; transform:translateX(8px);}
@@ -1099,6 +1099,8 @@ RIGHT ENGINEER IMAGE
     margin-bottom:30px;
     margin-top:50px;
 }
+.contact-title span{font-size:12px;}
+.contact-title span a{color:#FFF; text-decoration:underline;}
 .form-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -1681,7 +1683,7 @@ RIGHT ENGINEER IMAGE
 .bluebx h3{color:#FFF;}
 .prdctsltn-grid{grid-template-columns:repeat(1,1fr); margin:0 0 60px; max-width:100%;}
 .prdctsltn-grid p{width:auto;}
-.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:0;}
+.prdctsltn-grid .cpbltswrpr{grid-template-columns: repeat(3, .30fr); gap:10px; margin-top:0;}
 .prdctsprtsctnbx h1.blutxt{color:#0041bb;}
 .exprtsctn{background:#bddcff;}
 /* Left Content */
