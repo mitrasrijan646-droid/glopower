@@ -443,17 +443,17 @@ a:focus, a:hover {
     z-index: 10;
 }
 .services{
-	padding: 100px 5vw;
-    background: #a7ccee;
+	padding:50px 1vw;
+    background: #d4e4fd;
     position: relative;
     margin-top: -11px;
 }
 .parallax-section-service{
 	position: relative;
-    background-image: url(../images/power-man.svg);
+    background-image: url(../images/end-to-end.jpg);
 	background-position:110% 0;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height:auto;
     overflow: hidden;
 }
@@ -1893,7 +1893,7 @@ RIGHT ENGINEER IMAGE
 		background: linear-gradient(180deg,rgba(0, 72, 207, 1) 30%, rgba(0, 66, 189, 1) 30%);
 	  display:flex;
 	  flex-direction:column;
-	  gap:30px;
+	  gap:15px;
 }
 .card-hover-desc p{
 	color: #FFF;
