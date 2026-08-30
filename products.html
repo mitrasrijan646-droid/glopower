@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.1/build/css/intlTelInput.css">
 <!-- InstanceEndEditable -->
 </head>
 
@@ -655,13 +656,24 @@
 								</div>
 
 								<div class="input-box">
-									<label for="country">COUNTRY*</label>
-									<input type="text" id="country" name="country" required>
+									<label for="country">Country</label>
+									<select id="country" name="country" required>
+										<option value="" disabled selected>Select Country</option>
+									</select>
 								</div>
-
+								
 								<div class="input-box">
-									<label for="city">CITY*</label>
-									<input type="text" id="city" name="city" required>
+									<label for="state">STATE</label>
+									<select id="state" name="state" required disabled>
+										<option value="" disabled selected>Select Country First</option>
+									</select>
+								</div>
+								
+								<div class="input-box">
+									<label for="city">CITY</label>
+									<select id="city" name="city" required disabled>
+										<option value="" disabled selected>Select State First</option>
+									</select>
 								</div>
 								
 							</div>
@@ -1111,6 +1123,125 @@ function checkImgScroll() {
 
 window.addEventListener('scroll', checkImgScroll);
 window.addEventListener('load', checkImgScroll);
+</script>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    const countrySelect = document.querySelector('#country');
+    const stateSelect = document.querySelector('#state');
+    const citySelect = document.querySelector('#city');
+
+    function cleanList(arr) {
+        return Array.from(
+            new Set(
+                arr.filter(function (c) { return c && typeof c === 'string' && c.trim().length > 0; })
+                   .map(function (c) { return c.trim(); })
+            )
+        ).sort(function (a, b) { return a.localeCompare(b); });
+    }
+
+    function fillSelect(selectEl, items, placeholderText) {
+        selectEl.innerHTML = '';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.disabled = true;
+        defaultOpt.selected = true;
+        defaultOpt.textContent = placeholderText;
+        selectEl.appendChild(defaultOpt);
+
+        const fragment = document.createDocumentFragment();
+        items.forEach(function (name) {
+            const opt = document.createElement('option');
+            opt.value = name;
+            opt.textContent = name;
+            fragment.appendChild(opt);
+        });
+        selectEl.appendChild(fragment);
+        selectEl.disabled = false;
+    }
+
+    // Load states for a given country
+    function loadStates(selectedCountry) {
+        stateSelect.innerHTML = '<option value="" disabled selected>Loading states...</option>';
+        stateSelect.disabled = true;
+        citySelect.innerHTML = '<option value="" disabled selected>Select State First</option>';
+        citySelect.disabled = true;
+
+        fetch('https://countriesnow.space/api/v0.1/countries/states', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ country: selectedCountry })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error || !data.data || !data.data.states || data.data.states.length === 0) {
+                    stateSelect.innerHTML = '<option value="" disabled selected>No states found</option>';
+                    console.warn('No states for', selectedCountry, data);
+                    return;
+                }
+                const stateNames = cleanList(data.data.states.map(function (s) { return s.name; }));
+                fillSelect(stateSelect, stateNames, 'Select State');
+            })
+            .catch(function (err) {
+                console.error('Failed to load states:', err);
+                stateSelect.innerHTML = '<option value="" disabled selected>Error loading states</option>';
+            });
+    }
+
+    // Load cities for a given country + state
+    function loadCities(selectedCountry, selectedState) {
+        citySelect.innerHTML = '<option value="" disabled selected>Loading cities...</option>';
+        citySelect.disabled = true;
+
+        fetch('https://countriesnow.space/api/v0.1/countries/state/cities', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ country: selectedCountry, state: selectedState })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error || !data.data || data.data.length === 0) {
+                    citySelect.innerHTML = '<option value="" disabled selected>No cities found</option>';
+                    console.warn('No cities for', selectedCountry, selectedState, data);
+                    return;
+                }
+                const cityNames = cleanList(data.data);
+                fillSelect(citySelect, cityNames, 'Select City');
+            })
+            .catch(function (err) {
+                console.error('Failed to load cities:', err);
+                citySelect.innerHTML = '<option value="" disabled selected>Error loading cities</option>';
+            });
+    }
+
+    // 1. Load countries, default to India
+    fetch('https://countriesnow.space/api/v0.1/countries/positions')
+        .then(res => res.json())
+        .then(data => {
+            const countries = data.data.map(c => c.name).sort((a, b) => a.localeCompare(b));
+            countries.forEach(function (countryName) {
+                const opt = document.createElement('option');
+                opt.value = countryName;
+                opt.textContent = countryName;
+                if (countryName === 'Gabon') opt.selected = true;
+                countrySelect.appendChild(opt);
+            });
+            loadStates(countrySelect.value); // auto-load states for India
+        })
+        .catch(function (err) {
+            console.error('Failed to load countries:', err);
+        });
+
+    // 2. When country changes, reload states (and reset city)
+    countrySelect.addEventListener('change', function () {
+        loadStates(countrySelect.value);
+    });
+
+    // 3. When state changes, load cities
+    stateSelect.addEventListener('change', function () {
+        loadCities(countrySelect.value, stateSelect.value);
+    });
+});
 </script>
 
 <!-- InstanceEndEditable -->
