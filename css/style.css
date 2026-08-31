@@ -2453,8 +2453,8 @@ RIGHT ENGINEER IMAGE
 .cntctdtlsbx h1{text-align:left; color:#0041bb; margin-bottom:50px;}
 .cntctwrppr{
 	display:grid;
-	grid-template-columns:1fr 1.5fr;
-	gap:100px;
+	grid-template-columns:1.3fr 1.5fr;
+	gap:40px;
 }
 .cntctwrpprbx{
 	display:flex;
