@@ -1,5 +1,5 @@
 * { margin:0; padding:0; box-sizing:border-box; }
-	.hero-bg-wrap { position:absolute; inset:0; overflow:hidden; background:#1a1a1a;}
+  .hero-bg-wrap { position:absolute; inset:0; overflow:hidden; background:#1a1a1a;}
   .hero-bg {
     position:absolute; inset:0;
     background-size: cover;
@@ -86,6 +86,8 @@
     display:flex; list-style:none;
     border-top: 1px solid rgba(255,255,255,0.28);
     position: relative;
+	flex-wrap:wrap;
+	gap:30px;
   }
   .tab-item {
     flex:1;
@@ -116,7 +118,6 @@
 	.hero-content{width:100%; margin-top: 15vh;}
     .hero-content h1 { margin-bottom: 22px; font-size:35px;}
     .cta-btn { padding: 14px 22px; font-size: 14px; }
-
     .hero-tabs { padding: 0 20px; }
     .tabs-inner { position: static; } /* the sliding-underline track only makes sense
                                           for a single row; on mobile the tabs wrap
