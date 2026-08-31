@@ -2146,7 +2146,6 @@ RIGHT ENGINEER IMAGE
     justify-content: flex-start;
     gap:30px;
   }
-.card:hover .card-overlay{ height:100%; /* grows to fill the card — this now animates smoothly */ }
 .card-title{
     margin:0;
 	text-align:left;
