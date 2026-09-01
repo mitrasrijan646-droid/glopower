@@ -793,7 +793,7 @@ a:focus, a:hover {
 .project-content h4{
     font-size:18px;
     font-weight:700;
-    margin-bottom:10px;
+    margin:0;
     line-height:1.3;
     color:#FFF;
 }
@@ -2164,6 +2164,7 @@ RIGHT ENGINEER IMAGE
     opacity:0;
     transition:opacity .3s ease .12s;   /* text fades in slightly after the box starts opening */
 }
+.card:hover .card-overlay{ height: 100%; /* <-- this line was missing */}
 .card:hover .card-desc{  opacity:1; }
 .mttrsctn{background:#FFF;}
 .mttrwrprcntnr{
@@ -2503,7 +2504,13 @@ RIGHT ENGINEER IMAGE
 	.scndrow{grid-template-columns: repeat(2, 1fr); gap: 35px;}
 	.frstrow{grid-template-columns: 1fr 1fr;}
 	.whtbxnew p:before{top:-15px;}
-	.frstrowbx{gap:35px;}
+	.frstrowbx{
+		display: flex;
+		gap:20px;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
 	.whtbxnew .card-overlay p:before{top: -20px;}
 	.mttrwrprbx .infrastcn{grid-template-columns: repeat(2, 1fr);}
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content p{line-height:16px;}
@@ -2513,9 +2520,9 @@ RIGHT ENGINEER IMAGE
 	.preview-overlay{bottom: 0;}
 	.capabilities-grid-bottom{grid-template-columns: repeat(2, 1fr); margin-top: 15px;}
 	.capabilities-content{padding: 30px 0 76px 0;}
-	.epc-slick .epc-card{padding-bottom:30vh; aspect-ratio:1.5/3;}
+	.epc-slick .epc-card{padding-bottom:266px; aspect-ratio:1.5/3;}
 	.apprchcntnr{grid-template-columns: repeat(1, 1fr); gap:20px;}
-	.apprchcntnr .apprchcntnrbx:first-child{gap: 20px;}
+	.apprchcntnr .apprchcntnrbx:first-child{gap: 25px;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3){border-top-right-radius:0;}
 	.card-grid{grid-template-columns: repeat(2, 1fr);}
 	.costwrppr{ grid-template-columns: repeat(2, 1fr); gap: 30px;}
@@ -2529,27 +2536,16 @@ RIGHT ENGINEER IMAGE
 }
 @media screen and (max-width:767px){
 	.projects-section{ padding:50px 15px; }
-      .project-card,
-      .view-projects{
-        min-height:320px;
+    .project-card,
+    .view-projects{
+        min-height:auto;
       }
-
-      .project-content{
-        padding:20px;
-      }
-
-      .project-content h4{
-        font-size:16px;
-      }
-
+      .project-content{ padding:25px; }
       .project-content p,
       .project-content span{
         font-size:14px;
       }
-
-      .view-projects h2{
-        font-size:28px;
-      }
+    .view-projects h2{ font-size:28px; }
 	.parallax-section-service{background-size:cover;}
 	.bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:40px;}
 	.sprtbx .astntbx{width:100%;}
@@ -2583,7 +2579,7 @@ RIGHT ENGINEER IMAGE
 		top:0;
 		transform: translateX(0%);
 	}
-	.fuelcntnr{grid-template-columns:1fr; gap:25px;}
+	.fuelcntnr{grid-template-columns:1fr; gap:25px; margin-top: 20px;}
 	.cards-grid{grid-template-columns: repeat(1, 1fr);}
 	.sprtbx .spprtblubx{grid-template-columns: repeat(1, 1fr); gap: 15px;}
 	.enerjsctnbxparabx{gap: 25px;}
@@ -2591,6 +2587,9 @@ RIGHT ENGINEER IMAGE
 	.form-grid{grid-template-columns:repeat(2, 1fr);}
 	.main-slider{width:33%; padding:60px;}
 	.cntctwrppr{grid-template-columns:1fr; gap:20px;}
+	.detail-image .title-block h2{font-size:22px;}
+	.cable-parallax-wrap{display:none;}
+	.epc-slick .epc-card{aspect-ratio:1.8/3;}
 }
 @media screen and (max-width:540px){}
 @media (max-width:480px){
@@ -2600,11 +2599,6 @@ RIGHT ENGINEER IMAGE
 	.ftrwrppr { grid-template-columns: repeat(1, 1fr); }
 	.form-grid{grid-template-columns: repeat(1, 1fr);}
 	.mttrwrprbx .infrastcn{grid-template-columns: repeat(1, 1fr);}
-	/* .mttrwrprbx .infrastcn .infrastcnbx:nth-child(1){border-top-right-radius: 15px;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(2){border-top-right-radius: 0;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3){border-top-right-radius: 0;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(5){border-bottom-left-radius:0;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){border-bottom-left-radius:15px;} */
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content{height:auto; gap: 10px; padding: 25px;}
 	.elctrcprdctbx{background: linear-gradient(180deg, rgba(255, 255, 255, 1) 18%, rgba(0, 65, 187, 1) 18%);}
 	.gasgrrnbx{padding: 15px;}
@@ -2617,10 +2611,30 @@ RIGHT ENGINEER IMAGE
 	.mngmntsctn h1{font-size:50px;}
 	.enerjsctnbxparabx { gap: 15px; grid-template-columns: 1fr; }
 	.regnal-wrppr{grid-template-columns: repeat(1, 1fr);}
-	.engine-tab-content h2{font-size:35px;}
+	.engine-tab-content h2{font-size:25px;}
 	.prdctbnnr .evntbxbnnr{min-height:90vh;}
 	.powerbx .card-head{flex-direction: column;}
 	.epc-slick .epc-card.prdct-epcslide{aspect-ratio:2.8/ 4;}
+	.mapsctn h1{font-size:30px;}
+	.sprtbx h1{font-size:35px;}
+	.sprtbx h2{font-size:30px;}
+	.sprtbxcntnr.sectnbx{padding:100px 0;}
+	.innrbnnr .evntbxbnnr{min-height:70vh;}
+	.whtbx{padding-top:0;}
+	.sector-slider{padding-bottom:0;}
+	.whtbx h1{font-weight:700;}
+	.prdctbnnr .evntbxbnnr .bannrbx{top:0;}
+	.parallax-section{background-position: -150px 7%;}
+	.blackbxsctn h3.blcbxtxt{line-height:30px;}
+	.eqpmntsctn h1{font-weight:700;}
+	.frstrowbx.whtbxnew{padding:25px;}
+	.clntsctn h1{font-weight:700;}
+	.ftrtxtbx{grid-template-columns: 1fr;}
+	.epcsctn h1{font-weight:700;}
+	.fuelcntnrbx h2{font-size: 27px;}
+	.fuelcntnrbx h3{font-size:22px;}
+	.mngmntsctnbx img{margin:0 auto 30px; width:80%;}
+	.mngmntsctnwrpr p{text-align:center;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}

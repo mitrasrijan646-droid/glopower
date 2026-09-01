@@ -265,9 +265,9 @@
     .page-head { margin-bottom: 18px; }
 
     .detail-panel { height: auto; grid-template-columns: 1fr; }
-    .detail-image { height: 300px; } /* the project photo gets more room now that the thumbnails no longer carry images */
-    .detail-highlights { height: auto; max-height: 200px; }
-
+    .detail-image { height: 100%; } /* the project photo gets more room now that the thumbnails no longer carry images */
+    .detail-highlights { height: auto; max-height: 400px; }
+	.detail-image .title-block .loc{font-size: 18px;}
     /* arrow buttons removed on touch screens — swipe is the native, expected
        gesture here, and the buttons were just adding visual clutter and
        eating horizontal space that the row can use for the cards instead */
