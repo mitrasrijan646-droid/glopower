@@ -2174,10 +2174,7 @@ RIGHT ENGINEER IMAGE
 }
 .mttrwrprbx h2{color:#0041bb; text-align:center; font-weight:400;}
 .mttrwrprbx .infrastcn{margin-top:0; grid-template-columns: repeat(3, 1fr);}
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(1){ border-top-left-radius: 15px; overflow: hidden; }
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3){ border-top-right-radius: 15px; overflow: hidden;}
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(4){ border-bottom-left-radius: 15px; overflow: hidden;}
-.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){ border-bottom-right-radius: 15px; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx img{border-radius: 15px 15px 0 0;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content{
 	background: #0041bb;
     position: inherit;
@@ -2509,9 +2506,6 @@ RIGHT ENGINEER IMAGE
 	.frstrowbx{gap:35px;}
 	.whtbxnew .card-overlay p:before{top: -20px;}
 	.mttrwrprbx .infrastcn{grid-template-columns: repeat(2, 1fr);}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(4){border-bottom-left-radius: 0;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(2){border-top-right-radius: 15px; overflow: hidden;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(5){border-bottom-left-radius: 15px; overflow: hidden;}
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content p{line-height:16px;}
 	.gear-animation{width:150px; height:150px;}
 	.prdctsprtsctnbx{gap:0;}
@@ -2606,11 +2600,11 @@ RIGHT ENGINEER IMAGE
 	.ftrwrppr { grid-template-columns: repeat(1, 1fr); }
 	.form-grid{grid-template-columns: repeat(1, 1fr);}
 	.mttrwrprbx .infrastcn{grid-template-columns: repeat(1, 1fr);}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(1){border-top-right-radius: 15px;}
+	/* .mttrwrprbx .infrastcn .infrastcnbx:nth-child(1){border-top-right-radius: 15px;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(2){border-top-right-radius: 0;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(3){border-top-right-radius: 0;}
 	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(5){border-bottom-left-radius:0;}
-	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){border-bottom-left-radius:15px;}
+	.mttrwrprbx .infrastcn .infrastcnbx:nth-child(6){border-bottom-left-radius:15px;} */
 	.mttrwrprbx .infrastcn .infrastcnbx .card-content{height:auto; gap: 10px; padding: 25px;}
 	.elctrcprdctbx{background: linear-gradient(180deg, rgba(255, 255, 255, 1) 18%, rgba(0, 65, 187, 1) 18%);}
 	.gasgrrnbx{padding: 15px;}
