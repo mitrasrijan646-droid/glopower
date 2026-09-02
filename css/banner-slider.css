@@ -155,7 +155,7 @@
   @media (max-width: 480px) {
 	.hero .banner-wrapper{min-height:80vh;}
 	.tabs-list{grid-template-columns: 1fr 1fr; gap:12px; }
-	.hero-content h1 { font-size: 35px; }
+	.hero-content h1 { font-size:30px; }
 	.hero-content{margin-top: 20vh;}
   }
   @media (max-width:390px){

@@ -618,7 +618,8 @@
 			<div class="col-md-12 no-pad">
 				<!-- Regular img tag for parallax -->
 				<div class="ap-bg " id="whatBg">
-					<img src="images/support/support-image-new.jpg" alt="" class="ap-bg-img" />
+					<img src="images/support/support-image-new.jpg" alt="" class="ap-bg-img visible-lg visible-md visible-sm" />
+					<img src="images/support/support-image-new-mb.jpg" alt="" class="ap-bg-img visible-xs" />
 				</div>
 				<div class="container">
 					<div class="row">
@@ -1088,6 +1089,7 @@ $(function(){
 // It is intentionally separate from the 4 product slides below.
 const defaultSlide = {
   img: 'images/banner/banner-default.jpg',
+  imgMobile: 'images/banner/banner-default-mb.jpg',
   eyebrow: 'ENGINEERED FOR UPTIME',
   heading: 'Sustainable power solutions for every need'
 };
@@ -1095,6 +1097,7 @@ const defaultSlide = {
 const slides = [
   {
     img: 'images/banner/banner-one.jpg',
+    imgMobile: 'images/banner/banner-one-mb.jpg',
     eyebrow: 'Power Infrastructure',
     heading: 'Powering your business with Modern Diesel Technology',
     cta: 'Discover More',
@@ -1102,6 +1105,7 @@ const slides = [
   },
   {
     img: 'images/banner/banner-two.jpg',
+    imgMobile: 'images/banner/banner-two-mb.jpg',
     eyebrow: 'Cleaner Combustion',
     heading: 'Cleaner Power, Built for Continuous Operation',
     cta: 'Discover More',
@@ -1109,6 +1113,7 @@ const slides = [
   },
   {
     img: 'images/banner/banner-three.jpg',
+    imgMobile: 'images/banner/banner-three-mb.jpg',
     eyebrow: 'Engineered for Reliability',
     heading: 'The Infrastructure Behind Every Reliable Power System',
     cta: 'Discover More',
@@ -1116,6 +1121,7 @@ const slides = [
   },
   {
     img: 'images/banner/banner-four.jpg',
+    imgMobile: 'images/banner/banner-four-mb.jpg',
     eyebrow: 'End to End Delivery',
     heading: 'From Design to Commissioning, Engineered to Perform',
     cta: 'Discover More',
@@ -1139,11 +1145,24 @@ const AUTO_INTERVAL = 9000; // ms between slides
 let autoTimer = null;
 const heroEl = document.querySelector('.hero') || document.body;
 
+// ---- mobile banner config ----
+const MOBILE_BREAKPOINT = 768; // px, keep in sync with your CSS breakpoint
+
+function isMobile() {
+  return window.innerWidth <= MOBILE_BREAKPOINT;
+}
+
+// Returns the mobile image if we're on a small screen and one is defined,
+// otherwise falls back to the desktop image.
+function getImgFor(slide) {
+  return (isMobile() && slide.imgMobile) ? slide.imgMobile : slide.img;
+}
+
 function goToSlide(index) {
   const slide = slides[index];
   const incoming = activeIsA ? bgB : bgA;
   const outgoing = activeIsA ? bgA : bgB;
-  incoming.style.backgroundImage = `url('${slide.img}')`;
+  incoming.style.backgroundImage = `url('${getImgFor(slide)}')`;
   incoming.classList.remove('active');
   void incoming.offsetWidth; // reflow, forces animation restart
   incoming.classList.add('active');
@@ -1204,8 +1223,25 @@ tabItems.forEach(item => {
 heroEl.addEventListener('mouseenter', stopAutoPlay);
 heroEl.addEventListener('mouseleave', startAutoPlay);
 
+// Re-apply the correct image (mobile/desktop) if the viewport crosses the
+// breakpoint, e.g. on device rotation or browser resize.
+let resizeTimer;
+let wasMobile = isMobile();
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    const nowMobile = isMobile();
+    if (nowMobile === wasMobile) return; // breakpoint not crossed, do nothing
+    wasMobile = nowMobile;
+
+    const activeBg = activeIsA ? bgA : bgB; // the one currently marked .active
+    const slide = currentIndex === -1 ? defaultSlide : slides[currentIndex];
+    activeBg.style.backgroundImage = `url('${getImgFor(slide)}')`;
+  }, 200);
+});
+
 // init: show the default hero image, no tab highlighted, underline hidden, CTA hidden
-bgA.style.backgroundImage = `url('${defaultSlide.img}')`;
+bgA.style.backgroundImage = `url('${getImgFor(defaultSlide)}')`;
 bgA.classList.add('active');
 heroEyebrow.textContent = defaultSlide.eyebrow;
 heroHeading.textContent = defaultSlide.heading;

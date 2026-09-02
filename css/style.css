@@ -2548,7 +2548,13 @@ RIGHT ENGINEER IMAGE
     .view-projects h2{ font-size:28px; }
 	.parallax-section-service{background-size:cover;}
 	.bnnrsctn .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:40px;}
-	.sprtbx .astntbx{width:100%;}
+	.sprtbx .astntbx{
+		width: 100%;
+        justify-content: center;
+        gap: 10px;
+	}
+	.sprtbx .astntbx:hover{transform: translateY(-8px);}
+	.sprtbx .blubx-container:hover{transform: translateY(-8px);}
 	.footerwrpr{grid-template-columns: 1fr;}
 	.ftrtxtbx p a{margin: 0 3px;}
 	.lwrfttr{grid-template-columns: repeat(2, 1fr);}
@@ -2581,7 +2587,7 @@ RIGHT ENGINEER IMAGE
 	}
 	.fuelcntnr{grid-template-columns:1fr; gap:25px; margin-top: 20px;}
 	.cards-grid{grid-template-columns: repeat(1, 1fr);}
-	.sprtbx .spprtblubx{grid-template-columns: repeat(1, 1fr); gap: 15px;}
+	.sprtbx .spprtblubx{ gap: 15px; align-items: stretch;}
 	.enerjsctnbxparabx{gap: 25px;}
 	.regnal-wrppr{grid-template-columns: repeat(2, 1fr);}
 	.form-grid{grid-template-columns:repeat(2, 1fr);}
@@ -2635,6 +2641,7 @@ RIGHT ENGINEER IMAGE
 	.fuelcntnrbx h3{font-size:22px;}
 	.mngmntsctnbx img{margin:0 auto 30px; width:80%;}
 	.mngmntsctnwrpr p{text-align:center;}
+	.sprtbx .blubx-container{padding: 15px;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
