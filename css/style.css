@@ -1089,14 +1089,14 @@ RIGHT ENGINEER IMAGE
     background:#fff;
     color:#0047d9;
 }
-.contact-title{
+.contact-title p{
     color:#fff;
     font-size:20px;
     margin-bottom:30px;
     margin-top:50px;
 }
-.contact-title span{font-size:12px;}
-.contact-title span a{color:#FFF; text-decoration:underline;}
+.contact-title p span{font-size:12px;}
+.contact-title p span a{color:#FFF; text-decoration:underline;}
 .form-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
