@@ -332,7 +332,7 @@
 				<div class="epc-slick" id="epcSlick">
 				
 					<div class="epc-card cpbltsbx">
-						<a href="#">
+						<a href="#" id="htlt-panels" class="epc-card">
 							<img src="images/solution/epc/ht-lt.jpg" alt="Substation Design and Installation"/>
 							<div class="epc-caption">
 								<h4>HT/LT Electrical panels</h4>
@@ -342,7 +342,7 @@
 					</div>
 					
 					<div class="epc-card cpbltsbx">
-						<a href="#">
+						<a href="#" id="transformers-switchgear" class="epc-card">
 							<img src="images/solution/epc/Bus-Trunking.jpg" alt="Transformer and Switchgear Solutions"/>
 							<div class="epc-caption">
 								<h4>Bus Trunking and HT/LT Cabling</h4>
@@ -362,7 +362,7 @@
 					</div> -->
 					
 					<div class="epc-card cpbltsbx">
-						<a href="#">
+						<a href="#" id="ups-critical-power">
 							<img src="images/solution/epc/Transformers-Solutions.jpg" alt="SCADA and Automation Integration"/>
 							<div class="epc-caption">
 								<h4>Transformers & Switchgear Solutions</h4>
@@ -372,7 +372,7 @@
 					</div>
 					
 					<div class="epc-card cpbltsbx">
-						<a href="#">
+						<a href="#" id="scada">
 							<img src="images/solution/epc/UPS-Systems.jpg" alt="Diesel Generating Sets"/>
 							<div class="epc-caption">
 								<h4>UPS & Critical Power Systems</h4>
@@ -382,7 +382,7 @@
 					</div>
 					
 					<div class="epc-card cpbltsbx">
-						<a href="#">
+						<a href="#" id="">
 							<img src="images/solution/epc/SCADA.jpg" alt="Diesel Generating Sets"/>
 							<div class="epc-caption">
 								<h4>SCADA & Automation Integration</h4>
@@ -958,6 +958,47 @@ $(function(){
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 })();
+</script>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  var hash = window.location.hash.replace('#', '');
+  if (!hash) return;
+ 
+  var target = document.getElementById(hash);
+  if (!target) return;
+ 
+  // Give the carousel plugin time to initialize (Slick/Swiper build DOM async)
+  setTimeout(function () {
+    var slideEl = target.closest('.slick-slide') || target.closest('.swiper-slide');
+ 
+    // Case A: Slick Carousel
+    var $slick = window.jQuery && window.jQuery('.slick-slider'); // adjust selector to your slider's class
+    if ($slick && $slick.length && slideEl) {
+      var slideIndex = parseInt(slideEl.getAttribute('data-slick-index'), 10);
+      if (!isNaN(slideIndex)) {
+        $slick.slick('slickGoTo', slideIndex);
+      }
+    }
+ 
+    // Case B: Swiper
+    var swiperEl = document.querySelector('.swiper'); // adjust selector to your slider's class
+    if (swiperEl && swiperEl.swiper && slideEl) {
+      var slides = Array.from(swiperEl.querySelectorAll('.swiper-slide'));
+      var idx = slides.indexOf(slideEl);
+      if (idx > -1) swiperEl.swiper.slideTo(idx);
+    }
+ 
+    // Fallback for both cases (and for no-carousel scenario): scroll into view
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ 
+    // Optional: visually highlight the target card briefly
+    target.classList.add('deep-link-highlight');
+    setTimeout(function () {
+      target.classList.remove('deep-link-highlight');
+    }, 2000);
+  }, 300);
+});
 </script>
 
 <!-- InstanceEndEditable -->
