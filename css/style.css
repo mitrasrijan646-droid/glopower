@@ -1769,12 +1769,11 @@ RIGHT ENGINEER IMAGE
 .contactwrppr .form-group label{color:#0041bb;}
 .contactwrppr .form-group .chips span{border: 1px solid rgba(0, 65, 187, 0.7); color:#000;}
 .contactwrppr .form-group .chips input:checked + span,
-.chips span:hover{
-    background:#0047d9;
-    color:#FFF !important;
-}
+.chips span:hover{ background:#0047d9; color:#FFF !important;}
 .contactwrppr .contact-title{color:#0041bb;}
 .contactwrppr .contact-title span{font-size:12px; color:#000;}
+.contact-title.contact-page p label{color:#0041bb; text-transform:uppercase;}
+.contact-title.contact-page p span a{color:#ffc100; text-decoration:underline;}
 .contactwrppr .form-grid .input-box label{color:#0041bb;}
 .contactwrppr .form-grid .input-box input, .input-box textarea, .input-box select{ background:#e1e1e1;}
 .contactwrppr .form-grid .input-box select{background:#e1e1e1 !important;}
@@ -2641,6 +2640,8 @@ RIGHT ENGINEER IMAGE
 	.mngmntsctnbx img{margin:0 auto 30px; width:80%;}
 	.mngmntsctnwrpr p{text-align:center;}
 	.sprtbx .blubx-container{padding: 15px;}
+	.prdctbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
+	.innrbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
