@@ -2040,7 +2040,7 @@ RIGHT ENGINEER IMAGE
 }
 .epc-caption h4{color: #FFF; text-align:left; font-weight:700; margin:0; font-size:20px;}
 .epc-caption p{color:#FFF; text-align:left;}
-.epc-nav-row {display:flex; flex:0 39%; align-items: center; gap:25px; padding:20px 0 0;}
+.epc-nav-row {display:flex; flex:0 39%; align-items: center; gap:25px; padding:20px 0 0; justify-content:center;}
 .epcrow{margin-bottom:60px; justify-content: center;}
 .epc-arrow-btn{
 	width:32px; 
