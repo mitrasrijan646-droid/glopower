@@ -2642,6 +2642,7 @@ RIGHT ENGINEER IMAGE
 	.sprtbx .blubx-container{padding: 15px;}
 	.prdctbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
 	.innrbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
+	.bnnrsctn .evntbxbnnr .imgbx img{object-fit:fill;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
