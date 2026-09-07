@@ -315,7 +315,6 @@
   /* very small phones (SE-class widths / short viewport heights) —
      tighten further so the detail panel + nav still fit without excessive scroll */
   @media (max-width: 380px) {
-    .detail-image { height: 260px; }
-    .detail-highlights { max-height: 170px; padding: 18px 16px; }
+    .detail-highlights { padding: 18px 16px; }
     .card { flex-basis: 118px; height: 60px; }
   }

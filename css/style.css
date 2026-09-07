@@ -2020,14 +2020,14 @@ RIGHT ENGINEER IMAGE
 	background:#0041bb; 
 	border-radius:15px; 
 	padding-bottom:210px; 
-	aspect-ratio:2.9/4;
+	aspect-ratio:3/4;
 }
 .epc-slick .epc-card.cpbltsbx:hover{box-shadow:none;}
 .epc-slick .epc-card.cpbltsbx img { 
 	width: 100%; 
-	height: 100%;
+	/* height: 100%; */
 	margin:0;
-	object-fit:cover; 
+	/* object-fit:cover;  */
 	display: block; 
 	border-radius:15px 15px 0 0;
 }
@@ -2474,7 +2474,7 @@ RIGHT ENGINEER IMAGE
 	.powergrid{flex-direction:column;}
 	.powergrid.row-1{padding-left: 0;}
 	.powergrid.row-2{padding-right: 0;}
-	.bnnrsctn .evntbxbnnr{min-height:80vh;}
+	/* .bnnrsctn .evntbxbnnr{min-height:80vh;} */
 	.mapsctn{padding: 25px 25px 100px;}
 	.mapsctn .layout{gap: 50px;}
 	.sprtbxcntnr{grid-template-columns: 1fr;}
@@ -2492,7 +2492,7 @@ RIGHT ENGINEER IMAGE
     .view-projects{ align-items:center; text-align:center;}
     .view-projects h2{ text-align:center; font-size:32px;}
 	.cpbltswrpr{ grid-template-columns: repeat(2, 1fr);}
-	.innrbnnr .evntbxbnnr{min-height: 50vh;}
+	/* .innrbnnr .evntbxbnnr{min-height: 50vh;} */
 	.engine-tab-content{padding: 0 30px;}
 	.ftrwrppr{grid-template-columns: repeat(3, 1fr);}
 	.cpbltswrpr.prdctrngbx{grid-template-columns: repeat(3, 1fr);}
@@ -2624,7 +2624,7 @@ RIGHT ENGINEER IMAGE
 	.sprtbx h1{font-size:35px;}
 	.sprtbx h2{font-size:30px;}
 	.sprtbxcntnr.sectnbx{padding:100px 0;}
-	.innrbnnr .evntbxbnnr{min-height:70vh;}
+	.innrbnnr .evntbxbnnr{min-height:80vh;}
 	.sector-slider{padding-bottom:0;}
 	.whtbx h1{font-weight:700;}
 	.prdctbnnr .evntbxbnnr .bannrbx{top:0;}
@@ -2643,9 +2643,11 @@ RIGHT ENGINEER IMAGE
 	.prdctbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
 	.innrbnnr .evntbxbnnr .bannrbx .bannrbxcntnt h1{font-size:30px;}
 	.innrbnnr .evntbxbnnr.mobile-banner{justify-content: flex-end; padding-bottom:100px;}
+	.bnnrsctn .evntbxbnnr .imgbx img{height:auto; object-fit: contain;}
 }
 @media (max-width:390px){
 	h1{font-size: 35px;}
+	.innrbnnr .evntbxbnnr{min-height:90vh;}
 }
 @media (max-width:375px){}
 @media (max-width:320px){}
