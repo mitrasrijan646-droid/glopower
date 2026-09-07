@@ -2594,7 +2594,7 @@ RIGHT ENGINEER IMAGE
 	.cntctwrppr{grid-template-columns:1fr; gap:20px;}
 	.detail-image .title-block h2{font-size:22px;}
 	.cable-parallax-wrap{display:none;}
-	.epc-slick .epc-card{aspect-ratio:1.8/3;}
+	.epc-slick .epc-card{aspect-ratio:2.8/3;}
 }
 @media screen and (max-width:540px){}
 @media (max-width:480px){
