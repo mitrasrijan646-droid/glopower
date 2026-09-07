@@ -154,7 +154,7 @@
     .tab-item { font-size: 11.5px; padding: 10px 10px 11px; }
   }
   @media (max-width: 480px) {
-	.hero .banner-wrapper{min-height:80vh;}
+	.hero .banner-wrapper{min-height:80vh; justify-content:flex-end; padding-bottom: 30px;}
 	.tabs-list{grid-template-columns: 1fr 1fr; gap:12px; }
 	.hero-content h1 { font-size:30px; }
 	.hero-content{margin-top: 20vh;}

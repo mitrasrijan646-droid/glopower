@@ -204,14 +204,16 @@
 
   /* bottom fade + bounce arrow — only shown when content actually overflows (JS toggles .has-overflow) */
   .highlights-fade {
-    position: absolute; left: 0; right: 12px; bottom: 0; height: 46px;
+    position: absolute; left: 0; right: 0; bottom: 0; height: 46px;
     background: linear-gradient(180deg, rgba(232,169,58,0) 0%, rgba(232,169,58,0.95) 75%);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.25s ease;
+	display:none;
+    transition: opacity 0.5s ease;
   }
   .detail-highlights.has-overflow .highlights-fade { opacity: 1; }
-  .scroll-hint {
+  .scroll-hint { 
+	display:none;
     position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%);
     width: 22px; height: 22px; border-radius: 50%;
     background: rgba(22,48,92,0.85);
@@ -219,7 +221,7 @@
     opacity: 0; transition: opacity 0.25s ease;
     animation: bounceHint 1.6s ease-in-out infinite;
   }
-  .detail-highlights.has-overflow .scroll-hint { opacity: 1; }
+  .detail-highlights.has-overflow .scroll-hint { opacity:0; }
   .scroll-hint svg { width: 12px; height: 12px; }
   @keyframes bounceHint {
     0%, 100% { transform: translateX(-50%) translateY(0); }
