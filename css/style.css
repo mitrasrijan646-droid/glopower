@@ -199,7 +199,7 @@ a:focus, a:hover {
 .navbar #myNavbar ul.navbar-nav li{margin:0 3px;}
 .navbar #myNavbar ul.navbar-nav li:last-child{margin:0 0 0 10px;}
 .navbar #myNavbar ul.navbar-nav li a{
-    padding:0 15px;
+    padding:0 10px;
     font-weight: 500;
 	color:#FFF;
 	font-size:17px;
@@ -232,7 +232,7 @@ a:focus, a:hover {
     display:none;
     position: absolute;
     top: calc(100% + 0px);
-    left:205px;
+    left:55px;
     transform: translateX(-50%);
     background: #FFF;
     min-width: 1300px;
@@ -246,12 +246,12 @@ a:focus, a:hover {
     from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
     to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-#myNavbar .nav-dropdown:hover .custom-dropdown {display: block; }
+#myNavbar .nav-dropdown:hover .custom-dropdown {display: block;}
 #myNavbar .dropdown-grid {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    gap:45px;
-	padding: 35px 28px;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:25px;
+	padding:35px 28px;
 }
 #myNavbar .dropdown-grid .grid-nav{
 	display: flex;
@@ -259,10 +259,19 @@ a:focus, a:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap:25px;
+    gap:15px;
+	border-radius:15px; 
+	cursor:pointer;
+	transition: all 0.9s ease;
+	transform: translateX(0px);
 }
+#myNavbar .dropdown-grid .grid-nav:hover{transform: translateX(6px);}
+#myNavbar .dropdown-grid .grid-nav:first-child{cursor:inherit; padding-right:35px;}
+#myNavbar .dropdown-grid .grid-nav:first-child:hover { transform: translateX(0) !important;}
+.dropdown-grid .grid-nav div a{background:#FFF !important; padding:0 !important;}
+#myNavbar .dropdown-grid .grid-nav a img{border-radius:15px; width:100%;}
 #myNavbar .dropdown-grid .grid-nav h1{font-weight:400; margin:0;}
-#myNavbar .dropdown-grid .grid-nav h4{margin:0; }
+#myNavbar .dropdown-grid .grid-nav h4{margin:0;}
 #myNavbar .dropdown-grid .grid-nav h4 a{
 	background:transparent !important;
 	outline:none;
@@ -271,9 +280,8 @@ a:focus, a:hover {
 	font-size:18px !important;
 	line-height:22px !important;
 	padding: 0 !important;
-	transform: translateX(0px);
 }
-#myNavbar .dropdown-grid .grid-nav h4 a:hover{transform: translateX(6px); color:#0048cf !important;}
+#myNavbar .dropdown-grid .grid-nav:hover h4 a{transform: translateX(9px);}
 .scrolled #myNavbar ul.navbar-nav li.active a.dropdown-grid .grid-nav h4 a{color:#0039a3;}
 #myNavbar .dropdown-grid .grid-nav p{ font-weight:400;}
 #myNavbar .dropdown-grid .grid-nav ul{padding-inline-start:0; width: 100%;}
@@ -1764,7 +1772,7 @@ RIGHT ENGINEER IMAGE
 }
 .cap-card:hover h4 {color:#FFF; }
 .contactwrppr{background:#FFF;}
-.contactwrppr h1{color:#0041bb; margin-bottom:50px;}
+.contactwrppr h1{color:#0041bb; margin-bottom:50px; font-size:50px;}
 .contactwrppr p.required-field{color:#0041bb; font-weight:bold;}
 .contactwrppr .form-group label{color:#0041bb;}
 .contactwrppr .form-group .chips span{border: 1px solid rgba(0, 65, 187, 0.7); color:#000;}
@@ -1994,7 +2002,7 @@ RIGHT ENGINEER IMAGE
 	line-height:25px;
 }
 .mngmntsctn{background:#0048cf;}
-.mngmntsctn h1{color:#FFF; font-size:6rem;}
+.mngmntsctn h1{color:#FFF; font-size:50px; text-align:left;}
 .mngmntsctnwrpr{
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2072,8 +2080,7 @@ RIGHT ENGINEER IMAGE
     will-change: transform, opacity;
     transition: transform 0.1s linear;
 }
-#myNavbar .custom-dropdown-one{display:none; left:-300px;}
-#myNavbar .custom-dropdown-one .dropdown-grid{grid-template-columns: 1.6fr 1.5fr 1.2fr 1.2fr;}
+#myNavbar .custom-dropdown-one{display:none; left:175px;}
 .clntsctn{background:#dfdfdf; padding:150px 0;}
 .clntsctn h1{color:#0039a3; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
@@ -2570,7 +2577,7 @@ RIGHT ENGINEER IMAGE
 	.services-grid .support-card:nth-child(3){grid-column: 1;}
 	.services-grid .support-card:nth-child(4){grid-column: 1;}
 	.services-grid .support-card:nth-child(5){grid-column: 1;}
-	.prdctimgbx img{height:auto; width:100%;}
+	.prdctimgbx img{display:none;}
 	.prdctsprtsctnbx p{width:auto;}
 	.services-grid{grid-template-columns: repeat(1, 1fr);}
 	.preview-overlay h2{font-size:20px;}
