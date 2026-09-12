@@ -106,6 +106,7 @@
 </style>
 
 <!-- InstanceEndEditable -->
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfhH7gtAAAAAAlAiKjcICbGa4MN78JIGgKS7kl2"></script>
 </head>
 
 <body>
@@ -605,124 +606,12 @@
 			<div class="col-md-12">
 				<h1>Connect With Us for Detailed Discussions</h1>
 					<div class="discussion-wrapper">
-						<!-- <form action="" method="post" class="form" id="form">
-							<p class="required-field">* Required fields</p>
-
-							<div class="form-grid">
-							
-								<div class="input-box">
-									<label for="interest">AREA OF INTEREST*</label>
-									<select class="" name="interest" id="interest" required>
-										<option value="">SELECT AREA OF INTEREST</option>
-										<option value="DIESEL">DIESEL GENERATORS</option>
-										<option value="GAS">GAS GENERATORS</option>
-										<option value="ELECTRICAL">ELECTRICAL EQUIPMENT & ACCESSORIES</option>
-										<option value="SPARE">SPARE PARTS</option>
-										<option value="PRODUCT">PRODUCT SUPPORT</option>
-									</select>
-								</div>
-								
-								<div class="input-box">
-									<label for="solution">POWER SOLUTION ARE YOU INTERESTED IN?*</label>
-									<select class="" name="solution" id="solution" required>
-										<option value="">SELECT AREA OF SOLUTION INTEREST</option>
-										<option value="INDUSTRIAL">INDUSTRIAL</option>
-										<option value="MINING">MINING</option>
-										<option value="DATA-CENTRES">DATA CENTRES</option>
-										<option value="IT">IT</option>
-										<option value="TELECOM">TELECOM</option>
-										<option value="BANKING">BANKING</option>
-										<option value="RESIDENTIAL">RESIDENTIAL</option>
-										<option value="COMMERCIAL">COMMERCIAL</option>
-										<option value="METRO-RAIL">METRO RAIL</option>
-										<option value="AIRPORTS">AIRPORTS</option>
-										<option value="POWER-PLANTS">POWER PLANTS</option>
-										<option value="HEALTHCARE">HEALTHCARE</option>
-										<option value="MICROGRIDS">MICROGRIDS</option>
-									</select>
-								</div>
-								
-								<div class="input-box">
-									<label for="purchase">MAKE A PURCHASE?*</label>
-									<select class="" name="purchase" id="purchase" required>
-										<option value="">SELECT A PURCHASE</option>
-										<option value="3">0-3 MONTHS</option>
-										<option value="3-6">3-6 MONTHS</option>
-										<option value="6-12">6-12 MONTHS</option>
-										<option value="12">GREATER THAN 12 MONTHS</option>
-									</select>
-								</div>
-
-								<div class="input-box">
-									<label for="name">NAME*</label>
-									<input type="text" id="name" name="name" required>
-								</div>
-
-								<div class="input-box">
-									<label for="email">WORK EMAIL ADDRESS*</label>
-									<input type="email" id="email" name="email" required>
-								</div>
-
-								<div class="input-box">
-									<label for="phone">PHONE NUMBER*</label>
-									<input type="tel" id="phone" name="phone" required>
-								</div>
-
-								<div class="input-box">
-									<label for="company">COMPANY NAME*</label>
-									<input type="text" id="company" name="company" required>
-								</div>
-
-								<div class="input-box">
-									<label for="country">Country</label>
-									<select id="country" name="country" required>
-										<option value="" disabled selected>Select Country</option>
-									</select>
-								</div>
-								
-								<div class="input-box">
-									<label for="state">STATE</label>
-									<select id="state" name="state" required disabled>
-										<option value="" disabled selected>Select Country First</option>
-									</select>
-								</div>
-								
-								<div class="input-box">
-									<label for="city">CITY</label>
-									<select id="city" name="city" required disabled>
-										<option value="" disabled selected>Select State First</option>
-									</select>
-								</div>
-								
-								<div class="input-box form-group">
-									<label for="purchase">Method of Contact*</label>
-									<select class="" name="purchase" id="purchase" required>
-										<option value="">SELECT CONTACT</option>
-										<option value="PHONE">PHONE</option>
-										<option value="EMAIL">EMAIL</option>
-										<option value="PREFERENCE">NO PREFERENCE</option>
-									</select>
-								</div>
-								
-							</div>
-							
-							<div class="input-box textarea-box">
-								<label>MESSAGE*</label>
-								<textarea id="message" name="message" required></textarea>
-							</div>
-							 
-							<div class="contact-title">
-								<p><span>This information is for Internal Purposes only. We will not share your information with any third party. For more information, see Glopower <a href="privacy-policy.html">Privacy Policy</a></span></p>
-							</div>
-
-							<button type="submit" class="submit-btn"> SUBMIT <span>→</span> </button>
-						</form> -->
 						
-						<form action="submit.php" method="post" class="form" id="form">
+						<form action="submit.php" method="post" class="form" id="glopower-contact-form">
 							<p class="required-field">* Required fields</p>
-
+						 
 							<div class="form-grid">
-
+						 
 								<div class="input-box">
 									<label for="interest">AREA OF INTEREST*</label>
 									<select class="" name="interest" id="interest" required>
@@ -734,7 +623,7 @@
 										<option value="PRODUCT">PRODUCT SUPPORT</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="solution">POWER SOLUTION ARE YOU INTERESTED IN?*</label>
 									<select class="" name="solution" id="solution" required>
@@ -754,7 +643,7 @@
 										<option value="MICROGRIDS">MICROGRIDS</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="purchase_time">MAKE A PURCHASE?*</label>
 									<select class="" name="purchase_time" id="purchase_time" required>
@@ -765,48 +654,48 @@
 										<option value="12">GREATER THAN 12 MONTHS</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="name">NAME*</label>
 									<input type="text" id="name" name="name" required>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="email">WORK EMAIL ADDRESS*</label>
 									<input type="email" id="email" name="email" required>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="phone">PHONE NUMBER*</label>
 									<input type="tel" id="phone" name="phone" required>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="company">COMPANY NAME*</label>
 									<input type="text" id="company" name="company" required>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="country">Country</label>
 									<select id="country" name="country" required>
 										<option value="" disabled selected>Select Country</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="state">STATE</label>
 									<select id="state" name="state" required disabled>
 										<option value="" disabled selected>Select Country First</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box">
 									<label for="city">CITY</label>
 									<select id="city" name="city" required disabled>
 										<option value="" disabled selected>Select State First</option>
 									</select>
 								</div>
-
+						 
 								<div class="input-box form-group">
 									<label for="contact_method">Method of Contact*</label>
 									<select class="" name="contact_method" id="contact_method" required>
@@ -816,14 +705,14 @@
 										<option value="PREFERENCE">NO PREFERENCE</option>
 									</select>
 								</div>
-
+						 
 							</div>
-
+						 
 							<div class="input-box textarea-box">
 								<label>MESSAGE*</label>
 								<textarea id="message" name="message" required></textarea>
 							</div>
-
+						 
 							<!-- ============ SPAM PROTECTION FIELDS ============ -->
 							<!-- Honeypot: real users never see/fill this (hidden via CSS below).
 								 Bots that auto-fill every field will get caught. -->
@@ -831,19 +720,22 @@
 								<label for="website">Leave this field blank</label>
 								<input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
 							</div>
-
+						 
 							<!-- Time-trap: records when the form was rendered. Submissions that
 								 arrive in under ~3 seconds are almost always bots. -->
 							<input type="hidden" name="form_loaded_at" id="form_loaded_at" value="">
+						 
+							<!-- Records which page the form was submitted from -->
+							<input type="hidden" id="page_url" name="page_url">
 							<!-- =================================================== -->
-
+						 
 							<div class="contact-title">
 								<p><span>This information is for Internal Purposes only. We will not share your information with any third party. For more information, see Glopower <a href="privacy-policy.html">Privacy Policy</a></span></p>
 							</div>
-
-							<div id="form-error" class="form-error" style="display:none;"></div>
-
-							<button type="submit" class="submit-btn" id="submit-btn"> SUBMIT <span>→</span> </button>
+						 
+							<div id="gp-form-error" class="form-error" style="display:none;"></div>
+						 
+							<button type="submit" class="submit-btn" id="gp-submit-btn"> SUBMIT <span>→</span> </button>
 						</form>
 						
 						
@@ -1149,6 +1041,19 @@ window.addEventListener('scroll', () => {
   applyPreset('snappy');
 </script>
 
+<script>
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6LfhH7gtAAAAAAlAiKjcICbGa4MN78JIGgKS7kl2', {action: 'LOGIN'});
+    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+    // reCAPTCHA to the end user's browser.
+    // This token must be validated by creating an assessment.
+    // See https://cloud.google.com/recaptcha/docs/create-assessment
+  });
+}
+</script>
+
 <!-- InstanceBeginEditable name="EditRegion6" -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript">
@@ -1392,16 +1297,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script type="text/javascript">
+<script>
 (function () {
-    var form = document.getElementById('form');
+    var form = document.getElementById('glopower-contact-form');
     var loadedAtField = document.getElementById('form_loaded_at');
-    var errorBox = document.getElementById('form-error');
-    var submitBtn = document.getElementById('submit-btn');
+    var errorBox = document.getElementById('gp-form-error');
+    var submitBtn = document.getElementById('gp-submit-btn');
     var overlay = document.getElementById('thankyou-overlay');
  
     // Record the time the form was rendered (used server-side as a time-trap)
     loadedAtField.value = Math.floor(Date.now() / 1000);
+ 
+    // Record which page the form was submitted from
+    var pageUrlField = document.getElementById('page_url');
+    if (pageUrlField) {
+        pageUrlField.value = window.location.href;
+    }
  
     function showError(msg) {
         errorBox.textContent = msg;

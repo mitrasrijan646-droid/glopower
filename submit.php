@@ -105,9 +105,10 @@ if (!empty($missing)) {
 // Optional fields
 $data['state'] = isset($_POST['state']) ? trim($_POST['state']) : '';
 $data['city']  = isset($_POST['city']) ? trim($_POST['city']) : '';
+$data['page_url'] = isset($_POST['page_url']) ? trim($_POST['page_url']) : '';
 
 // Clean text fields
-foreach (['name', 'company', 'phone', 'country', 'state', 'city'] as $f) {
+foreach (['name', 'company', 'phone', 'country', 'state', 'city', 'page_url'] as $f) {
     $data[$f] = clean_text($data[$f]);
 }
 $data['message'] = trim(strip_tags($_POST['message'])); // keep line breaks in the message body
@@ -166,7 +167,8 @@ $body .= "Company: {$data['company']}\n";
 $body .= "Country: {$data['country']}\n";
 $body .= "State: {$data['state']}\n";
 $body .= "City: {$data['city']}\n";
-$body .= "Preferred Contact Method: {$data['contact_method']}\n\n";
+$body .= "Preferred Contact Method: {$data['contact_method']}\n";
+$body .= "Submitted From Page: " . ($data['page_url'] !== '' ? $data['page_url'] : 'N/A') . "\n\n";
 $body .= "Message:\n{$data['message']}\n";
 
 // Headers - note the sender's raw email/name are only used after clean_text() stripped CR/LF

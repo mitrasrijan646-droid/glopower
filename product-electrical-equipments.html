@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 <!-- InstanceEndEditable -->
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfhH7gtAAAAAAlAiKjcICbGa4MN78JIGgKS7kl2"></script>
 </head>
 
 <body>
@@ -1184,6 +1185,19 @@ window.addEventListener('scroll', () => {
   });
 
   applyPreset('snappy');
+</script>
+
+<script>
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6LfhH7gtAAAAAAlAiKjcICbGa4MN78JIGgKS7kl2', {action: 'LOGIN'});
+    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+    // reCAPTCHA to the end user's browser.
+    // This token must be validated by creating an assessment.
+    // See https://cloud.google.com/recaptcha/docs/create-assessment
+  });
+}
 </script>
 
 <!-- InstanceBeginEditable name="EditRegion6" -->
