@@ -648,10 +648,10 @@
 									<label for="purchase_time">MAKE A PURCHASE?*</label>
 									<select class="" name="purchase_time" id="purchase_time" required>
 										<option value="">SELECT A PURCHASE</option>
-										<option value="3">0-3 MONTHS</option>
-										<option value="3-6">3-6 MONTHS</option>
-										<option value="6-12">6-12 MONTHS</option>
-										<option value="12">GREATER THAN 12 MONTHS</option>
+										<option value="3-Months">0-3 MONTHS</option>
+										<option value="3-6-Months">3-6 MONTHS</option>
+										<option value="6-12-Months">6-12 MONTHS</option>
+										<option value="12-Months">GREATER THAN 12 MONTHS</option>
 									</select>
 								</div>
 						 
@@ -723,10 +723,10 @@
 						 
 							<!-- Time-trap: records when the form was rendered. Submissions that
 								 arrive in under ~3 seconds are almost always bots. -->
-							<input type="hidden" name="form_loaded_at" id="form_loaded_at" value="">
+							<input type="hidden" name="form_loaded_at" id="form_loaded_at" value="<?php echo time(); ?>"/>
 						 
 							<!-- Records which page the form was submitted from -->
-							<input type="hidden" id="page_url" name="page_url">
+							<input type="hidden" id="page_url" name="page_url" value="Products">
 							<!-- =================================================== -->
 						 
 							<div class="contact-title">

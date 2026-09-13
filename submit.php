@@ -154,7 +154,8 @@ if ($isSpam) {
 }
 
 // ---------- 8. BUILD + SEND EMAIL ----------
-$subject = "New Enquiry from {$SITE_NAME}: {$data['company']}";
+$pageLabel = $data['page_url'] !== '' ? $data['page_url'] : 'Unknown Page';
+$subject = "New Enquiry from {$SITE_NAME}: {$pageLabel}";
 
 $body = "You have received a new enquiry from the website contact form.\n\n";
 $body .= "Area of Interest: {$data['interest']}\n";
