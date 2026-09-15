@@ -2180,24 +2180,36 @@ RIGHT ENGINEER IMAGE
     align-items:flex-start;
 }
 .mttrwrprbx h2{color:#0041bb; text-align:center; font-weight:400;}
-.mttrwrprbx .infrastcn{margin-top:0; grid-template-columns: repeat(3, 1fr);}
-.mttrwrprbx .infrastcn .infrastcnbx img{border-radius: 15px 15px 0 0;}
+.mttrwrprbx .infrastcn{margin-top:0; grid-template-columns: repeat(3, 1fr); }
+.mttrwrprbx .infrastcn .infrastcnbx{
+	background: #0041bb; 
+	border-radius:15px;
+}
+.mttrwrprbx .infrastcn .infrastcnbx div{position: relative; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx img{border-radius: 15px 15px 0 0; transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.1s ease;}
+.mttrwrprbx .infrastcn .infrastcnbx:hover img {
+    transform: scale(1.10) rotate(0deg);
+    opacity: 0.85;
+}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content {
+    transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.mttrwrprbx .infrastcn .infrastcnbx:hover .card-content {
+    transform: scale(1.01);
+}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content{
-	background: #0041bb;
-    position: inherit;
-    padding:15px ;
+    padding:15px;
 	gap:20px;
     display: grid;
+	bottom:0;
     grid-template-columns: 1.6fr 2fr;
     justify-content: flex-start;
-    align-items:  flex-start;
-	height:100px;
-	border-radius: 0px 0 15px 15px;
+    align-items:flex-start;
 }
 .mttrwrprbx .infrastcn .infrastcnbx .card-content.epc-card-content{background:#0954e1;}
-.mttrwrprbx .infrastcn .infrastcnbx .card-content.gas-card-content{background:#9ea90a;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content.gas-card-content{background:#9ea90a; border-radius:0 0 15px 15px;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content h3{line-height:20px; text-align:left; font-size:17px; font-weight:700;}
-.mttrwrprbx .infrastcn .infrastcnbx .card-content p{color:#FFF; margin-bottom:0; font-size:14px; line-height:20px;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content p{color:#FFF; margin-bottom:0; font-size:14px; line-height:17px;}
 .apprchsctn{background:#f0f0f0;}
 .apprchcntnr{
 	display:grid;
