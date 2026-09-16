@@ -476,7 +476,7 @@ a:focus, a:hover {
       display: flex;
       gap:28px;
       position: relative;
-      z-index: 1;
+      z-index:0;
       margin-bottom:28px;
     }
     /* Row 1 shifts RIGHT (Card1 smaller, Card2 bigger) */
@@ -633,7 +633,7 @@ a:focus, a:hover {
     object-fit:cover;
     transition:0.5s ease;
 }
-.swiper-slide:hover img{ transform:scale(1.08);}
+.swiper-slide:hover img{ transform:none;}
 .card-image::before{
     content:"";
     position:absolute;
@@ -738,10 +738,20 @@ a:focus, a:hover {
 	display:block;
 }
 .astntbx:hover{ background:#ffc100; transform:translateX(8px);}
-.lwrsctn{padding-bottom:30px; padding-top:80px;}
+.lwrsctn{
+	padding-bottom:30px; 
+	padding-top:80px;
+	background: #F0F0F0;
+	background: linear-gradient(180deg, rgba(240, 240, 240, 1) 100%, rgba(255, 255, 255, 1) 100%);
+}
 .lwrsctn h2{color:#000; font-size:40px;}
 .lwrsctn h1{color:#f2ae2c;}
-.projects-section{ width:100%; padding:0 0 120px 3vw;}
+.projects-section{ 
+	width:100%; 
+	padding:0 0 120px 3vw;
+	background: #F0F0F0;
+	background: linear-gradient(180deg, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 35%);
+}
 .projects-container{
     max-width:1300px;
     margin:auto;
@@ -2081,13 +2091,20 @@ RIGHT ENGINEER IMAGE
     transition: transform 0.1s linear;
 }
 #myNavbar .custom-dropdown-one{display:none; left:175px;}
-.clntsctn{background:#dfdfdf; padding:150px 0;}
+.clntsctn{background:#FFF;}
 .clntsctn h1{color:#0039a3; text-align:center;}
 .clntsctn .clientSwiper{padding:40px 0 0!important;}
 .clntsctn .clientSwiper .swiper-slide{overflow:visible;}
 .clntsctn .clientSwiper .swiper-slide img{width:100%; transition:0.5s ease;}
-.clntsctn .clientSwiper .swiper-slide:hover img{ transform:scale(1.08);}
+.clntsctn .clientSwiper .swiper-slide:hover img{ transform:none;}
 .clntsctn .swiper-pagination-bullets .swiper-pagination-bullet{background:#0039a3;}
+.clntsctn .clntsctn-mobile{
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+	margin-top:40px;
+}
+.clntsctn .clntsctn-mobile img{margin:0 auto; width:auto; display:table;}
 .fuelcntnr{
 	display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -2185,7 +2202,7 @@ RIGHT ENGINEER IMAGE
 	background: #0041bb; 
 	border-radius:15px;
 }
-.mttrwrprbx .infrastcn .infrastcnbx div{position: relative; overflow: hidden;}
+.mttrwrprbx .infrastcn .infrastcnbx div{position: relative; overflow: hidden; z-index:0;}
 .mttrwrprbx .infrastcn .infrastcnbx img{border-radius: 15px 15px 0 0; transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.1s ease;}
 .mttrwrprbx .infrastcn .infrastcnbx:hover img {
     transform: scale(1.10) rotate(0deg);
@@ -2206,7 +2223,7 @@ RIGHT ENGINEER IMAGE
     justify-content: flex-start;
     align-items:flex-start;
 }
-.mttrwrprbx .infrastcn .infrastcnbx .card-content.epc-card-content{background:#0954e1;}
+.mttrwrprbx .infrastcn .infrastcnbx .card-content.epc-card-content{background:#0954e1; border-radius:0 0 15px 15px;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content.gas-card-content{background:#9ea90a; border-radius:0 0 15px 15px;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content h3{line-height:20px; text-align:left; font-size:17px; font-weight:700;}
 .mttrwrprbx .infrastcn .infrastcnbx .card-content p{color:#FFF; margin-bottom:0; font-size:14px; line-height:17px;}
@@ -2566,7 +2583,7 @@ RIGHT ENGINEER IMAGE
 	.epc-slick .epc-card.prdct-epcslide{aspect-ratio:2.8/ 7;}
 }
 @media screen and (max-width:767px){
-	.projects-section{ padding:50px 15px; }
+	.projects-section{ padding:50px 15px; background: linear-gradient(180deg, rgba(240, 240, 240, 1) 100%, rgba(255, 255, 255, 1) 16%);}
     .project-card,
     .view-projects{
         min-height:auto;
